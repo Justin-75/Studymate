@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+.venv/
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 项目特定
+Data/Database/
+Data/Cache/
+uploads/
+logs/
+
+# 配置文件（如不想公开）
+.env
+.sops.yaml
+env.yaml
+
+# IDE
+.vscode/
+.idea/
+
+# studymate
+Data/pdfs/
+*.db
+*.bak
+*.code-workspaces

@@ -1,0 +1,28 @@
+server:
+  name: PDF_Study_Partner_MCP
+  name_zh: PDF学习伴侣 MCP 服务器
+  author: Justin
+  description: >
+    该智能体基于 PDF 文档，通过 TF‑IDF 检索和 Groq 云端大语言模型（gpt-oss-120b）生成学习材料，
+    包括摘要、抽认卡和测验，并支持自动评分。
+  description_zh: >
+    上传 PDF 文档，智能生成学习材料。支持摘要、抽认卡、测验三种模式，
+    并利用 Groq 云端 LLM 提升内容质量。评分模块可自动批改选择题。
+  version: 1.0.0
+
+transport:
+  type: "sse"
+  host: "127.0.0.1"
+  port: 5000                
+
+logging:
+  console:
+    enabled: true
+    level: "INFO"
+  file:
+    enabled: false
+    level: "DEBUG"
+    path: "logs/%Y-%m-%d_%H-%M-%S.log"
+    rotation: "10 MB"
+    retention: "7 days"
+    compression: "zip"
