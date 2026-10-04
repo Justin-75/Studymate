@@ -22,6 +22,39 @@ _HYPHEN_LINEBREAK_RE = re.compile(r"([A-Za-z])-\n\s*([A-Za-z])")
 _PAGE_NUMBER_ONLY_RE = re.compile(r"^\s*(page\s*)?\d+\s*$", re.IGNORECASE)
 _SEPARATOR_ONLY_RE = re.compile(r"^\s*[-—_=]{3,}\s*$")
 
+# --- Known extraction noise (found in the d2l-zh and LLMBook PDFs) ---
+# MXNet runtime log lines printed into the book's code output, e.g.
+#   [07:00:31] ../src/storage/storage.cc:196: Using Pooled (Naive) StorageManager for CPU
+_MXNET_LOG_RE = re.compile(
+    r"\[\d{2}:\d{2}:\d{2}\]\s*\.\./src/[^\s:]+:\d+:\s*"
+    r"(?:Using Pooled \(Naive\) StorageManager for [CG]PU"
+    r"|GPU context requested, but no GPUs found\."
+    r"|Auto-tuning cuDNN op, set MXNET_CUDNN_AUTOTUNE_DEFAULT to\s*␣?(?:\s*,?→?\s*0 to disable)?)"
+)
+# Page-break markers of code listings: "(continued from previous page)", "(continues on next page)",
+# "表 9.2.1 – continued from previous page"
+_CONTINUED_RE = re.compile(
+    r"(?:表\s*[\d.]+\s*[–-]\s*)?\(?\s*continue[sd] (?:from previous|on next) page\s*\)?",
+    re.IGNORECASE,
+)
+# Line-wrap markers inside code listings: d2l uses "␣" + newline + ",→", LLMBook uses "↩→".
+# (A lone "␣" is NOT removed: SLP3 uses it on purpose to show a space in regex examples.)
+_WRAP_SPACE_RE = re.compile(r"␣\s*,→")
+_WRAP_D2L_RE = re.compile(r"\s*,→")
+_WRAP_LLMBOOK_RE = re.compile(r"\s*↩→\s*")
+
+
+def strip_known_noise(text: str) -> str:
+    """Remove log lines, page-break markers and code line-wrap markers. Safe on any document."""
+    if not text:
+        return ""
+    text = _MXNET_LOG_RE.sub("", text)
+    text = _CONTINUED_RE.sub("", text)
+    text = _WRAP_SPACE_RE.sub(" ", text)
+    text = _WRAP_D2L_RE.sub("", text)
+    text = _WRAP_LLMBOOK_RE.sub(" ", text)
+    return text
+
 
 def _strip_control_chars(text: str) -> str:
     """Remove most control characters while keeping newlines and tabs."""
@@ -60,6 +93,9 @@ def clean_page_text(text: str) -> str:
 
     # Remove URLs that often come from hyperlink text
     text = _URL_RE.sub("", text)
+
+    # Remove known extraction noise (MXNet logs, "continued from previous page", wrap markers)
+    text = strip_known_noise(text)
 
     # Remove soft hyphen
     text = text.replace("\u00ad", "")

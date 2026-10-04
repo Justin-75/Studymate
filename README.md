@@ -1,78 +1,75 @@
-## PDF Study Partner MCP Server
+## StudyMate — PDF study assistant (RAG)
 
-An intelligent study companion based on the Groq Cloud LLM (gpt-oss-120b), following the MCP Server specification. Upload a PDF document, and generate summaries, flashcards, and quizzes via natural language queries, with automatic grading.
+Upload a PDF, then generate summaries, flashcards and quizzes from it, with automatic grading.
+Works on Chinese and English documents.
 
-### Clone Repository
+**Retrieval:** BM25 (jieba) + BGE-M3 dense (FAISS) → Reciprocal Rank Fusion → bge-reranker-v2-m3.
+On the 181-question bilingual benchmark (`eval/questions.jsonl`) this reaches Recall@1 0.873 and
+MRR 0.923, against 0.591 / 0.691 for the earlier TF-IDF pipeline. See `eval_out/`.
 
-```bash
-git clone --recursive https://github.com/your-repo/pdf-study-partner.git
-cd studymate
-```
+**Generation:** any OpenAI-compatible LLM — DeepSeek (default), local Ollama, or Groq.
 
-- If already cloned but missing submodules:
-
-```bash
-git submodule update --init --recursive
-```
-
-### Install Dependencies
+### Install
 
 ```powershell
-1. Download anaconda
-2. Conda create --file environment.yml
-3. Conda activate studymate
+conda env create -f environment.yml
+conda activate studymate
 ```
 
-### Configure API Key
+### Configure the LLM
 
-1. Get a free API key from [console.groq.com](https://console.groq.com)
-2. Create a `.env` file in the project root 
+Create a `.env` file in the project root:
 
 ```env
-GROQ_API_KEY=your_groq_api_key_here
+LLM_PROVIDER=deepseek
+DEEPSEEK_API_KEY=your_key_here
+# LLM_MODEL=deepseek-flash      (optional override)
 ```
 
-### Start Server
+For a local model instead: `LLM_PROVIDER=ollama` and `LLM_MODEL=<model you pulled>`, with `ollama serve` running.
+BGE-M3 is read from `BGE_M3_PATH` (default `E:\models\bge-m3`), otherwise downloaded from Hugging Face.
 
-1. Conda activate studymate
-2. python server/http_server.py
+### Run
 
-
-The server will start at `http://localhost:5000`. Open `test_frontend.html` in your browser to use the application.
-
-### Tools
-
-ingest_pdf 	  - Upload & process PDF|File (multipart/form-data)  Input:  {"doc_id": "..."}     Output: Returns unique doc ID   
-generate_material   - Generate material  -   Input: {doc_id, mode, query} Output:        {"data": {...}}     - mode: summary/flashcards/quiz 
-grade_quiz	     -   Grade quiz	      Input:    {quiz, answers}    Output:  {score, total, details}  -     quiz is the full object  
-
-### Project Structure
+```powershell
+conda activate studymate
+python server/http_server.py
 ```
-your-project/
-├── core/                     
-├── server/
-│   └── http_server.py
+
+The server starts at `http://localhost:5000`. Open `test_frontend.html` in your browser.
+
+### API
+
+| Endpoint | Input | Output |
+|---|---|---|
+| `POST /api/upload` | PDF file (multipart/form-data) | `{doc_id}` — also builds the BM25 + dense indexes |
+| `POST /api/generate` | `{doc_id, mode, query, top_k}`, mode = summary / flashcards / quiz | `{data: {...}}` |
+| `POST /api/grade` | `{quiz, answers}` | `{score, total, details}` |
+
+### Evaluate retrieval
+
+```powershell
+python scripts/eval_retrieval.py
+```
+
+The eval imports the same `src/retrieval/hybrid.py` the server uses, so its numbers describe the live app.
+
+### Project structure
+
+```
+studymate/
+├── server/http_server.py      # Flask API
 ├── src/
-│   ├── generation/
+│   ├── ingest.py              # PDF -> pages -> clean -> chunks -> SQLite
+│   ├── pdf/                   # extractor, OCR fallback, cleaner, chunker
 │   ├── retrieval/
-│   ├── llm_client.py          # Groq Cloud API client
-│   └── ...
-├── tools/
-│   └── study_partner_tool.py
-├── .env                       # API key (not committed)
-├── .gitignore                
-├── config.yaml
-├── pyproject.toml
-├── README.md
-├── test_frontend.html
-└── test_imports.py
+│   │   ├── hybrid.py          # THE retrieval pipeline (app + eval)
+│   │   ├── bm25_index.py  dense_index.py  reranker.py
+│   │   └── tfidf_index.py  search.py   # old TF-IDF baseline, kept for the benchmark
+│   ├── generation/            # LLM prompts, quiz grading
+│   ├── llm_client.py          # the one place that calls the LLM
+│   └── db/                    # SQLite schema + repository
+├── eval/                      # benchmark questions + changelog
+├── scripts/eval_retrieval.py  # benchmark runner
+└── test_frontend.html
 ```
-
-### Deployment
-
-1. **Install Python 3.14** 
-2. Clone the repo and Install dependency
-3. Set your `GROQ_API_KEY` in `.env`
-4. Run `python server/http_server.py`
-5. Access at `http://localhost:5000`
-

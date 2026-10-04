@@ -1,32 +1,11 @@
 # src/generation/generator.py
 from __future__ import annotations
-import os
 import json
 import re
-import uuid
-from src.llm_client import generate_with_groq, llm_enabled
-
-import hashlib
 from typing import Any, Dict, List
 
+from src.llm_client import generate, llm_enabled
 from src.db.models import GenerateRequest, GenerateResult, SearchHit
-
-# Deterministic summary pipeline
-from src.semantic_outline import (
-    build_page_contexts_from_hits,
-    build_summary,
-    is_cjk_heavy,
-)
-
-# High-precision learning item generation (query-anchored)
-from src.learning_items import (
-    select_important_concepts,
-    generate_flashcards_high_precision,
-    generate_quiz_high_precision,
-)
-
-# Quiz persistence by quiz_id
-from src.generation.quiz_store import save_quiz
 
 
 # ----------------------------
@@ -47,14 +26,19 @@ def _build_citations_pages(hits: List[SearchHit], max_pages: int = 8) -> List[Di
     return [{"page_no": p} for p in pages]
 
 
-def _seed(doc_id: str, mode: str, query: str) -> int:
-    raw = f"{doc_id}|{mode}|{query}".encode("utf-8")
-    return int(hashlib.sha256(raw).hexdigest()[:8], 16)
-
-
 # ----------------------------
 # Public API
 # ----------------------------
+
+
+def _message(req: GenerateRequest, msg: str, citations: List[Dict[str, Any]] | None = None) -> GenerateResult:
+    return GenerateResult(
+        doc_id=req.doc_id,
+        mode=req.mode,
+        query=req.query,
+        content={"message": msg},
+        citations=citations or [],
+    )
 
 
 def _check_no_relevant_content(parsed: dict, req) -> GenerateResult | None:
@@ -193,8 +177,11 @@ def generate_material(req: GenerateRequest, hits: List[SearchHit]) -> GenerateRe
         )
     citations = _build_citations_pages(hits)  # 复用原有 citations
 
-    # ----- LLM 分支（仅在 USE_LLM 开启且配置了有效 GROQ_API_KEY 时启用）-----
-    if hits and llm_enabled():
+    if not llm_enabled():
+        return _message(req, "LLM is not configured. Set LLM_PROVIDER and its API key in .env (see src/llm_client.py).")
+
+    # ----- LLM 生成 -----
+    if hits:
         # 构建上下文：将所有 hits 的文本拼接，附上页码
         context_parts = []
         for hit in hits:
@@ -207,7 +194,7 @@ def generate_material(req: GenerateRequest, hits: List[SearchHit]) -> GenerateRe
 
         if req.mode == "summary":
             prompt = build_summary_prompt(context, req.query or "")
-            llm_response = generate_with_groq(prompt, temperature=0.3)
+            llm_response = generate(prompt, temperature=0.3)
             if llm_response:
                 json_match = re.search(r'\{.*\}', llm_response, re.DOTALL)
                 if json_match:
@@ -228,7 +215,7 @@ def generate_material(req: GenerateRequest, hits: List[SearchHit]) -> GenerateRe
 
         elif req.mode == "flashcards":
             prompt = build_flashcards_prompt(context, req.query or "")
-            llm_response = generate_with_groq(prompt, temperature=0.5)
+            llm_response = generate(prompt, temperature=0.5)
             content = None
             if llm_response:
                 # 尝试直接解析为 JSON
@@ -290,12 +277,11 @@ def generate_material(req: GenerateRequest, hits: List[SearchHit]) -> GenerateRe
                     citations=citations,
                 )
             else:
-                print("⚠️ LLM 抽认卡失败，回退到规则生成")
-                # 回退逻辑（原有代码会继续执行）
+                print("⚠️ LLM 抽认卡失败")
 
         elif req.mode == "quiz":
             prompt = build_quiz_prompt(context, req.query or "")
-            llm_response = generate_with_groq(prompt, temperature=0.3)
+            llm_response = generate(prompt, temperature=0.3)
             content = None
             if llm_response:
                 print("📝 LLM quiz raw:", llm_response)
@@ -358,7 +344,7 @@ def generate_material(req: GenerateRequest, hits: List[SearchHit]) -> GenerateRe
                     content["quiz"] = valid_questions
                     print(f"✅ 通过校验的题目数: {len(valid_questions)}")
                 else:
-                    content = None  # 没有有效题目，触发回退
+                    content = None  # 没有有效题目
                     
         # 如果 LLM 成功生成了内容，则返回
         if content:
@@ -370,76 +356,4 @@ def generate_material(req: GenerateRequest, hits: List[SearchHit]) -> GenerateRe
                 citations=citations,
             )
 
-    # ----- 原有确定性生成逻辑（当 LLM 未启用或失败时执行）-----
-    citations = _build_citations_pages(hits)
-
-    # 1) Build page contexts
-    page_contexts = build_page_contexts_from_hits(hits)
-
-    # 2) Build structured summary bundle
-    seed = _seed(req.doc_id, req.mode, req.query or "")
-    summary_bundle = build_summary(page_contexts, query=req.query or "", seed=seed)
-
-    # Language heuristic
-    page_texts = [v.get("text", "") for _, v in sorted(page_contexts.items(), key=lambda kv: kv[0])]
-    cjk = is_cjk_heavy(page_texts)
-
-    # 3) Derive important_terms
-    important_concepts = select_important_concepts(
-        summary_bundle,
-        query=req.query or "",
-        max_concepts=6,
-        min_concepts=3,
-    )
-    important_terms = [c.to_dict() for c in important_concepts]
-
-    if req.mode == "summary":
-        content = {
-            "summary": summary_bundle.get("summary", ""),
-            "main_idea": summary_bundle.get("main_idea", ""),
-            "why_it_matters": summary_bundle.get("why_it_matters", ""),
-            "key_points": summary_bundle.get("key_points", []),
-            "key_points_cited": summary_bundle.get("key_points_cited", []),
-            "topics": summary_bundle.get("topics", []),
-            "important_terms": important_terms,
-            "concepts": summary_bundle.get("concepts", []),
-            "pages": summary_bundle.get("pages", []),
-            "language": summary_bundle.get("language", "cjk" if cjk else "en"),
-        }
-
-    elif req.mode == "flashcards":
-        content = generate_flashcards_high_precision(
-            doc_id=req.doc_id,
-            summary_bundle=summary_bundle,
-            page_contexts=page_contexts,
-            query=req.query or "",
-            cjk=cjk,
-            max_cards=10,
-        )
-
-    elif req.mode == "quiz":
-        content = generate_quiz_high_precision(
-            doc_id=req.doc_id,
-            summary_bundle=summary_bundle,
-            page_contexts=page_contexts,
-            query=req.query or "",
-            cjk=cjk,
-            max_questions=6,
-        )
-        try:
-            save_quiz(content)
-        except Exception:
-            pass
-
-    else:
-        content = {"message": f"Unsupported mode: {req.mode}"}
-
-    return GenerateResult(
-        doc_id=req.doc_id,
-        mode=req.mode,
-        query=req.query,
-        content=content,
-        citations=citations,
-    )
-
-
+    return _message(req, "Generation failed: the LLM returned no usable content. Please try again.", citations)

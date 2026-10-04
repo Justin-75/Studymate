@@ -1,0 +1,119 @@
+How to use it
+conda activate studymate
+python scripts/eval_retrieval.py
+
+
+1. Pick a document from the numbered list (or paste a PDF path to add a new one).
+2. Type a question -> you see the top 5 pages the current retriever returns.
+3. Type the gold page(s) that really answer it -> the question is saved.
+4. Type `run` any time to score every saved question (Recall@k, MRR) and
+   write CSVs to eval_out/<timestamp>/ for Excel.
+
+p 400	Show the text of page 400
+list	Show questions saved for this document
+undo	Delete the last saved question
+run	Score all questions and write the Excel files
+back	Pick another document
+quit	Exit
+
+L1 Lexical	Uses the same words as the page	"What two properties must a problem have for DP?"	~35%
+L2 Paraphrase	Same meaning, different words	"When is caching recursive results worth it?"	~30%
+L3 Cross-lingual	Question in one language, document in the other	红黑树的性质 asked against the English CLRS	~15%
+L4 Multi-page	Needs 2+ pages: comparisons, "differences between X and Y"	"How do greedy and DP choose subproblems differently?"	~10%
+L5 Unanswerable	Not in the document; gold pages = []	"Best fried rice recipe?"	~10%
+
+
+
+python scripts\sample_chunks.py c9978d7b-171b-4376-8c75-fd43217d3ae1 Data\samples\algo.jsonl 60 25 1180
+
+What you do with the output
+For each sampled chunk, ask an LLM: "Write one question a student would ask that this passage answers. Don't mention the passage." Then the benchmark row is:
+
+{"id": 21, "doc": "algo", "lang": "en", "q": "<the generated question>", "gold_pages": [<chunk's page_no>], "source": "llm_generated", "verified": false, "notes": ""}
+
+
+
+
+
+CLRS
+c9978d7b-171b-4376-8c75-fd43217d3ae1
+d2l 
+b9cc9d3f-1eca-483c-a9c4-64f88e8f464d
+地产
+66e44303-fd5e-4fb3-a055-100cdaf54766
+太空
+15450e21-1a87-4e57-a266-27752ea1b9b5
+
+
+I want you to be a professional chinese teacher question and an algorithm master, where you need to analyze the content of each chunks, then i want you based on the chunks, 1 chunks one question, try to create a problem. 
+L1 Lexical	Uses the same words as the page, so you scan the chunks try to make questions that has the answer on the chunks directly, without analyzing. For example:	"What two properties must a problem have for DP?"	~35%
+L2 Paraphrase	Same meaning, different words, so from the page you analyze the content, then try to make a question for a keyword for example:	"When is caching recursive results worth it?"	~30%
+L3 Cross-lingual	Question in one language,  basically the same with L2 but its just combination of chinese and english for the questions, for example : 红黑树的性质 asked against the English CLRS	~15%
+
+L4 Multi-page	You make a question where if you want to answer you need to take reference of more than one page for the answer, for example you make a comparisons, "differences between X and Y", or like statements and so on, so it needed more analysis from combination of chunks ~10% 
+
+L5 Unanswerable	Not in the document; gold pages = []	"Best fried rice recipe?"	~10%
+
+You see the proportion right, I want you to make 50 questions, and i want you to list from which page it was taken, so out of 100 chunks, you make 50 questions, i dont think its hard, do you understand all the instructions ??
+
+
+
+1. Penempatan gold page yang kurang tepat 
+2. Penempatan Level yang salah, walau 2 reference tapi ga pake Analisa krn ada 1 page yg state lgsg differences 
+3. Penempatan soal yang jawabannya ambigu dimana 3 tempat bisa dipake semua 
+
+
+d2l-zh-041 - gold page diubah jadi 508 509 516 
+d2l-zh-042 - gold page = 719 , 720 cm code doang. 436 pindahin ke L1
+d2l-zh-043 - gold page = 177 181 180
+
+Sistem kena semua baru akurat! (ganti eval)
+
+L3: Which probabilistic graphical model does the book use to motivate bidirectional RNNs? 36
+
+Delete CLRS 037 
+
+
+
+
+-------------------------
+Improvement dari retrieval
+
+1. 1 page 1x keluar cukup, ambil max score cukup 
+2. Chunker coba chunk per sections jadi ga sering kepotong antara 1 page dan page berikutnya
+3. Eval haurs fully matched 
+4. Buang log line noise, CLRS kebanyakan broken formula (kebetulan)
+5. Khusus comparison question -> bikin 2 query terpisah dan jawab 
+6. Formulation question harus dibuang noisenya -> bikin cara retrieve via math (opt) 	
+
+
+
+=================================
+
+1. Benchmark side:
+
+A. Accuracy between gold page and question content and question level [Fixed Now] 
+B. Formulation for count in Recall@k and MMR  [Fixed Now]
+
+2. RAG Side:
+
+A. Chunking problem -> Answered got chunked by 2 chunks, unstable chunk sizes 
+B. Tokenization problem -> Some garbage got inside [Fixed Now]
+C. Comparison question -> Split into two
+D. Ranking -> Weighted RRF (Dense 60-70% + BM25 30%)
+
+Reranker ga bisa fix -> Uncorrelated chunks on the pool. 
+LR Fusion -> cari alpha beta for weighting RRF -> small improvement krn chunks sudah benar di recall @5 sudah 0.98
+
+
+
+1. Hybrid Reranker
+2. Eval (Question)
+3. Cleaning Noise + Duplicate page on rank 
+
+
+
+Generative UI 
+
+Langchain -> Design sambungin ke deepseek 
+

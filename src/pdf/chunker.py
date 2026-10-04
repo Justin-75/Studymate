@@ -3,13 +3,74 @@
 from __future__ import annotations
 
 import hashlib
+import re
 from typing import List, Tuple
 
 from src.db.models import Chunk
 
-# We reuse the same sentence splitter as generation to prevent chunk-boundary truncation.
-# IMPORTANT: semantic_outline has no hard sklearn dependency at import time (safe for ingest).
-from src.semantic_outline import split_sentences, normalize_whitespace, repair_hyphenation
+
+# ------------------------------------------------------------
+# Sentence helpers (moved here from the old semantic_outline.py, unchanged,
+# so chunk boundaries and chunk_ids stay exactly the same as before)
+# ------------------------------------------------------------
+
+_CJK_RE = re.compile(r"[\u4e00-\u9fff]")
+_SOFT_HYPHEN = "\u00ad"
+_SENT_SPLIT_RE = re.compile(
+    r"(?<=[\.\!\?])\s+|(?<=[。！？])\s+|(?<=[。！？])(?=\S)|\n{2,}"
+)
+
+
+def has_cjk(s: str) -> bool:
+    return bool(_CJK_RE.search(s or ""))
+
+
+def normalize_whitespace(text: str) -> str:
+    if not text:
+        return ""
+    t = (text or "").replace("\x00", " ").replace(_SOFT_HYPHEN, "")
+    t = t.replace("\r\n", "\n").replace("\r", "\n")
+    # Collapse spaces but keep paragraph breaks
+    t = re.sub(r"[ \t]{2,}", " ", t)
+    t = re.sub(r"\n{3,}", "\n\n", t)
+    return t.strip()
+
+
+def repair_hyphenation(text: str) -> str:
+    """Fix PDF line-wrap hyphenation: "in- dex" -> "index"."""
+    if not text:
+        return ""
+    return re.sub(r"([A-Za-z])-\s+([A-Za-z])", r"\1\2", text)
+
+
+def normalize_for_sentence_split(text: str) -> str:
+    """Single newlines (line-wrap) -> spaces; paragraph breaks kept as blank lines."""
+    if not text:
+        return ""
+    t = normalize_whitespace(text)
+    t = repair_hyphenation(t)
+    t = re.sub(r"\n{2,}", " <PARA> ", t)
+    t = t.replace("\n", " ")
+    t = re.sub(r"\s+", " ", t).strip()
+    t = t.replace("<PARA>", "\n\n")
+    return t.strip()
+
+
+def split_sentences(text: str) -> List[str]:
+    """Robust(ish) EN/ZH sentence splitter, tolerant to PDF newlines."""
+    t = normalize_for_sentence_split(text)
+    if not t:
+        return []
+    out: List[str] = []
+    for p in _SENT_SPLIT_RE.split(t):
+        s = p.strip()
+        if not s:
+            continue
+        # Filter short Latin fragments (keep short CJK)
+        if len(s) < 18 and not has_cjk(s):
+            continue
+        out.append(s)
+    return out
 
 
 def make_chunk_id(doc_id: str, page_no: int, chunk_index: int) -> str:

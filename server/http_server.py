@@ -66,18 +66,10 @@ except ImportError as e:
     sys.exit(1)
 
 try:
-    from src.retrieval.tfidf_index import TfidfIndex
-    print("✅ 导入 TfidfIndex")
+    from src.retrieval.hybrid import hybrid_search, warm_up
+    print("✅ 导入 hybrid_search (BM25 + BGE-M3 + RRF + reranker)")
 except ImportError as e:
-    print(f"❌ 导入 TfidfIndex 失败: {e}")
-    traceback.print_exc()
-    sys.exit(1)
-
-try:
-    from src.retrieval.search import search_chunks
-    print("✅ 导入 search_chunks")
-except ImportError as e:
-    print(f"❌ 导入 search_chunks 失败: {e}")
+    print(f"❌ 导入 hybrid_search 失败: {e}")
     traceback.print_exc()
     sys.exit(1)
 
@@ -95,10 +87,8 @@ CORS(app)
 
 # ========== 全局配置 ==========
 DB_PATH = str(project_root / "Data/Database/app.db")
-TFIDF_CACHE_ROOT = str(project_root / "Data/Cache/tfidf")
 
 print(f"数据库路径: {DB_PATH}")
-print(f"TF-IDF缓存路径: {TFIDF_CACHE_ROOT}")
 
 # ========== 上传配置 ==========
 UPLOAD_FOLDER = project_root / 'uploads'
@@ -139,7 +129,6 @@ def upload_pdf():
         print(f"开始处理PDF: {temp_path}")
         
         # 调用ingest_pdf，传递必要的参数
-        # 从Finaltest.py看，ingest_pdf需要多个参数
         result = ingest_pdf(
             file_path=temp_path,
             db_path=DB_PATH,
@@ -165,6 +154,10 @@ def upload_pdf():
             doc_id = result
         else:
             doc_id = f"doc_{uuid.uuid4().hex[:8]}"
+
+        # Build the BM25 + dense indexes now, so the first question doesn't wait for them
+        print(f"构建检索索引 (BM25 + BGE-M3): {doc_id}")
+        warm_up(Repository(DB_PATH), doc_id)
         
         # 清理临时文件
         try:
@@ -212,29 +205,11 @@ def generate():
         
         print(f"生成参数: doc_id={doc_id}, mode={mode}, query={query}, top_k={top_k}")
         
-        # 创建Repository和TfidfIndex
         repo = Repository(DB_PATH)
-        index = TfidfIndex(TFIDF_CACHE_ROOT)
-        
-        #构建索引
-        from src.retrieval.search import build_index_for_doc
-        if not index.index_exists(doc_id):
-            print(f"⚠️ 索引不存在，正在为文档 {doc_id} 构建索引...")
-            build_index_for_doc(repo, index, doc_id)
-            print("✅ 索引构建完成")
-        else:
-            print("索引已存在")
 
-        # 调用search_chunks（按照Finaltest.py的方式）
+        # Hybrid retrieval: BM25 + BGE-M3 dense -> RRF -> bge-reranker (same code as the benchmark)
         print(f"开始检索: doc_id={doc_id}, query={query}")
-        hits = search_chunks(
-            repo=repo,
-            index=index,
-            doc_id=doc_id,
-            query=query,
-            top_k=top_k,
-            auto_build=True
-        )
+        hits = hybrid_search(repo, doc_id, query, top_k=top_k)
         print(f"检索到 {len(hits)} 个结果")
         
         # 创建GenerateRequest对象

@@ -9,10 +9,12 @@ dependencies:
       - pymupdf
       - flask
       - flask-cors
-      - groq
-      - mcp
+      - openai            # client for DeepSeek / Ollama / Groq (all OpenAI-compatible)
       - pillow
       - opencv-python
       - pytesseract
       - python-dotenv
       - jieba
+      - FlagEmbedding
+      - faiss-cpu
+      - modelscope

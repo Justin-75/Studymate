@@ -1,0 +1,1201 @@
+﻿retriever,id,doc,lang,level,question,gold_pages,top1,top2,top3,top4,top5,first_hit_rank,hit@1,hit@3,hit@5,hit@10,hit@20,hit@50,RR,returned_nothing
+hybrid_rrf+reranker,d2l-zh-001,d2l-zh,zh,L1,图3.1.2中表示线性回归的神经网络层数是多少?为什么计算层数时不考虑输入层?,111,111,121,125,105,104,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-002,d2l-zh,zh,L1,"在softmax回归实验中,精度(accuracy)是如何定义的?",129,129,137,138,143,126,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-003,d2l-zh,zh,L1,什么是泛化误差(generalization error)?,160,160,160,454,175,161,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-004,d2l-zh,zh,L1,"当输入值精确等于0时,ReLU函数的导数默认取多少?",151,151,154,152,278,187,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-005,d2l-zh,zh,L1,LeNet是由谁、在哪一年、在哪个机构提出的?最初的目的是什么?,267,267,267,274,272,270,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-006,d2l-zh,zh,L1,统计学家把训练数据上的平均损失称为什么?它用来近似什么?,195,195,199,39,105,166,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-007,d2l-zh,zh,L1,"在统计学中,对超出已知观测范围进行预测叫什么?在现有观测值之间进行估计叫什么?",316,316,323,318,322,107,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-008,d2l-zh,zh,L1,tokenize函数支持哪两种词元类型?遇到其他类型会怎样?,325,385,326,729,325,325,4,0,0,1,1,1,1,0.25,0
+hybrid_rrf+reranker,d2l-zh-009,d2l-zh,zh,L1,什么是循环神经网络(RNNs)?,339,339,343,315,345,351,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-010,d2l-zh,zh,L1,"在图9.8.1的贪心搜索例子中,预测输出序列的条件概率是多少?",403,403,403,404,405,402,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-011,d2l-zh,zh,L1,硬盘驱动器(HDD)的转速大约是多少?大约能达到多少IOPs?,548,548,557,548,556,549,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-012,d2l-zh,zh,L1,“计算性能”一章集中讨论了影响计算性能的哪些主要因素?,529,529,546,22,580,556,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-013,d2l-zh,zh,L1,"在BERT遮蔽语言模型的数据生成中,被选中预测的词元有多大比例被替换成“<mask>”?其余情况如何处理?",727,721,727,727,727,728,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,d2l-zh-014,d2l-zh,zh,L1,单发多框检测(SSD)论文中选用的基础网络是什么?,620,620,629,623,631,808,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-015,d2l-zh,zh,L1,"read_imdb读取的IMDb评论数据集中,训练集数目是多少?",739,739,739,739,738,741,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-016,d2l-zh,zh,L1,"在房价预测的K折验证实验中,5-折验证的平均训练log rmse和平均验证log rmse分别是多少?",208,208,210,208,207,209,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-017,d2l-zh,zh,L1,"CIFAR-10训练图像增广中,图像先被放大到多少像素,随机裁剪后又被缩放到多少像素?",668,668,668,676,592,586,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-018,d2l-zh,zh,L1,"在微调模型中,输出层的学习率是其他层的多少倍?",594,594,595,593,590,308,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-019,d2l-zh,zh,L2,"如果某一层需要一个在训练过程中始终不被更新的权重,在MXNet中应该怎么实现?",218,225,218,233,596,229,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,d2l-zh-020,d2l-zh,zh,L2,"语言模型中,为了让数据集里从未出现过的词组合也能获得非零概率,常用什么处理方法?",330,330,330,329,338,692,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-021,d2l-zh,zh,L2,"用[1, -1]卷积核进行互相关检测边缘时,为什么把图像转置后就检测不到边缘了?",251,251,251,252,249,254,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-022,d2l-zh,zh,L2,"与AlexNet相比,NiN在网络末端用什么替代了全连接层?这样设计有什么好处和代价?",287,287,288,285,288,277,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-023,d2l-zh,zh,L2,“批量规范化”这个名字是怎么来的?,294,294,300,310,295,301,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-024,d2l-zh,zh,L2,有没有一种比LSTM结构更简单、效果相当而计算更快的门控循环结构?,362,362,368,374,361,367,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-025,d2l-zh,zh,L2,"训练序列到序列模型时,把真实的目标序列(而不是模型上一步的预测)送入解码器作为输入,这种做法叫什么?",398,398,402,439,399,392,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-026,d2l-zh,zh,L2,"梯度下降时学习率设得太大或太小,分别会出现什么现象?",469,483,469,479,495,503,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,d2l-zh-027,d2l-zh,zh,L2,"为什么实践中每个epoch都是无放回地遍历训练数据,而不是有放回地随机采样?",483,483,349,350,349,271,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-028,d2l-zh,zh,L2,"在环形拓扑中同步梯度时,如果把梯度切成n块并行传递,聚合时间会怎样随节点数变化?",575,575,576,579,573,495,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-029,d2l-zh,zh,L2,"目标检测模型输出了很多围绕同一目标、高度重叠的预测框,该如何精简?",609,609,609,599,612,616,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-030,d2l-zh,zh,L2,转置卷积中的填充与普通卷积中的填充有什么不同?,646,646,255,649,651,644,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-031,d2l-zh,zh,L2,为什么word2vec、GloVe这类预训练词向量无法区分“bank”在不同句子中的含义?,683,683,717,724,684,717,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-032,d2l-zh,zh,L2,字节对编码(BPE)学到的子词是否与数据集无关?能否用于其他数据集?,710,710,711,708,710,15,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-033,d2l-zh,zh,L2,"在GPU上训练时,为什么每个小批量都把损失打印到命令行会拖慢训练?",242,560,563,242,559,115,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf+reranker,d2l-zh-034,d2l-zh,en,L3,"In the GloVe co-occurrence table, why is P(solid|ice)/P(solid|steam) large (≈8.9) while the ratio for 'water' is close to 1?",706,706,706,704,707,714,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-035,d2l-zh,en,L3,"Why can GPT only look left-to-right, and how does its downstream fine-tuning differ from ELMo?",717,717,717,718,724,717,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-036,d2l-zh,zh,L3,Which probabilistic graphical model does the book use to motivate 双向循环神经网络 (bidirectional RNNs)?,378,380,378,383,382,10,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,d2l-zh-037,d2l-zh,en,L3,When should additive attention be used instead of scaled dot-product attention?,424,423,424,423,422,422,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,d2l-zh-038,d2l-zh,zh,L3,"What are the three stages of a fully convolutional network (全卷积网络) for semantic segmentation, and how is its transposed convolution initialized?",655,649,655,644,649,653,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,d2l-zh-039,d2l-zh,en,L3,Why is accuracy rarely the right metric once an ML system is used for automated decisions?,199,199,138,35,270,671,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-040,d2l-zh,en,L3,"In the MultiHeadAttention implementation, what shape do queries/keys/values have after transpose_qkv?",432,432,432,432,432,432,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-041,d2l-zh,zh,L4,"Adagrad的学习率衰减过于剧烈,RMSProp和Adam/Yogi分别是如何改进这一问题的?",506 511 519,508,509,512,510,516,7,0,0,0,1,1,1,0.1429,0
+hybrid_rrf+reranker,d2l-zh-042,d2l-zh,zh,L4,Transformer的位置编码与BERT的位置嵌入有什么区别?,438 720,719,719,720,718,720,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf+reranker,d2l-zh-043,d2l-zh,zh,L4,暂退法(Dropout)在理论上如何保证期望不变?在代码实现中训练和测试阶段分别怎么处理?,177 180,177,181,180,177,179,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-044,d2l-zh,zh,L4,softmax的从零实现和简洁实现在数值计算上有什么不同?为什么简洁实现要这样改?,135 143,143,144,135,134,129,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-045,d2l-zh,zh,L4,"skip_gram函数中,npx.batch_dot的输出为什么是(批量大小,1,max_len)?",416 701,701,422,697,416,697,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,d2l-zh-046,d2l-zh,zh,L5,如何使用PyTorch Lightning配置多节点分布式训练?,(none),577,576,588,578,627,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,d2l-zh-047,d2l-zh,zh,L5,扩散模型(Diffusion Model)的前向加噪过程是如何定义的?,(none),177,182,701,216,625,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,d2l-zh-048,d2l-zh,en,L5,What is the time complexity of Dijkstra's algorithm using a Fibonacci heap?,(none),435,12,350,511,473,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,d2l-zh-049,d2l-zh,zh,L5,"用LoRA微调大语言模型时,秩r一般设为多少比较合适?",(none),773,479,773,365,671,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,d2l-zh-050,d2l-zh,zh,L5,红烧肉最正宗的做法是什么?,(none),68,567,567,567,554,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,LLMbookzh-001,LLMbookzh,zh,L1,这种大模型具有但小模型不具有的能力通常被称为什么?,18,18,36,38,264,36,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-002,LLMbookzh,zh,L1,"在给定算力预算的条件下,扩展法则的三个基本公式中,αN、αD、αC 分别约为多少?",33,33,34,35,33,34,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-003,LLMbookzh,zh,L1,OpenAI 提供的三种文本表征 API 支持的输入长度都是多少个词元?,54,54,53,116,48,53,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-004,LLMbookzh,zh,L1,WebText 是通过抓取 Reddit 上获得至少几个赞的外链得到的?文本总量是多少?,57,57,57,60,55,74,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-005,LLMbookzh,zh,L1,Dolly 数据集包含多少个人类生成的数据实例?由哪家公司发布?,63,63,65,63,64,65,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-006,LLMbookzh,zh,L1,"Dolma 采用基于规则的方法过滤隐私内容时,主要标注了哪三类敏感信息?",77,77,77,75,75,61,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-007,LLMbookzh,zh,L1,BPE 算法最早是在哪一年被提出的?最初用于什么?,85,85,88,87,86,93,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-008,LLMbookzh,zh,L1,"LLaMA 的预训练数据中,来自 arXiv 的科学数据占比是多少?",90,90,72,72,92,59,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-009,LLMbookzh,zh,L1,目前常用的预训练任务主要分为哪三类?,126,126,54,61,73,71,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-010,LLMbookzh,zh,L1,"以 LLaMA (7B) 为例,按参数量计算公式得到的参数量是多少?",138,138,139,245,137,176,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-011,LLMbookzh,zh,L1,"在另外一些参考文献中,指令微调也被称为什么?",150,150,208,61,162,37,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-012,LLMbookzh,zh,L1,"在指令微调代码实践中,IGNORE_INDEX 的值被设置为多少?",168,168,169,169,169,169,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-013,LLMbookzh,zh,L1,"在实践中,束搜索中束的数量通常设定在什么范围?当 n=1 时会发生什么?",215,215,215,216,218,218,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-014,LLMbookzh,zh,L1,"根据零点因子 Z 是否为零,均匀量化可以进一步分为哪两类?",231,231,230,233,232,233,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-015,LLMbookzh,zh,L1,Sheared LLaMA 将 LLaMA-2 (7B) 剪枝到多大参数规模?继续预训练后恢复到原始模型多少预测精度?,246,246,245,46,48,47,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-016,LLMbookzh,zh,L1,多智能体系统的协同机制通常包括哪三种?,284,284,283,283,286,285,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-017,LLMbookzh,zh,L1,XSum 数据集包含了多少篇 BBC 新闻文章?时间范围是?,302,302,300,300,56,300,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-018,LLMbookzh,zh,L1,HellaSwag 数据集包含大约多少个情景描述?这些描述主要来源于哪里?,312,312,312,333,58,65,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-019,LLMbookzh,zh,L2,"模型预测下一个词越来越准,却在某些任务上越做越差——这种反常现象叫什么?",36,36,42,128,41,127,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-020,LLMbookzh,zh,L2,书中用什么日常生活中的例子来通俗解释扩展法则与涌现能力之间的关系?,39,39,39,36,38,18,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-021,LLMbookzh,zh,L2,"如果评测用的题目事先已经混进了训练语料,这种问题在书中被称为什么?",81,81,81,359,298,303,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-022,LLMbookzh,zh,L2,怎样量化衡量一个分词器把文本'压'得好不好?如何计算?,89,89,86,76,292,88,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-023,LLMbookzh,zh,L2,"只按词元所处位置分配一个固定向量的做法,为什么不利于处理长文本?",96,96,120,121,96,116,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-024,LLMbookzh,zh,L2,"Transformer 编码器中把每一层的输入直接加到输出上,这样设计是为了解决什么问题?",99,99,96,102,98,227,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-025,LLMbookzh,zh,L2,"想粗略估算一次预训练要跑多少天,书里给了什么方法?用 LLaMA (65B) 算出来大约多少天?",140,140,51,51,51,47,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-026,LLMbookzh,zh,L2,"只用英文指令数据微调的模型,能力能迁移到其他语言吗?书中举了什么例子?",159,159,167,158,151,150,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-027,LLMbookzh,zh,L2,"用低秩适配方法微调 LLaMA (7B) 时,显存需求大约能从多少降到多少?",163,163,177,176,238,238,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-028,LLMbookzh,zh,L2,为什么研究者要寻找不依赖强化学习的对齐方法?基于人类反馈的强化学习在工程上有哪些麻烦?,199,199,181,178,201,182,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-029,LLMbookzh,zh,L2,"同一批次里的请求输出长短不一,导致要等最慢的那条生成完,vLLM 用什么技术来缓解这个问题?",225,225,228,227,229,332,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-030,LLMbookzh,zh,L2,利用一个大模型和一个小模型的输出概率差来挑选下一个词的解码方法叫什么?,218,218,213,225,214,226,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-031,LLMbookzh,zh,L2,"设计思维链示例时,为什么倾向于挑选推理步骤更多的例子?",266,266,266,267,271,267,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-032,LLMbookzh,zh,L2,"大模型做大数运算或解方程时容易出错,有哪些办法可以提升它的数值计算能力?",318,318,317,317,89,323,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-033,LLMbookzh,zh,L2,"检索回来的参考文档太长、还夹杂无关内容时,可以在输入端做哪些处理?",338,338,338,339,339,253,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-034,LLMbookzh,en,L3,"According to Ilya Sutskever, what is large-scale pre-training essentially doing?",30,30,126,127,30,3,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-035,LLMbookzh,zh,L3,GPT-4 Turbo 的 context window 有多大?knowledge cutoff 扩展到了什么时候?,45,45,53,39,360,116,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-036,LLMbookzh,en,L3,Why does the Transformer need position embeddings? What does self-attention degrade into without them?,104,96,104,112,112,112,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,LLMbookzh-037,LLMbookzh,en,L3,"In PPO, why is the probability ratio r_t(θ) clipped to [1−ε, 1+ε]?",193,193,193,194,189,202,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-038,LLMbookzh,zh,L3,"In in-context learning, 示例设计 (demonstration design) 有哪三个关键因素?",258,258,247,37,257,252,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-039,LLMbookzh,en,L3,How is a model's expected win rate calculated in the Elo rating system used for pairwise LLM comparison?,295,295,184,290,294,189,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-040,LLMbookzh,en,L3,"What did SQuAD 2.0 add compared with the original SQuAD, and what is SQuAD's main evaluation metric?",308,308,307,131,131,131,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-041,LLMbookzh,zh,L4,"对 LLaMA (65B) 分别进行全参数指令微调和 LoRA 微调,所需的 A800 GPU 数量、批次大小和微调时间有何差异?",171 176,176,171,176,176,144,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-042,LLMbookzh,zh,L4,InstructGPT 采用的 RLHF 与 DPO 在优化策略模型的方式上有什么不同?,183 204,211,211,199,207,195,10,0,0,0,1,1,1,0.1,0
+hybrid_rrf+reranker,LLMbookzh-043,LLMbookzh,zh,L4,完整自注意力机制与状态空间模型在建模序列时的计算复杂度有何不同?为什么?,108 123,108,108,122,97,122,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,LLMbookzh-044,LLMbookzh,zh,L4,"以 8 比特为例,对称量化与非对称量化的参数设置有何不同?将 LLaMA (7B) 从 FP16 量化到 INT8/INT4 后,显存和性能如何变化?",232 241,231,240,238,232,240,4,0,0,1,1,1,1,0.25,0
+hybrid_rrf+reranker,LLMbookzh-045,LLMbookzh,zh,L4,"基于大语言模型的规划框架与智能体框架中,'制定方案'和'执行动作'分别由哪些组件负责?",273 281,272,281,282,279,273,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,LLMbookzh-046,LLMbookzh,zh,L5,红烧肉怎么做才好吃?,(none),274,112,274,83,83,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,LLMbookzh-047,LLMbookzh,zh,L5,GPT-4 的参数量是多少?,(none),158,2,53,17,45,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,LLMbookzh-048,LLMbookzh,zh,L5,FlashAttention-2 相比标准注意力实现能带来多少倍的训练加速?,(none),224,109,68,109,378,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,LLMbookzh-049,LLMbookzh,en,L5,"How many experts does Mixtral activate per token, and how many experts does each layer have in total?",(none),110,110,49,49,111,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,LLMbookzh-050,LLMbookzh,zh,L5,LoRA 最早是由哪个机构、在哪一年提出的?,(none),174,174,163,52,174,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,p300-001,p300,en,L1,What is a morpheme?,45,45,41,72,45,156,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-002,p300,en,L1,Which two tokenization algorithms are widely used in modern language models?,51,51,243,290,54,9,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-003,p300,en,L1,"In the regular expression example for finding 'the', what are false positives and false negatives?",61,61,121,121,122,121,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-004,p300,en,L1,How does gradient descent find the minimum of a function?,111,111,111,111,111,112,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-005,p300,en,L1,Under what name was logistic regression developed and applied to NLP at IBM Research in the early 1990s?,133,133,133,214,133,116,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-006,p300,en,L1,How does top-k sampling work?,208,208,208,208,208,209,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-007,p300,en,L1,What does Direct Preference Optimization (DPO) avoid that RL-based preference training requires?,230,231,230,231,218,27,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,p300-008,p300,en,L1,What is a postings list in an inverted index?,268,268,268,280,268,280,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-009,p300,en,L1,"Since when have TREC evaluations been run, and when was the QA track added?",282,282,281,308,505,278,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-010,p300,en,L1,"What are cycles per second called, and what is the period of a wave?",346,346,345,640,352,356,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-011,p300,en,L1,What is dynamic time warping?,389,389,389,641,646,69,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-012,p300,en,L1,How are TTS systems evaluated by humans?,401,401,401,403,403,402,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-013,p300,en,L1,Which algorithms do CRF taggers use for inference and for training?,429,429,431,427,517,423,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-014,p300,en,L1,What are graph-based methods for creating dependency structures based on?,478,478,471,461,471,479,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-015,p300,en,L1,"Which typology of affective states does the chapter use, and what categories does it include?",527,527,527,545,545,527,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-016,p300,en,L1,Why must a dialogue system use coreference when the user says 'I'll take the second one' after hearing about two flights?,547,547,602,602,600,600,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-017,p300,en,L1,What percentage of PDTB relations are either within a single sentence or span two adjacent sentences?,586,586,581,586,585,579,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-018,p300,en,L2,"What do you call a language in which a single ending packs several grammatical meanings together, and what English example is given?",46,46,287,286,14,46,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-019,p300,en,L2,What is the most helpful way to picture the operations needed to turn 'intention' into 'execution'?,68,69,68,70,73,69,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,p300-020,p300,en,L2,"Why does a 4-gram model trained on Shakespeare have so few choices for the next word, often copying his text?",87,87,87,87,84,239,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-021,p300,en,L2,"If a name like 'Jurafsky' never appears in training but shows up at test time, why isn't that fatal for modern language models?",89,89,89,36,50,89,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-022,p300,en,L2,"When comparing two classifiers, what does a very small p-value tell us about the observed gap in performance?",125,125,125,125,127,128,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-023,p300,en,L2,How could you work out what an unfamiliar vegetable name means just from the sentences it appears in?,139,139,139,17,16,17,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-024,p300,en,L2,How does word2vec obtain training labels without anyone hand-annotating data?,145,145,334,489,145,145,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-025,p300,en,L2,How does the size of the surrounding window used to build word vectors change which words come out as most similar?,151,151,151,141,151,144,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-026,p300,en,L2,"Backprop is a special case of which more general way of computing derivatives, and what representation does it rely on?",178,178,178,176,299,313,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-027,p300,en,L2,"Why is it wasteful at generation time to recompute keys and values for earlier tokens, and what technique fixes this?",212,212,212,204,204,295,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-028,p300,en,L2,"In an LSTM, which component throws away context that is no longer useful, and how does it do it?",324,323,323,324,327,324,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf+reranker,p300-029,p300,en,L2,Why are speech features collected on a perceptually warped frequency scale instead of equally across all frequencies?,359,359,360,349,360,351,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-030,p300,en,L2,How does CTC avoid transcribing silence as letters while still allowing genuine double letters?,381,381,381,385,380,382,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-031,p300,en,L2,Why is finding and labeling names of people and places harder than tagging each word with its part of speech?,414,414,408,429,408,411,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-032,p300,en,L2,Why can 'herself' but not 'her' refer to Janet in 'Janet bought ___ a bottle of fish sauce'?,554,554,554,413,578,550,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-033,p300,zh,L3,bigram 语言模型中，P(wn|wn−1) 如何用 count 来估计？为什么每个句子要加 <s> 和 </s>？,79,79,79,78,90,79,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-034,p300,zh,L3,在垃圾邮件检测的 confusion matrix（混淆矩阵）中，true positive 和 false negative 分别指什么？,121,121,121,121,122,122,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-035,p300,zh,L3,Transformer 里的 feedforward layer 为什么叫 position-wise？它的参数在不同位置、不同层之间是否共享？,194,194,194,192,186,213,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-036,p300,zh,L3,一个 transformer block 内部的计算顺序是什么？residual connection 加在哪里？,199,192,192,195,192,199,5,0,0,1,1,1,1,0.2,0
+hybrid_rrf+reranker,p300-037,p300,zh,L3,简单 RNN 中 hidden state h_t 是怎么计算的？参数矩阵 W、U、V 的维度分别是多少？,312,312,315,321,321,313,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-038,p300,zh,L3,Viterbi 算法的 initialization、recursion、termination 三个步骤分别在做什么？,419,419,419,419,427,427,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-039,p300,zh,L3,依存句法结构 (dependency structure) 用什么样的图来表示？V 和 A 分别代表什么？,459,459,460,459,457,457,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-040,p300,zh,L3,e2e-coref 模型在计算 span representation 时，用哪三个 token 来表示一个 span？,563,563,564,563,564,450,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-041,p300,en,L4,Compare how attention works in a transformer layer versus in an RNN encoder-decoder.,188 332,293,293,215,374,374,11,0,0,0,0,1,1,0.0909,0
+hybrid_rrf+reranker,p300-042,p300,en,L4,"What are the trade-offs between single-encoder and dual-encoder dense retrieval, and how can a retriever be better adapted for RAG?",273 277,273,261,280,276,275,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-043,p300,en,L4,"What does the chrF metric measure, and in the 'witness for the past' example, how do the two hypotheses score?",302 306,302,302,302,297,304,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-044,p300,en,L4,How does the neural span-based constituency parser (Kitaev et al.) differ from classic CKY?,443 449,449,449,454,433,454,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-045,p300,en,L4,Compare transition-based and graph-based dependency parsing.,462 471,471,478,462,471,458,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,p300-046,p300,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),219,219,552,541,139,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,p300-047,p300,en,L5,What is the running time of Dijkstra's algorithm with a Fibonacci heap?,(none),474,51,476,70,24,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,p300-048,p300,en,L5,What are the ACID properties of database transactions?,(none),634,640,617,618,281,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,p300-049,p300,zh,L5,如何在 PyTorch 中设置 learning rate scheduler？,(none),183,183,114,627,369,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,p300-050,p300,en,L5,How do you configure BGP routing on a Cisco router?,(none),471,242,64,631,640,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,clrs-001,clrs,en,L1,"Which chapter studies linear programming, the technique used for problems such as placing oil wells or assigning airline crews to flights?",28,28,28,790,880,870,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-002,clrs,en,L1,Why is Strassen's algorithm often not the method of choice for matrix multiplication from a practical point of view?,132,132,132,133,103,848,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-003,clrs,en,L1,"In the hiring problem, what is the total cost of the algorithm in terms of the interviewing cost ci, the hiring cost ch, and m people hired?",136,136,142,136,136,135,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-004,clrs,en,L1,"Which procedures allow the heap data structure to implement a priority queue, and what is their running time?",174,174,174,184,183,170,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-005,clrs,en,L1,Who is credited with inventing counting sort in 1954?,232,232,1307,63,63,1237,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-006,clrs,en,L1,"What is the expected running time of RANDOMIZED-SELECT, assuming the elements are distinct?",236,236,234,247,205,238,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-007,clrs,en,L1,"Under reasonable assumptions, what is the average time to search for an element in a hash table?",274,274,280,280,281,280,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-008,clrs,en,L1,"In the 0-1 knapsack example with a 50-pound knapsack, which items does the optimal solution take?",447,447,1159,448,448,1159,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-009,clrs,en,L1,What does B-TREE-SEARCH return when the key is not found and x is a leaf?,513,513,517,512,512,521,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-010,clrs,en,L1,"In a disjoint-set data structure with n MAKE-SET operations, what is the maximum number of UNION operations?",583,583,588,583,597,587,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-011,clrs,en,L1,How is the work of a multithreaded computation defined?,800,800,801,798,799,801,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-012,clrs,en,L1,What are computations called when round-off errors become amplified and lead to incorrect results?,834,834,923,944,1036,25,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-013,clrs,en,L1,"According to the fundamental theorem of linear programming, what are the possible outcomes for any linear program?",912,913,912,907,873,913,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,clrs-014,clrs,en,L1,"Trial division by all integers up to R factors any number up to R^2. For the same amount of work, up to what size can POLLARD-RHO factor a number?",997,997,1001,998,1300,999,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-015,clrs,en,L1,"Besides text-editing programs, what other applications of string-matching algorithms are mentioned?",1006,1006,1011,1007,1016,791,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-016,clrs,en,L1,Who invented the Knuth-Morris-Pratt algorithm?,1034,1034,1034,1274,63,1004,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-017,clrs,en,L1,Since what year has the P ≠ NP question been an open research problem?,1069,1069,1069,1126,1085,1085,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-018,clrs,en,L2,"When inserting a new element into the already-sorted prefix, how far does insertion sort typically have to look, and what does that mean for its typical running time?",49,45,33,70,48,70,8,0,0,0,1,1,1,0.125,0
+hybrid_rrf+reranker,clrs-019,clrs,en,L2,Why is finding the contiguous stretch of an array with the largest total trivial when no entries are negative?,91,91,95,90,951,708,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-020,clrs,en,L2,What compiler technique lets quicksort get rid of its second recursive call by using a loop instead?,209,209,200,196,209,192,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-021,clrs,en,L2,"In the idealized model for open addressing, what is assumed about the order in which table slots are tried for a given key?",295,291,295,295,291,297,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,clrs-022,clrs,en,L2,"In the book's three-matrix example, how big a difference does the choice of grouping make to the number of scalar multiplications?",392,392,392,393,392,393,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-023,clrs,en,L2,"How much time and memory does the bottom-up procedure for choosing the best order of matrix multiplications need, and why?",398,410,393,386,396,396,7,0,0,0,1,1,1,0.1429,0
+hybrid_rrf+reranker,clrs-024,clrs,en,L2,"In the scheduling-non-overlapping-events problem, after greedily picking the event that ends earliest, what is left to solve?",438,438,438,444,439,444,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-025,clrs,en,L2,"In the potential-function style of amortized analysis, what does it mean when an operation is charged less than it actually costs?",481,477,472,472,477,481,5,0,0,1,1,1,1,0.2,0
+hybrid_rrf+reranker,clrs-026,clrs,en,L2,What running time results from a recurrence that shrinks the universe size to its square root at each level while doing constant work per level?,558,558,558,115,575,197,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-027,clrs,en,L2,What everyday example does the book use to illustrate ordering tasks that have precedence constraints in a DAG?,633,678,633,634,633,678,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,clrs-028,clrs,en,L2,"What determines how fast Dijkstra's algorithm runs, and at most how many times can it lower a vertex's key overall?",682,682,682,679,679,684,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-029,clrs,en,L2,"Why hasn't one standard model of parallel computing been widely accepted, the way the RAM model was for serial computing?",793,793,832,44,45,44,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-030,clrs,en,L2,"Algebraically, how does the simplex method move from one corner of the feasible region to another?",870,869,869,870,871,871,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf+reranker,clrs-031,clrs,en,L2,"What two things does an electronic signature confirm, and who is able to check it?",982,979,982,982,982,985,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,clrs-032,clrs,en,L2,Why can the same Θ(k)-time algorithm count as polynomial or exponential depending on how the input number k is written down?,1077,1077,1077,948,1069,1149,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-033,clrs,zh,L3,RB-INSERT-FIXUP 的 while 循环所维护的 loop invariant 中，红黑树最多会违反哪几条 red-black properties？,339,339,339,340,337,341,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-034,clrs,zh,L3,如何证明 HUFFMAN 算法产生的是 optimal prefix code（最优前缀码）？,456,454,456,452,457,454,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,clrs-035,clrs,zh,L3,Fibonacci heap 中 extract-min（抽取最小节点）操作的实际代价 (actual work) 是多少？,539,683,534,532,539,531,4,0,0,1,1,1,1,0.25,0
+hybrid_rrf+reranker,clrs-036,clrs,zh,L3,单源最短路径中，每个顶点的 predecessor 属性 v.π 有什么作用？最短路径最多包含多少条边？,668,668,697,673,695,671,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-037,clrs,zh,L3,Floyd-Warshall 的递归定义中，为什么 d_ij^(0) = w_ij？,715,716,718,720,720,720,20,0,0,0,0,1,1,0.05,0
+hybrid_rrf+reranker,clrs-038,clrs,zh,L3,迭代版 FFT (iterative FFT) 相比 Section 30.2 的递归版有什么优势？,936,936,936,928,932,921,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-039,clrs,zh,L3,"扩展欧几里得算法 EXTENDED-EUCLID 在 b ≠ 0 时，如何从递归结果 (d', x', y') 得到系数 x 和 y？",959,959,959,958,958,958,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-040,clrs,zh,L3,在 formal language 的框架下，复杂度类 P 是如何定义的？,1080,1074,1080,1076,1085,1088,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,clrs-041,clrs,en,L4,"Why does a naive recursive solution like RECURSIVE-MATRIX-CHAIN take exponential time, and how does dynamic programming avoid that cost?",380 406,410,407,405,410,386,6,0,0,0,1,1,1,0.1667,0
+hybrid_rrf+reranker,clrs-042,clrs,en,L4,"Compare the recursion tree for merge sort's recurrence T(n) = 2T(n/2) + cn with the one for T(n) = 3T(n/4) + cn^2: branching factor, subproblem size at depth i, and cost per node.",58 111,109,58,59,111,58,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf+reranker,clrs-043,clrs,en,L4,"Which red-black properties does RB-DELETE-FIXUP restore, and what is the worst-case bound on structural modifications for a sequence of m RB-INSERT and RB-DELETE operations?",347 495,495,496,347,346,347,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-044,clrs,en,L4,Contrast how many augmentations Ford-Fulkerson may need in the book's bad example with the bound on saturating pushes in the generic push-relabel algorithm.,747 766,766,767,766,764,757,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-045,clrs,en,L4,"Compare the costs of polynomial operations using the FFT: multiplying two degree-bound-n polynomials, evaluating at one point, at all n complex roots of unity, and at n arbitrary points. Why must degree-bounds be doubled before multiplying?",925 944,925,930,944,920,931,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf+reranker,clrs-046,clrs,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),145,32,136,50,50,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,clrs-047,clrs,en,L5,How does Python's Timsort choose its minimum run length?,(none),236,47,241,1064,237,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,clrs-048,clrs,en,L5,What is the time complexity of A* search when the heuristic is consistent?,(none),281,1278,499,1080,165,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,clrs-049,clrs,zh,L5,Transformer 模型中 self-attention 的时间复杂度是多少？,(none),1290,242,1306,426,1300,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf+reranker,clrs-050,clrs,en,L5,How does leader election work in the Raft consensus protocol?,(none),237,28,237,537,1044,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,d2l-zh-001,d2l-zh,zh,L1,图3.1.2中表示线性回归的神经网络层数是多少?为什么计算层数时不考虑输入层?,111,111,262,4,105,103,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-002,d2l-zh,zh,L1,"在softmax回归实验中,精度(accuracy)是如何定义的?",129,129,138,142,420,126,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-003,d2l-zh,zh,L1,什么是泛化误差(generalization error)?,160,160,808,82,696,107,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-004,d2l-zh,zh,L1,"当输入值精确等于0时,ReLU函数的导数默认取多少?",151,151,150,154,152,262,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-005,d2l-zh,zh,L1,LeNet是由谁、在哪一年、在哪个机构提出的?最初的目的是什么?,267,267,280,293,81,309,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-006,d2l-zh,zh,L1,统计学家把训练数据上的平均损失称为什么?它用来近似什么?,195,195,736,56,163,81,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-007,d2l-zh,zh,L1,"在统计学中,对超出已知观测范围进行预测叫什么?在现有观测值之间进行估计叫什么?",316,316,323,361,107,170,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-008,d2l-zh,zh,L1,tokenize函数支持哪两种词元类型?遇到其他类型会怎样?,325,327,534,746,325,731,4,0,0,1,1,1,1,0.25,0
+tfidf_pipeline,d2l-zh-009,d2l-zh,zh,L1,什么是循环神经网络(RNNs)?,339,380,406,355,343,273,32,0,0,0,0,0,1,0.0312,0
+tfidf_pipeline,d2l-zh-010,d2l-zh,zh,L1,"在图9.8.1的贪心搜索例子中,预测输出序列的条件概率是多少?",403,403,403,404,262,399,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-011,d2l-zh,zh,L1,硬盘驱动器(HDD)的转速大约是多少?大约能达到多少IOPs?,548,548,262,557,343,546,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-012,d2l-zh,zh,L1,“计算性能”一章集中讨论了影响计算性能的哪些主要因素?,529,529,580,22,536,564,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-013,d2l-zh,zh,L1,"在BERT遮蔽语言模型的数据生成中,被选中预测的词元有多大比例被替换成“<mask>”?其余情况如何处理?",727,727,721,736,725,767,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-014,d2l-zh,zh,L1,单发多框检测(SSD)论文中选用的基础网络是什么?,620,620,623,629,621,81,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-015,d2l-zh,zh,L1,"read_imdb读取的IMDb评论数据集中,训练集数目是多少?",739,741,738,741,739,262,4,0,0,1,1,1,1,0.25,0
+tfidf_pipeline,d2l-zh-016,d2l-zh,zh,L1,"在房价预测的K折验证实验中,5-折验证的平均训练log rmse和平均验证log rmse分别是多少?",208,208,210,262,209,689,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-017,d2l-zh,zh,L1,"CIFAR-10训练图像增广中,图像先被放大到多少像素,随机裁剪后又被缩放到多少像素?",668,664,589,586,641,671,18,0,0,0,0,1,1,0.0556,0
+tfidf_pipeline,d2l-zh-018,d2l-zh,zh,L1,"在微调模型中,输出层的学习率是其他层的多少倍?",594,595,339,476,177,356,14,0,0,0,0,1,1,0.0714,0
+tfidf_pipeline,d2l-zh-019,d2l-zh,zh,L2,"如果某一层需要一个在训练过程中始终不被更新的权重,在MXNet中应该怎么实现?",218,23,177,538,231,237,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,d2l-zh-020,d2l-zh,zh,L2,"语言模型中,为了让数据集里从未出现过的词组合也能获得非零概率,常用什么处理方法?",330,330,383,211,727,329,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-021,d2l-zh,zh,L2,"用[1, -1]卷积核进行互相关检测边缘时,为什么把图像转置后就检测不到边缘了?",251,253,255,165,251,620,4,0,0,1,1,1,1,0.25,0
+tfidf_pipeline,d2l-zh-022,d2l-zh,zh,L2,"与AlexNet相比,NiN在网络末端用什么替代了全连接层?这样设计有什么好处和代价?",287,277,285,287,280,288,3,0,1,1,1,1,1,0.3333,0
+tfidf_pipeline,d2l-zh-023,d2l-zh,zh,L2,“批量规范化”这个名字是怎么来的?,294,295,301,301,296,442,6,0,0,0,1,1,1,0.1667,0
+tfidf_pipeline,d2l-zh-024,d2l-zh,zh,L2,有没有一种比LSTM结构更简单、效果相当而计算更快的门控循环结构?,362,368,362,367,361,394,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,d2l-zh-025,d2l-zh,zh,L2,"训练序列到序列模型时,把真实的目标序列(而不是模型上一步的预测)送入解码器作为输入,这种做法叫什么?",398,392,398,719,40,323,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,d2l-zh-026,d2l-zh,zh,L2,"梯度下降时学习率设得太大或太小,分别会出现什么现象?",469,483,503,490,476,220,13,0,0,0,0,1,1,0.0769,0
+tfidf_pipeline,d2l-zh-027,d2l-zh,zh,L2,"为什么实践中每个epoch都是无放回地遍历训练数据,而不是有放回地随机采样?",483,335,417,162,477,558,17,0,0,0,0,1,1,0.0588,0
+tfidf_pipeline,d2l-zh-028,d2l-zh,zh,L2,"在环形拓扑中同步梯度时,如果把梯度切成n块并行传递,聚合时间会怎样随节点数变化?",575,575,573,495,579,576,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-029,d2l-zh,zh,L2,"目标检测模型输出了很多围绕同一目标、高度重叠的预测框,该如何精简?",609,620,609,616,619,596,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,d2l-zh-030,d2l-zh,zh,L2,转置卷积中的填充与普通卷积中的填充有什么不同?,646,646,285,620,655,396,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-031,d2l-zh,zh,L2,为什么word2vec、GloVe这类预训练词向量无法区分“bank”在不同句子中的含义?,683,717,706,699,712,707,7,0,0,0,1,1,1,0.1429,0
+tfidf_pipeline,d2l-zh-032,d2l-zh,zh,L2,字节对编码(BPE)学到的子词是否与数据集无关?能否用于其他数据集?,710,708,711,590,15,764,11,0,0,0,0,1,1,0.0909,0
+tfidf_pipeline,d2l-zh-033,d2l-zh,zh,L2,"在GPU上训练时,为什么每个小批量都把损失打印到命令行会拖慢训练?",242,569,242,560,558,789,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,d2l-zh-034,d2l-zh,en,L3,"In the GloVe co-occurrence table, why is P(solid|ice)/P(solid|steam) large (≈8.9) while the ratio for 'water' is close to 1?",706,101,354,706,805,555,3,0,1,1,1,1,1,0.3333,0
+tfidf_pipeline,d2l-zh-035,d2l-zh,en,L3,"Why can GPT only look left-to-right, and how does its downstream fine-tuning differ from ELMo?",717,717,594,101,799,567,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-036,d2l-zh,zh,L3,Which probabilistic graphical model does the book use to motivate 双向循环神经网络 (bidirectional RNNs)?,378,812,380,47,743,726,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,d2l-zh-037,d2l-zh,en,L3,When should additive attention be used instead of scaled dot-product attention?,424,424,449,809,765,427,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-038,d2l-zh,zh,L3,"What are the three stages of a fully convolutional network (全卷积网络) for semantic segmentation, and how is its transposed convolution initialized?",655,805,649,101,813,771,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,d2l-zh-039,d2l-zh,en,L3,Why is accuracy rarely the right metric once an ML system is used for automated decisions?,199,671,101,809,449,555,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,d2l-zh-040,d2l-zh,en,L3,"In the MultiHeadAttention implementation, what shape do queries/keys/values have after transpose_qkv?",432,432,812,424,416,432,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-041,d2l-zh,zh,L4,"Adagrad的学习率衰减过于剧烈,RMSProp和Adam/Yogi分别是如何改进这一问题的?",506 511 519,512,513,519,516,322,3,0,1,1,1,1,1,0.3333,0
+tfidf_pipeline,d2l-zh-042,d2l-zh,zh,L4,Transformer的位置编码与BERT的位置嵌入有什么区别?,438 720,719,451,439,718,440,7,0,0,0,1,1,1,0.1429,0
+tfidf_pipeline,d2l-zh-043,d2l-zh,zh,L4,暂退法(Dropout)在理论上如何保证期望不变?在代码实现中训练和测试阶段分别怎么处理?,177 180,181,178,177,179,301,3,0,1,1,1,1,1,0.3333,0
+tfidf_pipeline,d2l-zh-044,d2l-zh,zh,L4,softmax的从零实现和简洁实现在数值计算上有什么不同?为什么简洁实现要这样改?,135 143,142,569,145,420,620,13,0,0,0,0,1,1,0.0769,0
+tfidf_pipeline,d2l-zh-045,d2l-zh,zh,L4,"skip_gram函数中,npx.batch_dot的输出为什么是(批量大小,1,max_len)?",416 701,701,760,730,424,622,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,d2l-zh-046,d2l-zh,zh,L5,如何使用PyTorch Lightning配置多节点分布式训练?,(none),537,449,24,53,1,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,d2l-zh-047,d2l-zh,zh,L5,扩散模型(Diffusion Model)的前向加噪过程是如何定义的?,(none),724,37,314,126,593,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,d2l-zh-048,d2l-zh,en,L5,What is the time complexity of Dijkstra's algorithm using a Fibonacci heap?,(none),101,354,813,37,812,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,d2l-zh-049,d2l-zh,zh,L5,"用LoRA微调大语言模型时,秩r一般设为多少比较合适?",(none),727,329,383,717,343,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,d2l-zh-050,d2l-zh,zh,L5,红烧肉最正宗的做法是什么?,(none),81,801,764,233,56,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,LLMbookzh-001,LLMbookzh,zh,L1,这种大模型具有但小模型不具有的能力通常被称为什么?,18,18,116,19,36,16,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-002,LLMbookzh,zh,L1,"在给定算力预算的条件下,扩展法则的三个基本公式中,αN、αD、αC 分别约为多少?",33,33,35,34,335,32,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-003,LLMbookzh,zh,L1,OpenAI 提供的三种文本表征 API 支持的输入长度都是多少个词元?,54,54,43,324,40,152,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-004,LLMbookzh,zh,L1,WebText 是通过抓取 Reddit 上获得至少几个赞的外链得到的?文本总量是多少?,57,57,82,54,368,74,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-005,LLMbookzh,zh,L1,Dolly 数据集包含多少个人类生成的数据实例?由哪家公司发布?,63,63,151,312,61,197,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-006,LLMbookzh,zh,L1,"Dolma 采用基于规则的方法过滤隐私内容时,主要标注了哪三类敏感信息?",77,77,74,77,278,75,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-007,LLMbookzh,zh,L1,BPE 算法最早是在哪一年被提出的?最初用于什么?,85,85,116,88,207,93,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-008,LLMbookzh,zh,L1,"LLaMA 的预训练数据中,来自 arXiv 的科学数据占比是多少?",90,376,90,50,161,358,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,LLMbookzh-009,LLMbookzh,zh,L1,目前常用的预训练任务主要分为哪三类?,126,126,55,262,71,54,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-010,LLMbookzh,zh,L1,"以 LLaMA (7B) 为例,按参数量计算公式得到的参数量是多少?",138,138,50,245,176,48,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-011,LLMbookzh,zh,L1,"在另外一些参考文献中,指令微调也被称为什么?",150,150,159,31,158,161,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-012,LLMbookzh,zh,L1,"在指令微调代码实践中,IGNORE_INDEX 的值被设置为多少?",168,169,168,161,171,167,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,LLMbookzh-013,LLMbookzh,zh,L1,"在实践中,束搜索中束的数量通常设定在什么范围?当 n=1 时会发生什么?",215,215,292,216,215,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-014,LLMbookzh,zh,L1,"根据零点因子 Z 是否为零,均匀量化可以进一步分为哪两类?",231,231,230,216,239,237,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-015,LLMbookzh,zh,L1,Sheared LLaMA 将 LLaMA-2 (7B) 剪枝到多大参数规模?继续预训练后恢复到原始模型多少预测精度?,246,245,173,246,50,47,3,0,1,1,1,1,1,0.3333,0
+tfidf_pipeline,LLMbookzh-016,LLMbookzh,zh,L1,多智能体系统的协同机制通常包括哪三种?,284,283,284,283,286,282,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,LLMbookzh-017,LLMbookzh,zh,L1,XSum 数据集包含了多少篇 BBC 新闻文章?时间范围是?,302,302,56,307,312,326,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-018,LLMbookzh,zh,L1,HellaSwag 数据集包含大约多少个情景描述?这些描述主要来源于哪里?,312,312,312,333,58,386,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-019,LLMbookzh,zh,L2,"模型预测下一个词越来越准,却在某些任务上越做越差——这种反常现象叫什么?",36,359,36,226,178,137,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,LLMbookzh-020,LLMbookzh,zh,L2,书中用什么日常生活中的例子来通俗解释扩展法则与涌现能力之间的关系?,39,36,39,35,172,7,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,LLMbookzh-021,LLMbookzh,zh,L2,"如果评测用的题目事先已经混进了训练语料,这种问题在书中被称为什么?",81,71,223,18,73,,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,LLMbookzh-022,LLMbookzh,zh,L2,怎样量化衡量一个分词器把文本'压'得好不好?如何计算?,89,89,230,137,86,231,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-023,LLMbookzh,zh,L2,"只按词元所处位置分配一个固定向量的做法,为什么不利于处理长文本?",96,96,121,361,116,96,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-024,LLMbookzh,zh,L2,"Transformer 编码器中把每一层的输入直接加到输出上,这样设计是为了解决什么问题?",99,99,96,227,98,374,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-025,LLMbookzh,zh,L2,"想粗略估算一次预训练要跑多少天,书里给了什么方法?用 LLaMA (65B) 算出来大约多少天?",140,171,46,140,72,50,3,0,1,1,1,1,1,0.3333,0
+tfidf_pipeline,LLMbookzh-026,LLMbookzh,zh,L2,"只用英文指令数据微调的模型,能力能迁移到其他语言吗?书中举了什么例子?",159,159,157,52,161,167,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-027,LLMbookzh,zh,L2,"用低秩适配方法微调 LLaMA (7B) 时,显存需求大约能从多少降到多少?",163,50,143,162,176,48,26,0,0,0,0,0,1,0.0385,0
+tfidf_pipeline,LLMbookzh-028,LLMbookzh,zh,L2,为什么研究者要寻找不依赖强化学习的对齐方法?基于人类反馈的强化学习在工程上有哪些麻烦?,199,181,199,43,21,182,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,LLMbookzh-029,LLMbookzh,zh,L2,"同一批次里的请求输出长短不一,导致要等最慢的那条生成完,vLLM 用什么技术来缓解这个问题?",225,228,317,225,310,229,3,0,1,1,1,1,1,0.3333,0
+tfidf_pipeline,LLMbookzh-030,LLMbookzh,zh,L2,利用一个大模型和一个小模型的输出概率差来挑选下一个词的解码方法叫什么?,218,213,226,241,218,359,4,0,0,1,1,1,1,0.25,0
+tfidf_pipeline,LLMbookzh-031,LLMbookzh,zh,L2,"设计思维链示例时,为什么倾向于挑选推理步骤更多的例子?",266,266,266,267,198,361,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-032,LLMbookzh,zh,L2,"大模型做大数运算或解方程时容易出错,有哪些办法可以提升它的数值计算能力?",318,318,317,140,267,358,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-033,LLMbookzh,zh,L2,"检索回来的参考文档太长、还夹杂无关内容时,可以在输入端做哪些处理?",338,248,338,292,86,259,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,LLMbookzh-034,LLMbookzh,en,L3,"According to Ilya Sutskever, what is large-scale pre-training essentially doing?",30,368,126,127,169,252,32,0,0,0,0,0,1,0.0312,0
+tfidf_pipeline,LLMbookzh-035,LLMbookzh,zh,L3,GPT-4 Turbo 的 context window 有多大?knowledge cutoff 扩展到了什么时候?,45,53,390,45,39,252,3,0,1,1,1,1,1,0.3333,0
+tfidf_pipeline,LLMbookzh-036,LLMbookzh,en,L3,Why does the Transformer need position embeddings? What does self-attention degrade into without them?,104,254,112,96,374,323,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,LLMbookzh-037,LLMbookzh,en,L3,"In PPO, why is the probability ratio r_t(θ) clipped to [1−ε, 1+ε]?",193,254,193,233,175,243,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,LLMbookzh-038,LLMbookzh,zh,L3,"In in-context learning, 示例设计 (demonstration design) 有哪三个关键因素?",258,381,253,37,258,233,4,0,0,1,1,1,1,0.25,0
+tfidf_pipeline,LLMbookzh-039,LLMbookzh,en,L3,How is a model's expected win rate calculated in the Elo rating system used for pairwise LLM comparison?,295,254,85,280,111,389,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,LLMbookzh-040,LLMbookzh,en,L3,"What did SQuAD 2.0 add compared with the original SQuAD, and what is SQuAD's main evaluation metric?",308,308,251,384,316,300,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-041,LLMbookzh,zh,L4,"对 LLaMA (65B) 分别进行全参数指令微调和 LoRA 微调,所需的 A800 GPU 数量、批次大小和微调时间有何差异?",171 176,171,176,176,164,140,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-042,LLMbookzh,zh,L4,InstructGPT 采用的 RLHF 与 DPO 在优化策略模型的方式上有什么不同?,183 204,211,205,44,195,199,20,0,0,0,0,1,1,0.05,0
+tfidf_pipeline,LLMbookzh-043,LLMbookzh,zh,L4,完整自注意力机制与状态空间模型在建模序列时的计算复杂度有何不同?为什么?,108 123,108,123,108,122,97,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,LLMbookzh-044,LLMbookzh,zh,L4,"以 8 比特为例,对称量化与非对称量化的参数设置有何不同?将 LLaMA (7B) 从 FP16 量化到 INT8/INT4 后,显存和性能如何变化?",232 241,231,241,232,237,50,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,LLMbookzh-045,LLMbookzh,zh,L4,"基于大语言模型的规划框架与智能体框架中,'制定方案'和'执行动作'分别由哪些组件负责?",273 281,272,282,278,275,279,13,0,0,0,0,1,1,0.0769,0
+tfidf_pipeline,LLMbookzh-046,LLMbookzh,zh,L5,红烧肉怎么做才好吃?,(none),,,,,,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,1
+tfidf_pipeline,LLMbookzh-047,LLMbookzh,zh,L5,GPT-4 的参数量是多少?,(none),44,53,45,139,346,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,LLMbookzh-048,LLMbookzh,zh,L5,FlashAttention-2 相比标准注意力实现能带来多少倍的训练加速?,(none),109,224,142,378,188,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,LLMbookzh-049,LLMbookzh,en,L5,"How many experts does Mixtral activate per token, and how many experts does each layer have in total?",(none),111,316,252,258,258,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,LLMbookzh-050,LLMbookzh,zh,L5,LoRA 最早是由哪个机构、在哪一年提出的?,(none),163,175,164,174,176,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,p300-001,p300,en,L1,What is a morpheme?,45,45,45,13,,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-002,p300,en,L1,Which two tokenization algorithms are widely used in modern language models?,51,51,290,461,214,3,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-003,p300,en,L1,"In the regular expression example for finding 'the', what are false positives and false negatives?",61,61,122,56,641,249,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-004,p300,en,L1,How does gradient descent find the minimum of a function?,111,111,111,113,110,114,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-005,p300,en,L1,Under what name was logistic regression developed and applied to NLP at IBM Research in the early 1990s?,133,133,133,214,389,157,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-006,p300,en,L1,How does top-k sampling work?,208,208,208,209,206,206,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-007,p300,en,L1,What does Direct Preference Optimization (DPO) avoid that RL-based preference training requires?,230,231,230,218,224,231,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,p300-008,p300,en,L1,What is a postings list in an inverted index?,268,268,268,269,,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-009,p300,en,L1,"Since when have TREC evaluations been run, and when was the QA track added?",282,282,56,,,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-010,p300,en,L1,"What are cycles per second called, and what is the period of a wave?",346,346,56,599,68,640,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-011,p300,en,L1,What is dynamic time warping?,389,389,641,,,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-012,p300,en,L1,How are TTS systems evaluated by humans?,401,401,303,392,427,404,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-013,p300,en,L1,Which algorithms do CRF taggers use for inference and for training?,429,429,431,423,38,425,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-014,p300,en,L1,What are graph-based methods for creating dependency structures based on?,478,478,471,543,461,533,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-015,p300,en,L1,"Which typology of affective states does the chapter use, and what categories does it include?",527,527,545,35,527,35,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-016,p300,en,L1,Why must a dialogue system use coreference when the user says 'I'll take the second one' after hearing about two flights?,547,547,600,602,275,269,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-017,p300,en,L1,What percentage of PDTB relations are either within a single sentence or span two adjacent sentences?,586,586,585,525,581,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-018,p300,en,L2,"What do you call a language in which a single ending packs several grammatical meanings together, and what English example is given?",46,40,599,42,,,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,p300-019,p300,en,L2,What is the most helpful way to picture the operations needed to turn 'intention' into 'execution'?,68,68,173,383,69,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-020,p300,en,L2,"Why does a 4-gram model trained on Shakespeare have so few choices for the next word, often copying his text?",87,87,316,17,319,87,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-021,p300,en,L2,"If a name like 'Jurafsky' never appears in training but shows up at test time, why isn't that fatal for modern language models?",89,89,96,,,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-022,p300,en,L2,"When comparing two classifiers, what does a very small p-value tell us about the observed gap in performance?",125,125,40,80,,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-023,p300,en,L2,How could you work out what an unfamiliar vegetable name means just from the sentences it appears in?,139,588,,,,,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,p300-024,p300,en,L2,How does word2vec obtain training labels without anyone hand-annotating data?,145,145,,,,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-025,p300,en,L2,How does the size of the surrounding window used to build word vectors change which words come out as most similar?,151,151,141,540,357,144,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-026,p300,en,L2,"Backprop is a special case of which more general way of computing derivatives, and what representation does it rely on?",178,178,221,299,180,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-027,p300,en,L2,"Why is it wasteful at generation time to recompute keys and values for earlier tokens, and what technique fixes this?",212,374,212,204,310,236,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,p300-028,p300,en,L2,"In an LSTM, which component throws away context that is no longer useful, and how does it do it?",324,324,324,35,323,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-029,p300,en,L2,Why are speech features collected on a perceptually warped frequency scale instead of equally across all frequencies?,359,359,489,349,360,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-030,p300,en,L2,How does CTC avoid transcribing silence as letters while still allowing genuine double letters?,381,381,381,,,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-031,p300,en,L2,Why is finding and labeling names of people and places harder than tagging each word with its part of speech?,414,318,44,432,327,6,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,p300-032,p300,en,L2,Why can 'herself' but not 'her' refer to Janet in 'Janet bought ___ a bottle of fish sauce'?,554,554,,,,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-033,p300,zh,L3,bigram 语言模型中，P(wn|wn−1) 如何用 count 来估计？为什么每个句子要加 <s> 和 </s>？,79,79,92,90,92,79,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-034,p300,zh,L3,在垃圾邮件检测的 confusion matrix（混淆矩阵）中，true positive 和 false negative 分别指什么？,121,121,123,121,249,122,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-035,p300,zh,L3,Transformer 里的 feedforward layer 为什么叫 position-wise？它的参数在不同位置、不同层之间是否共享？,194,194,203,192,201,202,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-036,p300,zh,L3,一个 transformer block 内部的计算顺序是什么？residual connection 加在哪里？,199,192,196,293,256,196,17,0,0,0,0,1,1,0.0588,0
+tfidf_pipeline,p300-037,p300,zh,L3,简单 RNN 中 hidden state h_t 是怎么计算的？参数矩阵 W、U、V 的维度分别是多少？,312,330,319,314,329,332,27,0,0,0,0,0,1,0.037,0
+tfidf_pipeline,p300-038,p300,zh,L3,Viterbi 算法的 initialization、recursion、termination 三个步骤分别在做什么？,419,419,419,,,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-039,p300,zh,L3,依存句法结构 (dependency structure) 用什么样的图来表示？V 和 A 分别代表什么？,459,457,478,457,461,479,7,0,0,0,1,1,1,0.1429,0
+tfidf_pipeline,p300-040,p300,zh,L3,e2e-coref 模型在计算 span representation 时，用哪三个 token 来表示一个 span？,563,563,564,449,450,563,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-041,p300,en,L4,Compare how attention works in a transformer layer versus in an RNN encoder-decoder.,188 332,293,326,329,335,317,18,0,0,0,0,1,1,0.0556,0
+tfidf_pipeline,p300-042,p300,en,L4,"What are the trade-offs between single-encoder and dual-encoder dense retrieval, and how can a retriever be better adapted for RAG?",273 277,280,333,56,273,235,4,0,0,1,1,1,1,0.25,0
+tfidf_pipeline,p300-043,p300,en,L4,"What does the chrF metric measure, and in the 'witness for the past' example, how do the two hypotheses score?",302 306,302,304,40,295,78,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-044,p300,en,L4,How does the neural span-based constituency parser (Kitaev et al.) differ from classic CKY?,443 449,449,451,449,455,633,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-045,p300,en,L4,Compare transition-based and graph-based dependency parsing.,462 471,471,478,462,7,469,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,p300-046,p300,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),219,284,54,,,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,p300-047,p300,en,L5,What is the running time of Dijkstra's algorithm with a Fibonacci heap?,(none),474,,,,,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,p300-048,p300,en,L5,What are the ACID properties of database transactions?,(none),56,553,599,151,553,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,p300-049,p300,zh,L5,如何在 PyTorch 中设置 learning rate scheduler？,(none),111,114,183,114,475,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,p300-050,p300,en,L5,How do you configure BGP routing on a Cisco router?,(none),40,220,,,,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,clrs-001,clrs,en,L1,"Which chapter studies linear programming, the technique used for problems such as placing oil wells or assigning airline crews to flights?",28,870,28,871,527,790,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,clrs-002,clrs,en,L1,Why is Strassen's algorithm often not the method of choice for matrix multiplication from a practical point of view?,132,132,132,848,528,1242,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-003,clrs,en,L1,"In the hiring problem, what is the total cost of the algorithm in terms of the interviewing cost ci, the hiring cost ch, and m people hired?",136,142,136,477,160,121,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,clrs-004,clrs,en,L1,"Which procedures allow the heap data structure to implement a priority queue, and what is their running time?",174,174,184,172,174,566,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-005,clrs,en,L1,Who is credited with inventing counting sort in 1954?,232,232,217,170,217,215,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-006,clrs,en,L1,"What is the expected running time of RANDOMIZED-SELECT, assuming the elements are distinct?",236,236,202,237,238,138,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-007,clrs,en,L1,"Under reasonable assumptions, what is the average time to search for an element in a hash table?",274,274,280,277,165,1005,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-008,clrs,en,L1,"In the 0-1 knapsack example with a 50-pound knapsack, which items does the optimal solution take?",447,1159,448,1158,380,448,6,0,0,0,1,1,1,0.1667,0
+tfidf_pipeline,clrs-009,clrs,en,L1,What does B-TREE-SEARCH return when the key is not found and x is a leaf?,513,513,521,311,95,512,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-010,clrs,en,L1,"In a disjoint-set data structure with n MAKE-SET operations, what is the maximum number of UNION operations?",583,583,583,654,587,586,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-011,clrs,en,L1,How is the work of a multithreaded computation defined?,800,800,798,801,816,1313,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-012,clrs,en,L1,What are computations called when round-off errors become amplified and lead to incorrect results?,834,834,923,944,199,,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-013,clrs,en,L1,"According to the fundamental theorem of linear programming, what are the possible outcomes for any linear program?",912,912,867,913,907,870,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-014,clrs,en,L1,"Trial division by all integers up to R factors any number up to R^2. For the same amount of work, up to what size can POLLARD-RHO factor a number?",997,997,987,998,807,503,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-015,clrs,en,L1,"Besides text-editing programs, what other applications of string-matching algorithms are mentioned?",1006,1006,791,1007,1016,1033,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-016,clrs,en,L1,Who invented the Knuth-Morris-Pratt algorithm?,1034,1034,1023,1023,1274,1031,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-017,clrs,en,L1,Since what year has the P ≠ NP question been an open research problem?,1069,1090,1069,431,1085,1074,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,clrs-018,clrs,en,L2,"When inserting a new element into the already-sorted prefix, how far does insertion sort typically have to look, and what does that mean for its typical running time?",49,69,137,367,573,228,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,clrs-019,clrs,en,L2,Why is finding the contiguous stretch of an array with the largest total trivial when no entries are negative?,91,245,274,90,175,175,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,clrs-020,clrs,en,L2,What compiler technique lets quicksort get rid of its second recursive call by using a loop instead?,209,209,563,806,956,238,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-021,clrs,en,L2,"In the idealized model for open addressing, what is assumed about the order in which table slots are tried for a given key?",295,290,295,291,685,136,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,clrs-022,clrs,en,L2,"In the book's three-matrix example, how big a difference does the choice of grouping make to the number of scalar multiplications?",392,392,392,393,445,395,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-023,clrs,en,L2,"How much time and memory does the bottom-up procedure for choosing the best order of matrix multiplications need, and why?",398,387,393,715,579,439,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,clrs-024,clrs,en,L2,"In the scheduling-non-overlapping-events problem, after greedily picking the event that ends earliest, what is left to solve?",438,1211,1044,156,161,183,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,clrs-025,clrs,en,L2,"In the potential-function style of amortized analysis, what does it mean when an operation is charged less than it actually costs?",481,481,472,477,228,499,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-026,clrs,en,L2,What running time results from a recurrence that shrinks the universe size to its square root at each level while doing constant work per level?,558,558,197,977,566,111,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-027,clrs,en,L2,What everyday example does the book use to illustrate ordering tasks that have precedence constraints in a DAG?,633,465,800,633,676,466,3,0,1,1,1,1,1,0.3333,0
+tfidf_pipeline,clrs-028,clrs,en,L2,"What determines how fast Dijkstra's algorithm runs, and at most how many times can it lower a vertex's key overall?",682,682,768,682,758,349,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-029,clrs,en,L2,"Why hasn't one standard model of parallel computing been widely accepted, the way the RAM model was for serial computing?",793,44,793,45,44,795,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,clrs-030,clrs,en,L2,"Algebraically, how does the simplex method move from one corner of the feasible region to another?",870,871,869,869,870,868,4,0,0,1,1,1,1,0.25,0
+tfidf_pipeline,clrs-031,clrs,en,L2,"What two things does an electronic signature confirm, and who is able to check it?",982,979,15,135,982,982,4,0,0,1,1,1,1,0.25,0
+tfidf_pipeline,clrs-032,clrs,en,L2,Why can the same Θ(k)-time algorithm count as polynomial or exponential depending on how the input number k is written down?,1077,1077,1143,45,1149,1075,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-033,clrs,zh,L3,RB-INSERT-FIXUP 的 while 循环所维护的 loop invariant 中，红黑树最多会违反哪几条 red-black properties？,339,336,496,343,339,337,4,0,0,1,1,1,1,0.25,0
+tfidf_pipeline,clrs-034,clrs,zh,L3,如何证明 HUFFMAN 算法产生的是 optimal prefix code（最优前缀码）？,456,456,454,457,452,450,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-035,clrs,zh,L3,Fibonacci heap 中 extract-min（抽取最小节点）操作的实际代价 (actual work) 是多少？,539,538,543,531,603,184,8,0,0,0,1,1,1,0.125,0
+tfidf_pipeline,clrs-036,clrs,zh,L3,单源最短路径中，每个顶点的 predecessor 属性 v.π 有什么作用？最短路径最多包含多少条边？,668,706,573,624,554,1301,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,clrs-037,clrs,zh,L3,Floyd-Warshall 的递归定义中，为什么 d_ij^(0) = w_ij？,715,716,720,714,714,721,0,0,0,0,0,0,0,0,0
+tfidf_pipeline,clrs-038,clrs,zh,L3,迭代版 FFT (iterative FFT) 相比 Section 30.2 的递归版有什么优势？,936,941,941,936,921,940,3,0,1,1,1,1,1,0.3333,0
+tfidf_pipeline,clrs-039,clrs,zh,L3,"扩展欧几里得算法 EXTENDED-EUCLID 在 b ≠ 0 时，如何从递归结果 (d', x', y') 得到系数 x 和 y？",959,958,959,959,956,971,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,clrs-040,clrs,zh,L3,在 formal language 的框架下，复杂度类 P 是如何定义的？,1080,1078,1088,1079,1083,1079,16,0,0,0,0,1,1,0.0625,0
+tfidf_pipeline,clrs-041,clrs,en,L4,"Why does a naive recursive solution like RECURSIVE-MATRIX-CHAIN take exponential time, and how does dynamic programming avoid that cost?",380 406,406,385,1149,405,399,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-042,clrs,en,L4,"Compare the recursion tree for merge sort's recurrence T(n) = 2T(n/2) + cn with the one for T(n) = 3T(n/4) + cn^2: branching factor, subproblem size at depth i, and cost per node.",58 111,59,120,109,197,508,10,0,0,0,1,1,1,0.1,0
+tfidf_pipeline,clrs-043,clrs,en,L4,"Which red-black properties does RB-DELETE-FIXUP restore, and what is the worst-case bound on structural modifications for a sequence of m RB-INSERT and RB-DELETE operations?",347 495,496,495,496,351,336,2,0,1,1,1,1,1,0.5,0
+tfidf_pipeline,clrs-044,clrs,en,L4,Contrast how many augmentations Ford-Fulkerson may need in the book's bad example with the bound on saturating pushes in the generic push-relabel algorithm.,747 766,766,764,764,768,766,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-045,clrs,en,L4,"Compare the costs of polynomial operations using the FFT: multiplying two degree-bound-n polynomials, evaluating at one point, at all n complex roots of unity, and at n arbitrary points. Why must degree-bounds be doubled before multiplying?",925 944,944,927,925,931,919,1,1,1,1,1,1,1,1.0,0
+tfidf_pipeline,clrs-046,clrs,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),1221,524,333,165,160,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,clrs-047,clrs,en,L5,How does Python's Timsort choose its minimum run length?,(none),944,1296,62,,,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,clrs-048,clrs,en,L5,What is the time complexity of A* search when the heuristic is consistent?,(none),787,165,419,1221,1001,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,clrs-049,clrs,zh,L5,Transformer 模型中 self-attention 的时间复杂度是多少？,(none),1306,1189,497,1190,,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_pipeline,clrs-050,clrs,en,L5,How does leader election work in the Raft consensus protocol?,(none),938,62,447,282,539,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,d2l-zh-001,d2l-zh,zh,L1,图3.1.2中表示线性回归的神经网络层数是多少?为什么计算层数时不考虑输入层?,111,111,262,4,105,103,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-002,d2l-zh,zh,L1,"在softmax回归实验中,精度(accuracy)是如何定义的?",129,129,142,138,126,134,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-003,d2l-zh,zh,L1,什么是泛化误差(generalization error)?,160,160,808,803,696,810,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-004,d2l-zh,zh,L1,"当输入值精确等于0时,ReLU函数的导数默认取多少?",151,151,150,154,152,278,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-005,d2l-zh,zh,L1,LeNet是由谁、在哪一年、在哪个机构提出的?最初的目的是什么?,267,267,293,280,277,309,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-006,d2l-zh,zh,L1,统计学家把训练数据上的平均损失称为什么?它用来近似什么?,195,195,454,39,163,199,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-007,d2l-zh,zh,L1,"在统计学中,对超出已知观测范围进行预测叫什么?在现有观测值之间进行估计叫什么?",316,316,323,107,170,361,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-008,d2l-zh,zh,L1,tokenize函数支持哪两种词元类型?遇到其他类型会怎样?,325,327,327,327,327,325,5,0,0,1,1,1,1,0.2,0
+tfidf_raw,d2l-zh-009,d2l-zh,zh,L1,什么是循环神经网络(RNNs)?,339,380,343,406,355,361,14,0,0,0,0,1,1,0.0714,0
+tfidf_raw,d2l-zh-010,d2l-zh,zh,L1,"在图9.8.1的贪心搜索例子中,预测输出序列的条件概率是多少?",403,403,403,404,405,402,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-011,d2l-zh,zh,L1,硬盘驱动器(HDD)的转速大约是多少?大约能达到多少IOPs?,548,548,548,262,557,343,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-012,d2l-zh,zh,L1,“计算性能”一章集中讨论了影响计算性能的哪些主要因素?,529,529,580,536,22,534,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-013,d2l-zh,zh,L1,"在BERT遮蔽语言模型的数据生成中,被选中预测的词元有多大比例被替换成“<mask>”?其余情况如何处理?",727,727,721,727,736,727,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-014,d2l-zh,zh,L1,单发多框检测(SSD)论文中选用的基础网络是什么?,620,620,629,623,621,625,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-015,d2l-zh,zh,L1,"read_imdb读取的IMDb评论数据集中,训练集数目是多少?",739,741,738,741,739,739,4,0,0,1,1,1,1,0.25,0
+tfidf_raw,d2l-zh-016,d2l-zh,zh,L1,"在房价预测的K折验证实验中,5-折验证的平均训练log rmse和平均验证log rmse分别是多少?",208,208,208,209,210,689,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-017,d2l-zh,zh,L1,"CIFAR-10训练图像增广中,图像先被放大到多少像素,随机裁剪后又被缩放到多少像素?",668,664,589,586,665,583,12,0,0,0,0,1,1,0.0833,0
+tfidf_raw,d2l-zh-018,d2l-zh,zh,L1,"在微调模型中,输出层的学习率是其他层的多少倍?",594,595,594,590,593,339,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,d2l-zh-019,d2l-zh,zh,L2,"如果某一层需要一个在训练过程中始终不被更新的权重,在MXNet中应该怎么实现?",218,23,237,538,23,58,15,0,0,0,0,1,1,0.0667,0
+tfidf_raw,d2l-zh-020,d2l-zh,zh,L2,"语言模型中,为了让数据集里从未出现过的词组合也能获得非零概率,常用什么处理方法?",330,330,330,329,383,329,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-021,d2l-zh,zh,L2,"用[1, -1]卷积核进行互相关检测边缘时,为什么把图像转置后就检测不到边缘了?",251,253,254,255,258,249,7,0,0,0,1,1,1,0.1429,0
+tfidf_raw,d2l-zh-022,d2l-zh,zh,L2,"与AlexNet相比,NiN在网络末端用什么替代了全连接层?这样设计有什么好处和代价?",287,277,280,285,287,282,4,0,0,1,1,1,1,0.25,0
+tfidf_raw,d2l-zh-023,d2l-zh,zh,L2,“批量规范化”这个名字是怎么来的?,294,295,301,301,296,295,6,0,0,0,1,1,1,0.1667,0
+tfidf_raw,d2l-zh-024,d2l-zh,zh,L2,有没有一种比LSTM结构更简单、效果相当而计算更快的门控循环结构?,362,368,362,362,364,374,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,d2l-zh-025,d2l-zh,zh,L2,"训练序列到序列模型时,把真实的目标序列(而不是模型上一步的预测)送入解码器作为输入,这种做法叫什么?",398,392,398,402,395,445,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,d2l-zh-026,d2l-zh,zh,L2,"梯度下降时学习率设得太大或太小,分别会出现什么现象?",469,483,490,476,477,503,11,0,0,0,0,1,1,0.0909,0
+tfidf_raw,d2l-zh-027,d2l-zh,zh,L2,"为什么实践中每个epoch都是无放回地遍历训练数据,而不是有放回地随机采样?",483,335,417,671,320,172,0,0,0,0,0,0,0,0,0
+tfidf_raw,d2l-zh-028,d2l-zh,zh,L2,"在环形拓扑中同步梯度时,如果把梯度切成n块并行传递,聚合时间会怎样随节点数变化?",575,575,573,576,579,495,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-029,d2l-zh,zh,L2,"目标检测模型输出了很多围绕同一目标、高度重叠的预测框,该如何精简?",609,620,609,616,619,596,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,d2l-zh-030,d2l-zh,zh,L2,转置卷积中的填充与普通卷积中的填充有什么不同?,646,646,649,645,651,655,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-031,d2l-zh,zh,L2,为什么word2vec、GloVe这类预训练词向量无法区分“bank”在不同句子中的含义?,683,717,683,706,712,746,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,d2l-zh-032,d2l-zh,zh,L2,字节对编码(BPE)学到的子词是否与数据集无关?能否用于其他数据集?,710,708,711,708,15,710,5,0,0,1,1,1,1,0.2,0
+tfidf_raw,d2l-zh-033,d2l-zh,zh,L2,"在GPU上训练时,为什么每个小批量都把损失打印到命令行会拖慢训练?",242,569,560,242,565,558,3,0,1,1,1,1,1,0.3333,0
+tfidf_raw,d2l-zh-034,d2l-zh,en,L3,"In the GloVe co-occurrence table, why is P(solid|ice)/P(solid|steam) large (≈8.9) while the ratio for 'water' is close to 1?",706,101,354,805,810,812,16,0,0,0,0,1,1,0.0625,0
+tfidf_raw,d2l-zh-035,d2l-zh,en,L3,"Why can GPT only look left-to-right, and how does its downstream fine-tuning differ from ELMo?",717,717,594,812,101,677,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-036,d2l-zh,zh,L3,Which probabilistic graphical model does the book use to motivate 双向循环神经网络 (bidirectional RNNs)?,378,812,810,380,805,383,0,0,0,0,0,0,0,0,0
+tfidf_raw,d2l-zh-037,d2l-zh,en,L3,When should additive attention be used instead of scaled dot-product attention?,424,424,449,447,447,447,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-038,d2l-zh,zh,L3,"What are the three stages of a fully convolutional network (全卷积网络) for semantic segmentation, and how is its transposed convolution initialized?",655,805,813,812,807,807,0,0,0,0,0,0,0,0,0
+tfidf_raw,d2l-zh-039,d2l-zh,en,L3,Why is accuracy rarely the right metric once an ML system is used for automated decisions?,199,671,671,671,671,671,0,0,0,0,0,0,0,0,0
+tfidf_raw,d2l-zh-040,d2l-zh,en,L3,"In the MultiHeadAttention implementation, what shape do queries/keys/values have after transpose_qkv?",432,432,432,432,432,432,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-041,d2l-zh,zh,L4,"Adagrad的学习率衰减过于剧烈,RMSProp和Adam/Yogi分别是如何改进这一问题的?",506 511 519,512,513,516,507,509,9,0,0,0,1,1,1,0.1111,0
+tfidf_raw,d2l-zh-042,d2l-zh,zh,L4,Transformer的位置编码与BERT的位置嵌入有什么区别?,438 720,719,451,440,439,718,31,0,0,0,0,0,1,0.0323,0
+tfidf_raw,d2l-zh-043,d2l-zh,zh,L4,暂退法(Dropout)在理论上如何保证期望不变?在代码实现中训练和测试阶段分别怎么处理?,177 180,181,180,178,179,177,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,d2l-zh-044,d2l-zh,zh,L4,softmax的从零实现和简洁实现在数值计算上有什么不同?为什么简洁实现要这样改?,135 143,142,420,145,129,569,12,0,0,0,0,1,1,0.0833,0
+tfidf_raw,d2l-zh-045,d2l-zh,zh,L4,"skip_gram函数中,npx.batch_dot的输出为什么是(批量大小,1,max_len)?",416 701,701,760,422,424,416,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,d2l-zh-046,d2l-zh,zh,L5,如何使用PyTorch Lightning配置多节点分布式训练?,(none),537,24,449,576,53,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,d2l-zh-047,d2l-zh,zh,L5,扩散模型(Diffusion Model)的前向加噪过程是如何定义的?,(none),724,724,724,806,724,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,d2l-zh-048,d2l-zh,en,L5,What is the time complexity of Dijkstra's algorithm using a Fibonacci heap?,(none),101,813,810,805,812,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,d2l-zh-049,d2l-zh,zh,L5,"用LoRA微调大语言模型时,秩r一般设为多少比较合适?",(none),727,329,329,383,341,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,d2l-zh-050,d2l-zh,zh,L5,红烧肉最正宗的做法是什么?,(none),81,801,254,81,764,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,LLMbookzh-001,LLMbookzh,zh,L1,这种大模型具有但小模型不具有的能力通常被称为什么?,18,18,19,116,36,38,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-002,LLMbookzh,zh,L1,"在给定算力预算的条件下,扩展法则的三个基本公式中,αN、αD、αC 分别约为多少?",33,33,35,34,34,32,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-003,LLMbookzh,zh,L1,OpenAI 提供的三种文本表征 API 支持的输入长度都是多少个词元?,54,54,324,43,43,2,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-004,LLMbookzh,zh,L1,WebText 是通过抓取 Reddit 上获得至少几个赞的外链得到的?文本总量是多少?,57,57,57,368,54,82,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-005,LLMbookzh,zh,L1,Dolly 数据集包含多少个人类生成的数据实例?由哪家公司发布?,63,63,151,61,312,63,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-006,LLMbookzh,zh,L1,"Dolma 采用基于规则的方法过滤隐私内容时,主要标注了哪三类敏感信息?",77,77,77,74,75,61,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-007,LLMbookzh,zh,L1,BPE 算法最早是在哪一年被提出的?最初用于什么?,85,85,88,86,116,207,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-008,LLMbookzh,zh,L1,"LLaMA 的预训练数据中,来自 arXiv 的科学数据占比是多少?",90,376,370,372,367,391,26,0,0,0,0,0,1,0.0385,0
+tfidf_raw,LLMbookzh-009,LLMbookzh,zh,L1,目前常用的预训练任务主要分为哪三类?,126,126,262,263,55,71,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-010,LLMbookzh,zh,L1,"以 LLaMA (7B) 为例,按参数量计算公式得到的参数量是多少?",138,138,50,139,137,171,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-011,LLMbookzh,zh,L1,"在另外一些参考文献中,指令微调也被称为什么?",150,150,159,31,161,158,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-012,LLMbookzh,zh,L1,"在指令微调代码实践中,IGNORE_INDEX 的值被设置为多少?",168,169,168,169,161,161,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,LLMbookzh-013,LLMbookzh,zh,L1,"在实践中,束搜索中束的数量通常设定在什么范围?当 n=1 时会发生什么?",215,215,215,216,292,161,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-014,LLMbookzh,zh,L1,"根据零点因子 Z 是否为零,均匀量化可以进一步分为哪两类?",231,231,230,232,237,216,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-015,LLMbookzh,zh,L1,Sheared LLaMA 将 LLaMA-2 (7B) 剪枝到多大参数规模?继续预训练后恢复到原始模型多少预测精度?,246,245,246,173,50,47,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,LLMbookzh-016,LLMbookzh,zh,L1,多智能体系统的协同机制通常包括哪三种?,284,283,283,286,284,282,4,0,0,1,1,1,1,0.25,0
+tfidf_raw,LLMbookzh-017,LLMbookzh,zh,L1,XSum 数据集包含了多少篇 BBC 新闻文章?时间范围是?,302,302,56,61,312,307,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-018,LLMbookzh,zh,L1,HellaSwag 数据集包含大约多少个情景描述?这些描述主要来源于哪里?,312,312,312,58,333,61,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-019,LLMbookzh,zh,L2,"模型预测下一个词越来越准,却在某些任务上越做越差——这种反常现象叫什么?",36,359,36,20,178,126,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,LLMbookzh-020,LLMbookzh,zh,L2,书中用什么日常生活中的例子来通俗解释扩展法则与涌现能力之间的关系?,39,36,36,38,7,39,5,0,0,1,1,1,1,0.2,0
+tfidf_raw,LLMbookzh-021,LLMbookzh,zh,L2,"如果评测用的题目事先已经混进了训练语料,这种问题在书中被称为什么?",81,71,223,73,18,89,15,0,0,0,0,1,1,0.0667,0
+tfidf_raw,LLMbookzh-022,LLMbookzh,zh,L2,怎样量化衡量一个分词器把文本'压'得好不好?如何计算?,89,89,230,231,237,234,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-023,LLMbookzh,zh,L2,"只按词元所处位置分配一个固定向量的做法,为什么不利于处理长文本?",96,96,96,121,116,121,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-024,LLMbookzh,zh,L2,"Transformer 编码器中把每一层的输入直接加到输出上,这样设计是为了解决什么问题?",99,99,96,18,98,374,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-025,LLMbookzh,zh,L2,"想粗略估算一次预训练要跑多少天,书里给了什么方法?用 LLaMA (65B) 算出来大约多少天?",140,171,50,46,140,176,4,0,0,1,1,1,1,0.25,0
+tfidf_raw,LLMbookzh-026,LLMbookzh,zh,L2,"只用英文指令数据微调的模型,能力能迁移到其他语言吗?书中举了什么例子?",159,159,157,157,52,161,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-027,LLMbookzh,zh,L2,"用低秩适配方法微调 LLaMA (7B) 时,显存需求大约能从多少降到多少?",163,50,171,143,173,245,20,0,0,0,0,1,1,0.05,0
+tfidf_raw,LLMbookzh-028,LLMbookzh,zh,L2,为什么研究者要寻找不依赖强化学习的对齐方法?基于人类反馈的强化学习在工程上有哪些麻烦?,199,181,43,199,183,182,3,0,1,1,1,1,1,0.3333,0
+tfidf_raw,LLMbookzh-029,LLMbookzh,zh,L2,"同一批次里的请求输出长短不一,导致要等最慢的那条生成完,vLLM 用什么技术来缓解这个问题?",225,228,225,228,317,316,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,LLMbookzh-030,LLMbookzh,zh,L2,利用一个大模型和一个小模型的输出概率差来挑选下一个词的解码方法叫什么?,218,213,226,218,227,225,3,0,1,1,1,1,1,0.3333,0
+tfidf_raw,LLMbookzh-031,LLMbookzh,zh,L2,"设计思维链示例时,为什么倾向于挑选推理步骤更多的例子?",266,266,266,267,265,271,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-032,LLMbookzh,zh,L2,"大模型做大数运算或解方程时容易出错,有哪些办法可以提升它的数值计算能力?",318,318,317,89,140,24,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-033,LLMbookzh,zh,L2,"检索回来的参考文档太长、还夹杂无关内容时,可以在输入端做哪些处理?",338,248,338,339,292,259,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,LLMbookzh-034,LLMbookzh,en,L3,"According to Ilya Sutskever, what is large-scale pre-training essentially doing?",30,368,380,252,127,370,0,0,0,0,0,0,0,0,0
+tfidf_raw,LLMbookzh-035,LLMbookzh,zh,L3,GPT-4 Turbo 的 context window 有多大?knowledge cutoff 扩展到了什么时候?,45,53,45,390,39,252,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,LLMbookzh-036,LLMbookzh,en,L3,Why does the Transformer need position embeddings? What does self-attention degrade into without them?,104,254,274,252,251,251,0,0,0,0,0,0,0,0,0
+tfidf_raw,LLMbookzh-037,LLMbookzh,en,L3,"In PPO, why is the probability ratio r_t(θ) clipped to [1−ε, 1+ε]?",193,254,251,252,252,251,7,0,0,0,1,1,1,0.1429,0
+tfidf_raw,LLMbookzh-038,LLMbookzh,zh,L3,"In in-context learning, 示例设计 (demonstration design) 有哪三个关键因素?",258,381,253,380,380,252,25,0,0,0,0,0,1,0.04,0
+tfidf_raw,LLMbookzh-039,LLMbookzh,en,L3,How is a model's expected win rate calculated in the Elo rating system used for pairwise LLM comparison?,295,254,251,251,252,252,0,0,0,0,0,0,0,0,0
+tfidf_raw,LLMbookzh-040,LLMbookzh,en,L3,"What did SQuAD 2.0 add compared with the original SQuAD, and what is SQuAD's main evaluation metric?",308,308,251,384,254,274,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-041,LLMbookzh,zh,L4,"对 LLaMA (65B) 分别进行全参数指令微调和 LoRA 微调,所需的 A800 GPU 数量、批次大小和微调时间有何差异?",171 176,171,176,176,164,176,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-042,LLMbookzh,zh,L4,InstructGPT 采用的 RLHF 与 DPO 在优化策略模型的方式上有什么不同?,183 204,211,195,211,199,182,11,0,0,0,0,1,1,0.0909,0
+tfidf_raw,LLMbookzh-043,LLMbookzh,zh,L4,完整自注意力机制与状态空间模型在建模序列时的计算复杂度有何不同?为什么?,108 123,108,108,123,122,123,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,LLMbookzh-044,LLMbookzh,zh,L4,"以 8 比特为例,对称量化与非对称量化的参数设置有何不同?将 LLaMA (7B) 从 FP16 量化到 INT8/INT4 后,显存和性能如何变化?",232 241,231,241,232,237,230,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,LLMbookzh-045,LLMbookzh,zh,L4,"基于大语言模型的规划框架与智能体框架中,'制定方案'和'执行动作'分别由哪些组件负责?",273 281,272,279,282,275,278,8,0,0,0,1,1,1,0.125,0
+tfidf_raw,LLMbookzh-046,LLMbookzh,zh,L5,红烧肉怎么做才好吃?,(none),,,,,,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,1
+tfidf_raw,LLMbookzh-047,LLMbookzh,zh,L5,GPT-4 的参数量是多少?,(none),44,45,53,25,44,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,LLMbookzh-048,LLMbookzh,zh,L5,FlashAttention-2 相比标准注意力实现能带来多少倍的训练加速?,(none),109,224,142,142,378,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,LLMbookzh-049,LLMbookzh,en,L5,"How many experts does Mixtral activate per token, and how many experts does each layer have in total?",(none),111,111,111,111,252,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,LLMbookzh-050,LLMbookzh,zh,L5,LoRA 最早是由哪个机构、在哪一年提出的?,(none),163,164,163,175,164,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,p300-001,p300,en,L1,What is a morpheme?,45,45,45,45,13,41,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-002,p300,en,L1,Which two tokenization algorithms are widely used in modern language models?,51,51,290,290,290,3,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-003,p300,en,L1,"In the regular expression example for finding 'the', what are false positives and false negatives?",61,61,122,121,61,56,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-004,p300,en,L1,How does gradient descent find the minimum of a function?,111,111,111,111,113,111,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-005,p300,en,L1,Under what name was logistic regression developed and applied to NLP at IBM Research in the early 1990s?,133,133,133,214,157,119,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-006,p300,en,L1,How does top-k sampling work?,208,208,208,208,208,209,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-007,p300,en,L1,What does Direct Preference Optimization (DPO) avoid that RL-based preference training requires?,230,231,230,218,231,229,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,p300-008,p300,en,L1,What is a postings list in an inverted index?,268,268,268,269,268,275,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-009,p300,en,L1,"Since when have TREC evaluations been run, and when was the QA track added?",282,282,56,276,348,24,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-010,p300,en,L1,"What are cycles per second called, and what is the period of a wave?",346,346,345,56,599,356,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-011,p300,en,L1,What is dynamic time warping?,389,389,641,275,443,389,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-012,p300,en,L1,How are TTS systems evaluated by humans?,401,401,401,403,392,404,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-013,p300,en,L1,Which algorithms do CRF taggers use for inference and for training?,429,429,423,431,425,38,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-014,p300,en,L1,What are graph-based methods for creating dependency structures based on?,478,478,471,461,543,461,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-015,p300,en,L1,"Which typology of affective states does the chapter use, and what categories does it include?",527,527,527,545,527,35,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-016,p300,en,L1,Why must a dialogue system use coreference when the user says 'I'll take the second one' after hearing about two flights?,547,547,602,600,600,275,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-017,p300,en,L1,What percentage of PDTB relations are either within a single sentence or span two adjacent sentences?,586,586,585,581,525,121,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-018,p300,en,L2,"What do you call a language in which a single ending packs several grammatical meanings together, and what English example is given?",46,40,599,42,56,13,9,0,0,0,1,1,1,0.1111,0
+tfidf_raw,p300-019,p300,en,L2,What is the most helpful way to picture the operations needed to turn 'intention' into 'execution'?,68,68,69,383,173,70,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-020,p300,en,L2,"Why does a 4-gram model trained on Shakespeare have so few choices for the next word, often copying his text?",87,87,316,209,209,87,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-021,p300,en,L2,"If a name like 'Jurafsky' never appears in training but shows up at test time, why isn't that fatal for modern language models?",89,89,96,50,128,50,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-022,p300,en,L2,"When comparing two classifiers, what does a very small p-value tell us about the observed gap in performance?",125,125,40,80,561,416,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-023,p300,en,L2,How could you work out what an unfamiliar vegetable name means just from the sentences it appears in?,139,588,118,16,251,45,0,0,0,0,0,0,0,0,0
+tfidf_raw,p300-024,p300,en,L2,How does word2vec obtain training labels without anyone hand-annotating data?,145,145,116,406,299,258,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-025,p300,en,L2,How does the size of the surrounding window used to build word vectors change which words come out as most similar?,151,151,151,540,141,540,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-026,p300,en,L2,"Backprop is a special case of which more general way of computing derivatives, and what representation does it rely on?",178,178,221,180,299,299,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-027,p300,en,L2,"Why is it wasteful at generation time to recompute keys and values for earlier tokens, and what technique fixes this?",212,374,212,212,204,310,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,p300-028,p300,en,L2,"In an LSTM, which component throws away context that is no longer useful, and how does it do it?",324,324,324,323,35,324,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-029,p300,en,L2,Why are speech features collected on a perceptually warped frequency scale instead of equally across all frequencies?,359,359,349,489,360,356,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-030,p300,en,L2,How does CTC avoid transcribing silence as letters while still allowing genuine double letters?,381,381,381,385,380,384,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-031,p300,en,L2,Why is finding and labeling names of people and places harder than tagging each word with its part of speech?,414,318,411,317,6,429,22,0,0,0,0,0,1,0.0455,0
+tfidf_raw,p300-032,p300,en,L2,Why can 'herself' but not 'her' refer to Janet in 'Janet bought ___ a bottle of fish sauce'?,554,554,552,420,413,420,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-033,p300,zh,L3,bigram 语言模型中，P(wn|wn−1) 如何用 count 来估计？为什么每个句子要加 <s> 和 </s>？,79,79,79,92,90,92,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-034,p300,zh,L3,在垃圾邮件检测的 confusion matrix（混淆矩阵）中，true positive 和 false negative 分别指什么？,121,121,121,123,123,123,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-035,p300,zh,L3,Transformer 里的 feedforward layer 为什么叫 position-wise？它的参数在不同位置、不同层之间是否共享？,194,194,203,192,192,194,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-036,p300,zh,L3,一个 transformer block 内部的计算顺序是什么？residual connection 加在哪里？,199,192,196,196,196,293,28,0,0,0,0,0,1,0.0357,0
+tfidf_raw,p300-037,p300,zh,L3,简单 RNN 中 hidden state h_t 是怎么计算的？参数矩阵 W、U、V 的维度分别是多少？,312,330,319,314,329,332,37,0,0,0,0,0,1,0.027,0
+tfidf_raw,p300-038,p300,zh,L3,Viterbi 算法的 initialization、recursion、termination 三个步骤分别在做什么？,419,419,419,419,419,71,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-039,p300,zh,L3,依存句法结构 (dependency structure) 用什么样的图来表示？V 和 A 分别代表什么？,459,457,478,457,457,458,6,0,0,0,1,1,1,0.1667,0
+tfidf_raw,p300-040,p300,zh,L3,e2e-coref 模型在计算 span representation 时，用哪三个 token 来表示一个 span？,563,563,564,564,449,563,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-041,p300,en,L4,Compare how attention works in a transformer layer versus in an RNN encoder-decoder.,188 332,293,293,375,374,374,27,0,0,0,0,0,1,0.037,0
+tfidf_raw,p300-042,p300,en,L4,"What are the trade-offs between single-encoder and dual-encoder dense retrieval, and how can a retriever be better adapted for RAG?",273 277,280,333,280,262,273,5,0,0,1,1,1,1,0.2,0
+tfidf_raw,p300-043,p300,en,L4,"What does the chrF metric measure, and in the 'witness for the past' example, how do the two hypotheses score?",302 306,302,302,304,302,78,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-044,p300,en,L4,How does the neural span-based constituency parser (Kitaev et al.) differ from classic CKY?,443 449,449,449,451,455,455,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-045,p300,en,L4,Compare transition-based and graph-based dependency parsing.,462 471,471,478,462,7,479,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,p300-046,p300,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),219,54,284,470,387,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,p300-047,p300,en,L5,What is the running time of Dijkstra's algorithm with a Fibonacci heap?,(none),474,473,51,50,495,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,p300-048,p300,en,L5,What are the ACID properties of database transactions?,(none),56,553,599,599,151,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,p300-049,p300,zh,L5,如何在 PyTorch 中设置 learning rate scheduler？,(none),111,114,183,114,475,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,p300-050,p300,en,L5,How do you configure BGP routing on a Cisco router?,(none),40,220,157,604,34,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,clrs-001,clrs,en,L1,"Which chapter studies linear programming, the technique used for problems such as placing oil wells or assigning airline crews to flights?",28,870,28,870,870,790,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,clrs-002,clrs,en,L1,Why is Strassen's algorithm often not the method of choice for matrix multiplication from a practical point of view?,132,132,132,848,103,1242,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-003,clrs,en,L1,"In the hiring problem, what is the total cost of the algorithm in terms of the interviewing cost ci, the hiring cost ch, and m people hired?",136,142,136,477,121,428,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,clrs-004,clrs,en,L1,"Which procedures allow the heap data structure to implement a priority queue, and what is their running time?",174,174,174,184,172,183,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-005,clrs,en,L1,Who is credited with inventing counting sort in 1954?,232,232,170,217,217,217,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-006,clrs,en,L1,"What is the expected running time of RANDOMIZED-SELECT, assuming the elements are distinct?",236,236,202,202,237,238,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-007,clrs,en,L1,"Under reasonable assumptions, what is the average time to search for an element in a hash table?",274,274,280,277,280,279,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-008,clrs,en,L1,"In the 0-1 knapsack example with a 50-pound knapsack, which items does the optimal solution take?",447,1159,1158,448,448,1159,6,0,0,0,1,1,1,0.1667,0
+tfidf_raw,clrs-009,clrs,en,L1,What does B-TREE-SEARCH return when the key is not found and x is a leaf?,513,513,521,311,311,512,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-010,clrs,en,L1,"In a disjoint-set data structure with n MAKE-SET operations, what is the maximum number of UNION operations?",583,583,583,587,654,593,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-011,clrs,en,L1,How is the work of a multithreaded computation defined?,800,800,801,798,816,805,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-012,clrs,en,L1,What are computations called when round-off errors become amplified and lead to incorrect results?,834,834,923,944,199,349,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-013,clrs,en,L1,"According to the fundamental theorem of linear programming, what are the possible outcomes for any linear program?",912,912,867,913,907,870,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-014,clrs,en,L1,"Trial division by all integers up to R factors any number up to R^2. For the same amount of work, up to what size can POLLARD-RHO factor a number?",997,997,998,987,1001,1001,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-015,clrs,en,L1,"Besides text-editing programs, what other applications of string-matching algorithms are mentioned?",1006,1006,1016,1007,791,791,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-016,clrs,en,L1,Who invented the Knuth-Morris-Pratt algorithm?,1034,1034,1023,1034,1023,1024,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-017,clrs,en,L1,Since what year has the P ≠ NP question been an open research problem?,1069,1090,1069,1069,1085,1085,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,clrs-018,clrs,en,L2,"When inserting a new element into the already-sorted prefix, how far does insertion sort typically have to look, and what does that mean for its typical running time?",49,69,33,70,69,70,0,0,0,0,0,0,0,0,0
+tfidf_raw,clrs-019,clrs,en,L2,Why is finding the contiguous stretch of an array with the largest total trivial when no entries are negative?,91,245,274,175,90,175,0,0,0,0,0,0,0,0,0
+tfidf_raw,clrs-020,clrs,en,L2,What compiler technique lets quicksort get rid of its second recursive call by using a loop instead?,209,209,563,956,806,238,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-021,clrs,en,L2,"In the idealized model for open addressing, what is assumed about the order in which table slots are tried for a given key?",295,290,291,291,295,291,4,0,0,1,1,1,1,0.25,0
+tfidf_raw,clrs-022,clrs,en,L2,"In the book's three-matrix example, how big a difference does the choice of grouping make to the number of scalar multiplications?",392,392,392,393,392,395,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-023,clrs,en,L2,"How much time and memory does the bottom-up procedure for choosing the best order of matrix multiplications need, and why?",398,387,715,439,393,408,28,0,0,0,0,0,1,0.0357,0
+tfidf_raw,clrs-024,clrs,en,L2,"In the scheduling-non-overlapping-events problem, after greedily picking the event that ends earliest, what is left to solve?",438,1211,1044,1213,1215,156,0,0,0,0,0,0,0,0,0
+tfidf_raw,clrs-025,clrs,en,L2,"In the potential-function style of amortized analysis, what does it mean when an operation is charged less than it actually costs?",481,481,477,472,499,477,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-026,clrs,en,L2,What running time results from a recurrence that shrinks the universe size to its square root at each level while doing constant work per level?,558,558,558,197,111,557,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-027,clrs,en,L2,What everyday example does the book use to illustrate ordering tasks that have precedence constraints in a DAG?,633,465,800,466,676,633,5,0,0,1,1,1,1,0.2,0
+tfidf_raw,clrs-028,clrs,en,L2,"What determines how fast Dijkstra's algorithm runs, and at most how many times can it lower a vertex's key overall?",682,682,680,679,682,768,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-029,clrs,en,L2,"Why hasn't one standard model of parallel computing been widely accepted, the way the RAM model was for serial computing?",793,44,44,793,45,45,3,0,1,1,1,1,1,0.3333,0
+tfidf_raw,clrs-030,clrs,en,L2,"Algebraically, how does the simplex method move from one corner of the feasible region to another?",870,871,871,869,868,869,9,0,0,0,1,1,1,0.1111,0
+tfidf_raw,clrs-031,clrs,en,L2,"What two things does an electronic signature confirm, and who is able to check it?",982,979,982,982,15,135,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,clrs-032,clrs,en,L2,Why can the same Θ(k)-time algorithm count as polynomial or exponential depending on how the input number k is written down?,1077,1077,1143,1077,45,1149,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-033,clrs,zh,L3,RB-INSERT-FIXUP 的 while 循环所维护的 loop invariant 中，红黑树最多会违反哪几条 red-black properties？,339,336,343,496,337,496,6,0,0,0,1,1,1,0.1667,0
+tfidf_raw,clrs-034,clrs,zh,L3,如何证明 HUFFMAN 算法产生的是 optimal prefix code（最优前缀码）？,456,456,454,454,457,452,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-035,clrs,zh,L3,Fibonacci heap 中 extract-min（抽取最小节点）操作的实际代价 (actual work) 是多少？,539,538,543,539,531,532,3,0,1,1,1,1,1,0.3333,0
+tfidf_raw,clrs-036,clrs,zh,L3,单源最短路径中，每个顶点的 predecessor 属性 v.π 有什么作用？最短路径最多包含多少条边？,668,706,716,573,624,621,0,0,0,0,0,0,0,0,0
+tfidf_raw,clrs-037,clrs,zh,L3,Floyd-Warshall 的递归定义中，为什么 d_ij^(0) = w_ij？,715,716,720,714,714,721,0,0,0,0,0,0,0,0,0
+tfidf_raw,clrs-038,clrs,zh,L3,迭代版 FFT (iterative FFT) 相比 Section 30.2 的递归版有什么优势？,936,941,941,936,921,940,3,0,1,1,1,1,1,0.3333,0
+tfidf_raw,clrs-039,clrs,zh,L3,"扩展欧几里得算法 EXTENDED-EUCLID 在 b ≠ 0 时，如何从递归结果 (d', x', y') 得到系数 x 和 y？",959,958,959,959,959,956,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,clrs-040,clrs,zh,L3,在 formal language 的框架下，复杂度类 P 是如何定义的？,1080,1078,1088,1079,1079,1079,16,0,0,0,0,1,1,0.0625,0
+tfidf_raw,clrs-041,clrs,en,L4,"Why does a naive recursive solution like RECURSIVE-MATRIX-CHAIN take exponential time, and how does dynamic programming avoid that cost?",380 406,406,399,405,385,407,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-042,clrs,en,L4,"Compare the recursion tree for merge sort's recurrence T(n) = 2T(n/2) + cn with the one for T(n) = 3T(n/4) + cn^2: branching factor, subproblem size at depth i, and cost per node.",58 111,59,197,120,114,109,6,0,0,0,1,1,1,0.1667,0
+tfidf_raw,clrs-043,clrs,en,L4,"Which red-black properties does RB-DELETE-FIXUP restore, and what is the worst-case bound on structural modifications for a sequence of m RB-INSERT and RB-DELETE operations?",347 495,496,495,496,496,496,2,0,1,1,1,1,1,0.5,0
+tfidf_raw,clrs-044,clrs,en,L4,Contrast how many augmentations Ford-Fulkerson may need in the book's bad example with the bound on saturating pushes in the generic push-relabel algorithm.,747 766,766,766,764,768,768,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-045,clrs,en,L4,"Compare the costs of polynomial operations using the FFT: multiplying two degree-bound-n polynomials, evaluating at one point, at all n complex roots of unity, and at n arbitrary points. Why must degree-bounds be doubled before multiplying?",925 944,944,927,925,933,931,1,1,1,1,1,1,1,1.0,0
+tfidf_raw,clrs-046,clrs,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),1221,165,333,524,70,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,clrs-047,clrs,en,L5,How does Python's Timsort choose its minimum run length?,(none),944,1296,62,282,1064,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,clrs-048,clrs,en,L5,What is the time complexity of A* search when the heuristic is consistent?,(none),787,165,1221,419,165,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,clrs-049,clrs,zh,L5,Transformer 模型中 self-attention 的时间复杂度是多少？,(none),1306,497,1189,1190,1191,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+tfidf_raw,clrs-050,clrs,en,L5,How does leader election work in the Raft consensus protocol?,(none),938,62,447,539,282,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,d2l-zh-001,d2l-zh,zh,L1,图3.1.2中表示线性回归的神经网络层数是多少?为什么计算层数时不考虑输入层?,111,111,121,104,103,262,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-002,d2l-zh,zh,L1,"在softmax回归实验中,精度(accuracy)是如何定义的?",129,138,129,137,5,144,2,0,1,1,1,1,1,0.5,0
+bm25_raw,d2l-zh-003,d2l-zh,zh,L1,什么是泛化误差(generalization error)?,160,160,169,161,160,454,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-004,d2l-zh,zh,L1,"当输入值精确等于0时,ReLU函数的导数默认取多少?",151,151,153,154,152,170,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-005,d2l-zh,zh,L1,LeNet是由谁、在哪一年、在哪个机构提出的?最初的目的是什么?,267,267,267,274,269,272,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-006,d2l-zh,zh,L1,统计学家把训练数据上的平均损失称为什么?它用来近似什么?,195,195,39,107,106,82,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-007,d2l-zh,zh,L1,"在统计学中,对超出已知观测范围进行预测叫什么?在现有观测值之间进行估计叫什么?",316,316,323,375,381,105,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-008,d2l-zh,zh,L1,tokenize函数支持哪两种词元类型?遇到其他类型会怎样?,325,536,325,37,326,794,2,0,1,1,1,1,1,0.5,0
+bm25_raw,d2l-zh-009,d2l-zh,zh,L1,什么是循环神经网络(RNNs)?,339,380,343,339,360,355,3,0,1,1,1,1,1,0.3333,0
+bm25_raw,d2l-zh-010,d2l-zh,zh,L1,"在图9.8.1的贪心搜索例子中,预测输出序列的条件概率是多少?",403,403,403,404,405,402,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-011,d2l-zh,zh,L1,硬盘驱动器(HDD)的转速大约是多少?大约能达到多少IOPs?,548,548,557,94,673,153,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-012,d2l-zh,zh,L1,“计算性能”一章集中讨论了影响计算性能的哪些主要因素?,529,529,22,564,134,147,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-013,d2l-zh,zh,L1,"在BERT遮蔽语言模型的数据生成中,被选中预测的词元有多大比例被替换成“<mask>”?其余情况如何处理?",727,727,731,736,727,725,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-014,d2l-zh,zh,L1,单发多框检测(SSD)论文中选用的基础网络是什么?,620,620,629,623,631,621,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-015,d2l-zh,zh,L1,"read_imdb读取的IMDb评论数据集中,训练集数目是多少?",739,739,739,739,738,741,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-016,d2l-zh,zh,L1,"在房价预测的K折验证实验中,5-折验证的平均训练log rmse和平均验证log rmse分别是多少?",208,208,208,207,209,163,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-017,d2l-zh,zh,L1,"CIFAR-10训练图像增广中,图像先被放大到多少像素,随机裁剪后又被缩放到多少像素?",668,583,586,668,589,592,3,0,1,1,1,1,1,0.3333,0
+bm25_raw,d2l-zh-018,d2l-zh,zh,L1,"在微调模型中,输出层的学习率是其他层的多少倍?",594,593,595,594,590,157,3,0,1,1,1,1,1,0.3333,0
+bm25_raw,d2l-zh-019,d2l-zh,zh,L2,"如果某一层需要一个在训练过程中始终不被更新的权重,在MXNet中应该怎么实现?",218,177,371,182,121,246,7,0,0,0,1,1,1,0.1429,0
+bm25_raw,d2l-zh-020,d2l-zh,zh,L2,"语言模型中,为了让数据集里从未出现过的词组合也能获得非零概率,常用什么处理方法?",330,330,706,175,764,159,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-021,d2l-zh,zh,L2,"用[1, -1]卷积核进行互相关检测边缘时,为什么把图像转置后就检测不到边缘了?",251,251,254,249,253,258,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-022,d2l-zh,zh,L2,"与AlexNet相比,NiN在网络末端用什么替代了全连接层?这样设计有什么好处和代价?",287,285,287,277,282,288,2,0,1,1,1,1,1,0.5,0
+bm25_raw,d2l-zh-023,d2l-zh,zh,L2,“批量规范化”这个名字是怎么来的?,294,300,145,295,301,442,8,0,0,0,1,1,1,0.125,0
+bm25_raw,d2l-zh-024,d2l-zh,zh,L2,有没有一种比LSTM结构更简单、效果相当而计算更快的门控循环结构?,362,362,368,375,374,402,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-025,d2l-zh,zh,L2,"训练序列到序列模型时,把真实的目标序列(而不是模型上一步的预测)送入解码器作为输入,这种做法叫什么?",398,398,402,395,390,392,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-026,d2l-zh,zh,L2,"梯度下降时学习率设得太大或太小,分别会出现什么现象?",469,503,483,483,476,190,33,0,0,0,0,0,1,0.0303,0
+bm25_raw,d2l-zh-027,d2l-zh,zh,L2,"为什么实践中每个epoch都是无放回地遍历训练数据,而不是有放回地随机采样?",483,483,477,170,335,117,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-028,d2l-zh,zh,L2,"在环形拓扑中同步梯度时,如果把梯度切成n块并行传递,聚合时间会怎样随节点数变化?",575,575,579,576,577,578,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-029,d2l-zh,zh,L2,"目标检测模型输出了很多围绕同一目标、高度重叠的预测框,该如何精简?",609,609,616,599,609,621,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-030,d2l-zh,zh,L2,转置卷积中的填充与普通卷积中的填充有什么不同?,646,646,254,649,651,655,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-031,d2l-zh,zh,L2,为什么word2vec、GloVe这类预训练词向量无法区分“bank”在不同句子中的含义?,683,683,15,717,712,706,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-032,d2l-zh,zh,L2,字节对编码(BPE)学到的子词是否与数据集无关?能否用于其他数据集?,710,708,711,710,710,15,3,0,1,1,1,1,1,0.3333,0
+bm25_raw,d2l-zh-033,d2l-zh,zh,L2,"在GPU上训练时,为什么每个小批量都把损失打印到命令行会拖慢训练?",242,560,557,563,565,559,12,0,0,0,0,1,1,0.0833,0
+bm25_raw,d2l-zh-034,d2l-zh,en,L3,"In the GloVe co-occurrence table, why is P(solid|ice)/P(solid|steam) large (≈8.9) while the ratio for 'water' is close to 1?",706,706,808,706,804,101,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-035,d2l-zh,en,L3,"Why can GPT only look left-to-right, and how does its downstream fine-tuning differ from ELMo?",717,101,717,718,812,810,2,0,1,1,1,1,1,0.5,0
+bm25_raw,d2l-zh-036,d2l-zh,zh,L3,Which probabilistic graphical model does the book use to motivate 双向循环神经网络 (bidirectional RNNs)?,378,382,382,380,383,351,49,0,0,0,0,0,1,0.0204,0
+bm25_raw,d2l-zh-037,d2l-zh,en,L3,When should additive attention be used instead of scaled dot-product attention?,424,423,77,806,421,3,7,0,0,0,1,1,1,0.1429,0
+bm25_raw,d2l-zh-038,d2l-zh,zh,L3,"What are the three stages of a fully convolutional network (全卷积网络) for semantic segmentation, and how is its transposed convolution initialized?",655,805,812,649,813,813,0,0,0,0,0,0,0,0,0
+bm25_raw,d2l-zh-039,d2l-zh,en,L3,Why is accuracy rarely the right metric once an ML system is used for automated decisions?,199,101,805,671,671,805,0,0,0,0,0,0,0,0,0
+bm25_raw,d2l-zh-040,d2l-zh,en,L3,"In the MultiHeadAttention implementation, what shape do queries/keys/values have after transpose_qkv?",432,432,432,432,432,432,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-041,d2l-zh,zh,L4,"Adagrad的学习率衰减过于剧烈,RMSProp和Adam/Yogi分别是如何改进这一问题的?",506 511 519,508,519,12,520,515,2,0,1,1,1,1,1,0.5,0
+bm25_raw,d2l-zh-042,d2l-zh,zh,L4,Transformer的位置编码与BERT的位置嵌入有什么区别?,438 720,719,439,444,724,444,16,0,0,0,0,1,1,0.0625,0
+bm25_raw,d2l-zh-043,d2l-zh,zh,L4,暂退法(Dropout)在理论上如何保证期望不变?在代码实现中训练和测试阶段分别怎么处理?,177 180,178,177,338,181,249,2,0,1,1,1,1,1,0.5,0
+bm25_raw,d2l-zh-044,d2l-zh,zh,L4,softmax的从零实现和简洁实现在数值计算上有什么不同?为什么简洁实现要这样改?,135 143,143,119,142,557,143,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-045,d2l-zh,zh,L4,"skip_gram函数中,npx.batch_dot的输出为什么是(批量大小,1,max_len)?",416 701,701,760,422,366,346,1,1,1,1,1,1,1,1.0,0
+bm25_raw,d2l-zh-046,d2l-zh,zh,L5,如何使用PyTorch Lightning配置多节点分布式训练?,(none),576,577,578,579,690,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,d2l-zh-047,d2l-zh,zh,L5,扩散模型(Diffusion Model)的前向加噪过程是如何定义的?,(none),177,565,37,218,217,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,d2l-zh-048,d2l-zh,en,L5,What is the time complexity of Dijkstra's algorithm using a Fibonacci heap?,(none),812,354,810,808,333,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,d2l-zh-049,d2l-zh,zh,L5,"用LoRA微调大语言模型时,秩r一般设为多少比较合适?",(none),774,262,483,721,736,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,d2l-zh-050,d2l-zh,zh,L5,红烧肉最正宗的做法是什么?,(none),254,279,497,801,324,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,LLMbookzh-001,LLMbookzh,zh,L1,这种大模型具有但小模型不具有的能力通常被称为什么?,18,18,116,36,20,36,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-002,LLMbookzh,zh,L1,"在给定算力预算的条件下,扩展法则的三个基本公式中,αN、αD、αC 分别约为多少?",33,33,34,33,32,34,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-003,LLMbookzh,zh,L1,OpenAI 提供的三种文本表征 API 支持的输入长度都是多少个词元?,54,54,116,53,332,260,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-004,LLMbookzh,zh,L1,WebText 是通过抓取 Reddit 上获得至少几个赞的外链得到的?文本总量是多少?,57,57,74,60,60,293,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-005,LLMbookzh,zh,L1,Dolly 数据集包含多少个人类生成的数据实例?由哪家公司发布?,63,63,64,65,356,65,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-006,LLMbookzh,zh,L1,"Dolma 采用基于规则的方法过滤隐私内容时,主要标注了哪三类敏感信息?",77,77,77,74,74,75,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-007,LLMbookzh,zh,L1,BPE 算法最早是在哪一年被提出的?最初用于什么?,85,85,88,210,262,86,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-008,LLMbookzh,zh,L1,"LLaMA 的预训练数据中,来自 arXiv 的科学数据占比是多少?",90,61,90,57,73,63,2,0,1,1,1,1,1,0.5,0
+bm25_raw,LLMbookzh-009,LLMbookzh,zh,L1,目前常用的预训练任务主要分为哪三类?,126,126,262,61,71,53,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-010,LLMbookzh,zh,L1,"以 LLaMA (7B) 为例,按参数量计算公式得到的参数量是多少?",138,138,139,139,46,176,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-011,LLMbookzh,zh,L1,"在另外一些参考文献中,指令微调也被称为什么?",150,150,344,208,162,159,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-012,LLMbookzh,zh,L1,"在指令微调代码实践中,IGNORE_INDEX 的值被设置为多少?",168,169,169,168,169,11,3,0,1,1,1,1,1,0.3333,0
+bm25_raw,LLMbookzh-013,LLMbookzh,zh,L1,"在实践中,束搜索中束的数量通常设定在什么范围?当 n=1 时会发生什么?",215,215,215,216,218,229,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-014,LLMbookzh,zh,L1,"根据零点因子 Z 是否为零,均匀量化可以进一步分为哪两类?",231,231,230,232,233,234,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-015,LLMbookzh,zh,L1,Sheared LLaMA 将 LLaMA-2 (7B) 剪枝到多大参数规模?继续预训练后恢复到原始模型多少预测精度?,246,246,245,48,35,240,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-016,LLMbookzh,zh,L1,多智能体系统的协同机制通常包括哪三种?,284,283,283,284,282,286,3,0,1,1,1,1,1,0.3333,0
+bm25_raw,LLMbookzh-017,LLMbookzh,zh,L1,XSum 数据集包含了多少篇 BBC 新闻文章?时间范围是?,302,56,302,59,68,358,2,0,1,1,1,1,1,0.5,0
+bm25_raw,LLMbookzh-018,LLMbookzh,zh,L1,HellaSwag 数据集包含大约多少个情景描述?这些描述主要来源于哪里?,312,312,312,58,61,260,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-019,LLMbookzh,zh,L2,"模型预测下一个词越来越准,却在某些任务上越做越差——这种反常现象叫什么?",36,36,128,226,359,361,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-020,LLMbookzh,zh,L2,书中用什么日常生活中的例子来通俗解释扩展法则与涌现能力之间的关系?,39,39,39,7,36,38,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-021,LLMbookzh,zh,L2,"如果评测用的题目事先已经混进了训练语料,这种问题在书中被称为什么?",81,80,344,81,152,298,3,0,1,1,1,1,1,0.3333,0
+bm25_raw,LLMbookzh-022,LLMbookzh,zh,L2,怎样量化衡量一个分词器把文本'压'得好不好?如何计算?,89,89,290,231,293,232,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-023,LLMbookzh,zh,L2,"只按词元所处位置分配一个固定向量的做法,为什么不利于处理长文本?",96,96,96,121,116,117,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-024,LLMbookzh,zh,L2,"Transformer 编码器中把每一层的输入直接加到输出上,这样设计是为了解决什么问题?",99,99,96,115,227,100,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-025,LLMbookzh,zh,L2,"想粗略估算一次预训练要跑多少天,书里给了什么方法?用 LLaMA (65B) 算出来大约多少天?",140,140,51,51,51,152,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-026,LLMbookzh,zh,L2,"只用英文指令数据微调的模型,能力能迁移到其他语言吗?书中举了什么例子?",159,159,69,31,344,158,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-027,LLMbookzh,zh,L2,"用低秩适配方法微调 LLaMA (7B) 时,显存需求大约能从多少降到多少?",163,163,163,164,162,176,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-028,LLMbookzh,zh,L2,为什么研究者要寻找不依赖强化学习的对齐方法?基于人类反馈的强化学习在工程上有哪些麻烦?,199,181,11,43,182,178,13,0,0,0,0,1,1,0.0769,0
+bm25_raw,LLMbookzh-029,LLMbookzh,zh,L2,"同一批次里的请求输出长短不一,导致要等最慢的那条生成完,vLLM 用什么技术来缓解这个问题?",225,225,228,310,152,135,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-030,LLMbookzh,zh,L2,利用一个大模型和一个小模型的输出概率差来挑选下一个词的解码方法叫什么?,218,218,213,225,226,227,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-031,LLMbookzh,zh,L2,"设计思维链示例时,为什么倾向于挑选推理步骤更多的例子?",266,266,267,265,266,269,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-032,LLMbookzh,zh,L2,"大模型做大数运算或解方程时容易出错,有哪些办法可以提升它的数值计算能力?",318,318,223,317,267,89,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-033,LLMbookzh,zh,L2,"检索回来的参考文档太长、还夹杂无关内容时,可以在输入端做哪些处理?",338,338,339,338,248,337,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-034,LLMbookzh,en,L3,"According to Ilya Sutskever, what is large-scale pre-training essentially doing?",30,368,380,280,366,252,0,0,0,0,0,0,0,0,0
+bm25_raw,LLMbookzh-035,LLMbookzh,zh,L3,GPT-4 Turbo 的 context window 有多大?knowledge cutoff 扩展到了什么时候?,45,53,45,39,53,2,2,0,1,1,1,1,1,0.5,0
+bm25_raw,LLMbookzh-036,LLMbookzh,en,L3,Why does the Transformer need position embeddings? What does self-attention degrade into without them?,104,112,112,112,112,112,0,0,0,0,0,0,0,0,0
+bm25_raw,LLMbookzh-037,LLMbookzh,en,L3,"In PPO, why is the probability ratio r_t(θ) clipped to [1−ε, 1+ε]?",193,193,229,193,106,190,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-038,LLMbookzh,zh,L3,"In in-context learning, 示例设计 (demonstration design) 有哪三个关键因素?",258,37,380,380,381,258,5,0,0,1,1,1,1,0.2,0
+bm25_raw,LLMbookzh-039,LLMbookzh,en,L3,How is a model's expected win rate calculated in the Elo rating system used for pairwise LLM comparison?,295,371,274,390,364,280,0,0,0,0,0,0,0,0,0
+bm25_raw,LLMbookzh-040,LLMbookzh,en,L3,"What did SQuAD 2.0 add compared with the original SQuAD, and what is SQuAD's main evaluation metric?",308,364,258,280,251,274,6,0,0,0,1,1,1,0.1667,0
+bm25_raw,LLMbookzh-041,LLMbookzh,zh,L4,"对 LLaMA (65B) 分别进行全参数指令微调和 LoRA 微调,所需的 A800 GPU 数量、批次大小和微调时间有何差异?",171 176,171,176,176,176,144,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-042,LLMbookzh,zh,L4,InstructGPT 采用的 RLHF 与 DPO 在优化策略模型的方式上有什么不同?,183 204,207,195,11,211,24,19,0,0,0,0,1,1,0.0526,0
+bm25_raw,LLMbookzh-043,LLMbookzh,zh,L4,完整自注意力机制与状态空间模型在建模序列时的计算复杂度有何不同?为什么?,108 123,108,122,108,122,97,1,1,1,1,1,1,1,1.0,0
+bm25_raw,LLMbookzh-044,LLMbookzh,zh,L4,"以 8 比特为例,对称量化与非对称量化的参数设置有何不同?将 LLaMA (7B) 从 FP16 量化到 INT8/INT4 后,显存和性能如何变化?",232 241,231,241,232,237,230,2,0,1,1,1,1,1,0.5,0
+bm25_raw,LLMbookzh-045,LLMbookzh,zh,L4,"基于大语言模型的规划框架与智能体框架中,'制定方案'和'执行动作'分别由哪些组件负责?",273 281,282,272,281,279,278,3,0,1,1,1,1,1,0.3333,0
+bm25_raw,LLMbookzh-046,LLMbookzh,zh,L5,红烧肉怎么做才好吃?,(none),112,113,39,39,37,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,LLMbookzh-047,LLMbookzh,zh,L5,GPT-4 的参数量是多少?,(none),138,46,139,158,79,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,LLMbookzh-048,LLMbookzh,zh,L5,FlashAttention-2 相比标准注意力实现能带来多少倍的训练加速?,(none),109,224,18,67,228,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,LLMbookzh-049,LLMbookzh,en,L5,"How many experts does Mixtral activate per token, and how many experts does each layer have in total?",(none),316,258,111,111,111,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,LLMbookzh-050,LLMbookzh,zh,L5,LoRA 最早是由哪个机构、在哪一年提出的?,(none),320,162,164,163,240,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,p300-001,p300,en,L1,What is a morpheme?,45,45,45,45,43,45,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-002,p300,en,L1,Which two tokenization algorithms are widely used in modern language models?,51,51,290,290,308,56,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-003,p300,en,L1,"In the regular expression example for finding 'the', what are false positives and false negatives?",61,122,61,641,121,499,2,0,1,1,1,1,1,0.5,0
+bm25_raw,p300-004,p300,en,L1,How does gradient descent find the minimum of a function?,111,111,111,111,111,176,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-005,p300,en,L1,Under what name was logistic regression developed and applied to NLP at IBM Research in the early 1990s?,133,133,133,214,389,133,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-006,p300,en,L1,How does top-k sampling work?,208,208,208,208,208,206,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-007,p300,en,L1,What does Direct Preference Optimization (DPO) avoid that RL-based preference training requires?,230,231,230,231,218,228,2,0,1,1,1,1,1,0.5,0
+bm25_raw,p300-008,p300,en,L1,What is a postings list in an inverted index?,268,268,268,269,268,269,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-009,p300,en,L1,"Since when have TREC evaluations been run, and when was the QA track added?",282,282,348,215,243,278,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-010,p300,en,L1,"What are cycles per second called, and what is the period of a wave?",346,346,345,356,640,346,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-011,p300,en,L1,What is dynamic time warping?,389,389,641,389,443,74,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-012,p300,en,L1,How are TTS systems evaluated by humans?,401,401,401,402,403,574,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-013,p300,en,L1,Which algorithms do CRF taggers use for inference and for training?,429,429,423,431,517,425,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-014,p300,en,L1,What are graph-based methods for creating dependency structures based on?,478,478,471,461,471,479,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-015,p300,en,L1,"Which typology of affective states does the chapter use, and what categories does it include?",527,545,527,527,527,538,2,0,1,1,1,1,1,0.5,0
+bm25_raw,p300-016,p300,en,L1,Why must a dialogue system use coreference when the user says 'I'll take the second one' after hearing about two flights?,547,547,600,547,602,600,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-017,p300,en,L1,What percentage of PDTB relations are either within a single sentence or span two adjacent sentences?,586,586,585,585,581,291,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-018,p300,en,L2,"What do you call a language in which a single ending packs several grammatical meanings together, and what English example is given?",46,434,342,40,42,23,19,0,0,0,0,1,1,0.0526,0
+bm25_raw,p300-019,p300,en,L2,What is the most helpful way to picture the operations needed to turn 'intention' into 'execution'?,68,68,69,69,69,70,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-020,p300,en,L2,"Why does a 4-gram model trained on Shakespeare have so few choices for the next word, often copying his text?",87,87,87,87,88,76,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-021,p300,en,L2,"If a name like 'Jurafsky' never appears in training but shows up at test time, why isn't that fatal for modern language models?",89,89,50,50,89,101,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-022,p300,en,L2,"When comparing two classifiers, what does a very small p-value tell us about the observed gap in performance?",125,125,128,416,128,40,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-023,p300,en,L2,How could you work out what an unfamiliar vegetable name means just from the sentences it appears in?,139,74,28,45,577,605,0,0,0,0,0,0,0,0,0
+bm25_raw,p300-024,p300,en,L2,How does word2vec obtain training labels without anyone hand-annotating data?,145,334,145,171,40,27,2,0,1,1,1,1,1,0.5,0
+bm25_raw,p300-025,p300,en,L2,How does the size of the surrounding window used to build word vectors change which words come out as most similar?,151,151,144,137,186,151,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-026,p300,en,L2,"Backprop is a special case of which more general way of computing derivatives, and what representation does it rely on?",178,178,178,19,57,83,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-027,p300,en,L2,"Why is it wasteful at generation time to recompute keys and values for earlier tokens, and what technique fixes this?",212,212,204,319,212,204,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-028,p300,en,L2,"In an LSTM, which component throws away context that is no longer useful, and how does it do it?",324,323,258,592,258,324,5,0,0,1,1,1,1,0.2,0
+bm25_raw,p300-029,p300,en,L2,Why are speech features collected on a perceptually warped frequency scale instead of equally across all frequencies?,359,359,349,360,356,360,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-030,p300,en,L2,How does CTC avoid transcribing silence as letters while still allowing genuine double letters?,381,381,381,385,336,514,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-031,p300,en,L2,Why is finding and labeling names of people and places harder than tagging each word with its part of speech?,414,429,317,318,411,327,26,0,0,0,0,0,1,0.0385,0
+bm25_raw,p300-032,p300,en,L2,Why can 'herself' but not 'her' refer to Janet in 'Janet bought ___ a bottle of fish sauce'?,554,554,550,28,553,552,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-033,p300,zh,L3,bigram 语言模型中，P(wn|wn−1) 如何用 count 来估计？为什么每个句子要加 <s> 和 </s>？,79,79,79,90,79,92,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-034,p300,zh,L3,在垃圾邮件检测的 confusion matrix（混淆矩阵）中，true positive 和 false negative 分别指什么？,121,121,121,123,123,123,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-035,p300,zh,L3,Transformer 里的 feedforward layer 为什么叫 position-wise？它的参数在不同位置、不同层之间是否共享？,194,194,194,192,192,203,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-036,p300,zh,L3,一个 transformer block 内部的计算顺序是什么？residual connection 加在哪里？,199,192,196,13,196,193,24,0,0,0,0,0,1,0.0417,0
+bm25_raw,p300-037,p300,zh,L3,简单 RNN 中 hidden state h_t 是怎么计算的？参数矩阵 W、U、V 的维度分别是多少？,312,314,13,13,321,321,6,0,0,0,1,1,1,0.1667,0
+bm25_raw,p300-038,p300,zh,L3,Viterbi 算法的 initialization、recursion、termination 三个步骤分别在做什么？,419,419,419,419,13,285,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-039,p300,zh,L3,依存句法结构 (dependency structure) 用什么样的图来表示？V 和 A 分别代表什么？,459,459,457,457,457,478,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-040,p300,zh,L3,e2e-coref 模型在计算 span representation 时，用哪三个 token 来表示一个 span？,563,563,564,563,564,564,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-041,p300,en,L4,Compare how attention works in a transformer layer versus in an RNN encoder-decoder.,188 332,293,375,293,374,294,18,0,0,0,0,1,1,0.0556,0
+bm25_raw,p300-042,p300,en,L4,"What are the trade-offs between single-encoder and dual-encoder dense retrieval, and how can a retriever be better adapted for RAG?",273 277,277,276,275,5,280,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-043,p300,en,L4,"What does the chrF metric measure, and in the 'witness for the past' example, how do the two hypotheses score?",302 306,302,302,297,303,36,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-044,p300,en,L4,How does the neural span-based constituency parser (Kitaev et al.) differ from classic CKY?,443 449,449,449,455,451,455,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-045,p300,en,L4,Compare transition-based and graph-based dependency parsing.,462 471,471,478,7,479,462,1,1,1,1,1,1,1,1.0,0
+bm25_raw,p300-046,p300,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),219,219,410,40,124,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,p300-047,p300,en,L5,What is the running time of Dijkstra's algorithm with a Fibonacci heap?,(none),474,51,24,556,465,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,p300-048,p300,en,L5,What are the ACID properties of database transactions?,(none),617,634,599,618,281,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,p300-049,p300,zh,L5,如何在 PyTorch 中设置 learning rate scheduler？,(none),183,111,114,16,612,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,p300-050,p300,en,L5,How do you configure BGP routing on a Cisco router?,(none),40,157,604,34,626,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,clrs-001,clrs,en,L1,"Which chapter studies linear programming, the technique used for problems such as placing oil wells or assigning airline crews to flights?",28,870,28,870,870,28,2,0,1,1,1,1,1,0.5,0
+bm25_raw,clrs-002,clrs,en,L1,Why is Strassen's algorithm often not the method of choice for matrix multiplication from a practical point of view?,132,132,132,133,848,100,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-003,clrs,en,L1,"In the hiring problem, what is the total cost of the algorithm in terms of the interviewing cost ci, the hiring cost ch, and m people hired?",136,136,160,142,160,480,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-004,clrs,en,L1,"Which procedures allow the heap data structure to implement a priority queue, and what is their running time?",174,174,174,183,257,183,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-005,clrs,en,L1,Who is credited with inventing counting sort in 1954?,232,232,217,170,217,217,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-006,clrs,en,L1,"What is the expected running time of RANDOMIZED-SELECT, assuming the elements are distinct?",236,236,202,234,240,238,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-007,clrs,en,L1,"Under reasonable assumptions, what is the average time to search for an element in a hash table?",274,274,280,280,296,277,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-008,clrs,en,L1,"In the 0-1 knapsack example with a 50-pound knapsack, which items does the optimal solution take?",447,448,447,1159,448,447,2,0,1,1,1,1,1,0.5,0
+bm25_raw,clrs-009,clrs,en,L1,What does B-TREE-SEARCH return when the key is not found and x is a leaf?,513,513,311,311,514,315,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-010,clrs,en,L1,"In a disjoint-set data structure with n MAKE-SET operations, what is the maximum number of UNION operations?",583,583,593,583,587,9,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-011,clrs,en,L1,How is the work of a multithreaded computation defined?,800,801,800,832,801,817,2,0,1,1,1,1,1,0.5,0
+bm25_raw,clrs-012,clrs,en,L1,What are computations called when round-off errors become amplified and lead to incorrect results?,834,834,923,27,944,199,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-013,clrs,en,L1,"According to the fundamental theorem of linear programming, what are the possible outcomes for any linear program?",912,913,912,913,907,873,2,0,1,1,1,1,1,0.5,0
+bm25_raw,clrs-014,clrs,en,L1,"Trial division by all integers up to R factors any number up to R^2. For the same amount of work, up to what size can POLLARD-RHO factor a number?",997,997,1001,998,987,987,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-015,clrs,en,L1,"Besides text-editing programs, what other applications of string-matching algorithms are mentioned?",1006,1006,791,791,1016,1011,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-016,clrs,en,L1,Who invented the Knuth-Morris-Pratt algorithm?,1034,1034,1034,1023,1023,1026,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-017,clrs,en,L1,Since what year has the P ≠ NP question been an open research problem?,1069,1069,1090,1069,1070,1085,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-018,clrs,en,L2,"When inserting a new element into the already-sorted prefix, how far does insertion sort typically have to look, and what does that mean for its typical running time?",49,69,69,70,33,573,0,0,0,0,0,0,0,0,0
+bm25_raw,clrs-019,clrs,en,L2,Why is finding the contiguous stretch of an array with the largest total trivial when no entries are negative?,91,90,91,275,86,247,2,0,1,1,1,1,1,0.5,0
+bm25_raw,clrs-020,clrs,en,L2,What compiler technique lets quicksort get rid of its second recursive call by using a loop instead?,209,209,806,937,209,410,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-021,clrs,en,L2,"In the idealized model for open addressing, what is assumed about the order in which table slots are tried for a given key?",295,291,291,290,295,294,4,0,0,1,1,1,1,0.25,0
+bm25_raw,clrs-022,clrs,en,L2,"In the book's three-matrix example, how big a difference does the choice of grouping make to the number of scalar multiplications?",392,392,392,392,393,393,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-023,clrs,en,L2,"How much time and memory does the bottom-up procedure for choosing the best order of matrix multiplications need, and why?",398,439,103,410,398,411,4,0,0,1,1,1,1,0.25,0
+bm25_raw,clrs-024,clrs,en,L2,"In the scheduling-non-overlapping-events problem, after greedily picking the event that ends earliest, what is left to solve?",438,439,1211,1211,1211,183,9,0,0,0,1,1,1,0.1111,0
+bm25_raw,clrs-025,clrs,en,L2,"In the potential-function style of amortized analysis, what does it mean when an operation is charged less than it actually costs?",481,477,477,472,472,481,5,0,0,1,1,1,1,0.2,0
+bm25_raw,clrs-026,clrs,en,L2,What running time results from a recurrence that shrinks the universe size to its square root at each level while doing constant work per level?,558,558,558,557,197,99,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-027,clrs,en,L2,What everyday example does the book use to illustrate ordering tasks that have precedence constraints in a DAG?,633,633,465,874,17,636,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-028,clrs,en,L2,"What determines how fast Dijkstra's algorithm runs, and at most how many times can it lower a vertex's key overall?",682,682,682,685,682,60,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-029,clrs,en,L2,"Why hasn't one standard model of parallel computing been widely accepted, the way the RAM model was for serial computing?",793,793,795,44,44,795,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-030,clrs,en,L2,"Algebraically, how does the simplex method move from one corner of the feasible region to another?",870,871,871,869,870,907,4,0,0,1,1,1,1,0.25,0
+bm25_raw,clrs-031,clrs,en,L2,"What two things does an electronic signature confirm, and who is able to check it?",982,979,982,982,982,160,2,0,1,1,1,1,1,0.5,0
+bm25_raw,clrs-032,clrs,en,L2,Why can the same Θ(k)-time algorithm count as polynomial or exponential depending on how the input number k is written down?,1077,1077,1077,1149,1143,45,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-033,clrs,zh,L3,RB-INSERT-FIXUP 的 while 循环所维护的 loop invariant 中，红黑树最多会违反哪几条 red-black properties？,339,343,337,339,336,339,3,0,1,1,1,1,1,0.3333,0
+bm25_raw,clrs-034,clrs,zh,L3,如何证明 HUFFMAN 算法产生的是 optimal prefix code（最优前缀码）？,456,456,452,454,456,457,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-035,clrs,zh,L3,Fibonacci heap 中 extract-min（抽取最小节点）操作的实际代价 (actual work) 是多少？,539,538,531,543,531,502,11,0,0,0,0,1,1,0.0909,0
+bm25_raw,clrs-036,clrs,zh,L3,单源最短路径中，每个顶点的 predecessor 属性 v.π 有什么作用？最短路径最多包含多少条边？,668,573,573,621,706,624,15,0,0,0,0,1,1,0.0667,0
+bm25_raw,clrs-037,clrs,zh,L3,Floyd-Warshall 的递归定义中，为什么 d_ij^(0) = w_ij？,715,716,720,718,720,721,35,0,0,0,0,0,1,0.0286,0
+bm25_raw,clrs-038,clrs,zh,L3,迭代版 FFT (iterative FFT) 相比 Section 30.2 的递归版有什么优势？,936,936,936,921,941,941,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-039,clrs,zh,L3,"扩展欧几里得算法 EXTENDED-EUCLID 在 b ≠ 0 时，如何从递归结果 (d', x', y') 得到系数 x 和 y？",959,958,959,959,959,958,2,0,1,1,1,1,1,0.5,0
+bm25_raw,clrs-040,clrs,zh,L3,在 formal language 的框架下，复杂度类 P 是如何定义的？,1080,1078,1088,1081,1088,1074,13,0,0,0,0,1,1,0.0769,0
+bm25_raw,clrs-041,clrs,en,L4,"Why does a naive recursive solution like RECURSIVE-MATRIX-CHAIN take exponential time, and how does dynamic programming avoid that cost?",380 406,405,410,393,399,391,17,0,0,0,0,1,1,0.0588,0
+bm25_raw,clrs-042,clrs,en,L4,"Compare the recursion tree for merge sort's recurrence T(n) = 2T(n/2) + cn with the one for T(n) = 3T(n/4) + cn^2: branching factor, subproblem size at depth i, and cost per node.",58 111,111,59,109,111,197,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-043,clrs,en,L4,"Which red-black properties does RB-DELETE-FIXUP restore, and what is the worst-case bound on structural modifications for a sequence of m RB-INSERT and RB-DELETE operations?",347 495,495,496,496,496,496,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-044,clrs,en,L4,Contrast how many augmentations Ford-Fulkerson may need in the book's bad example with the bound on saturating pushes in the generic push-relabel algorithm.,747 766,767,766,766,764,767,2,0,1,1,1,1,1,0.5,0
+bm25_raw,clrs-045,clrs,en,L4,"Compare the costs of polynomial operations using the FFT: multiplying two degree-bound-n polynomials, evaluating at one point, at all n complex roots of unity, and at n arbitrary points. Why must degree-bounds be doubled before multiplying?",925 944,925,944,921,931,930,1,1,1,1,1,1,1,1.0,0
+bm25_raw,clrs-046,clrs,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),70,50,160,32,103,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,clrs-047,clrs,en,L5,How does Python's Timsort choose its minimum run length?,(none),663,1015,276,658,282,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,clrs-048,clrs,en,L5,What is the time complexity of A* search when the heuristic is consistent?,(none),165,165,787,1080,333,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,clrs-049,clrs,zh,L5,Transformer 模型中 self-attention 的时间复杂度是多少？,(none),1306,497,1189,1191,1190,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bm25_raw,clrs-050,clrs,en,L5,How does leader election work in the Raft consensus protocol?,(none),439,831,108,870,918,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,d2l-zh-001,d2l-zh,zh,L1,图3.1.2中表示线性回归的神经网络层数是多少?为什么计算层数时不考虑输入层?,111,111,103,125,245,213,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-002,d2l-zh,zh,L1,"在softmax回归实验中,精度(accuracy)是如何定义的?",129,145,138,126,129,135,4,0,0,1,1,1,1,0.25,0
+bge_m3_dense,d2l-zh-003,d2l-zh,zh,L1,什么是泛化误差(generalization error)?,160,160,161,169,161,295,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-004,d2l-zh,zh,L1,"当输入值精确等于0时,ReLU函数的导数默认取多少?",151,151,150,152,83,224,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-005,d2l-zh,zh,L1,LeNet是由谁、在哪一年、在哪个机构提出的?最初的目的是什么?,267,267,274,243,267,268,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-006,d2l-zh,zh,L1,统计学家把训练数据上的平均损失称为什么?它用来近似什么?,195,166,39,107,160,195,5,0,0,1,1,1,1,0.2,0
+bge_m3_dense,d2l-zh-007,d2l-zh,zh,L1,"在统计学中,对超出已知观测范围进行预测叫什么?在现有观测值之间进行估计叫什么?",316,316,378,195,104,609,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-008,d2l-zh,zh,L1,tokenize函数支持哪两种词元类型?遇到其他类型会怎样?,325,729,326,325,735,735,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,d2l-zh-009,d2l-zh,zh,L1,什么是循环神经网络(RNNs)?,339,315,346,353,353,351,17,0,0,0,0,1,1,0.0588,0
+bge_m3_dense,d2l-zh-010,d2l-zh,zh,L1,"在图9.8.1的贪心搜索例子中,预测输出序列的条件概率是多少?",403,403,403,404,405,402,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-011,d2l-zh,zh,L1,硬盘驱动器(HDD)的转速大约是多少?大约能达到多少IOPs?,548,548,548,547,555,573,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-012,d2l-zh,zh,L1,“计算性能”一章集中讨论了影响计算性能的哪些主要因素?,529,529,580,546,545,546,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-013,d2l-zh,zh,L1,"在BERT遮蔽语言模型的数据生成中,被选中预测的词元有多大比例被替换成“<mask>”?其余情况如何处理?",727,721,727,727,736,721,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,d2l-zh-014,d2l-zh,zh,L1,单发多框检测(SSD)论文中选用的基础网络是什么?,620,620,629,625,631,624,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-015,d2l-zh,zh,L1,"read_imdb读取的IMDb评论数据集中,训练集数目是多少?",739,739,739,739,741,741,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-016,d2l-zh,zh,L1,"在房价预测的K折验证实验中,5-折验证的平均训练log rmse和平均验证log rmse分别是多少?",208,208,208,209,206,163,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-017,d2l-zh,zh,L1,"CIFAR-10训练图像增广中,图像先被放大到多少像素,随机裁剪后又被缩放到多少像素?",668,586,676,589,668,642,4,0,0,1,1,1,1,0.25,0
+bge_m3_dense,d2l-zh-018,d2l-zh,zh,L1,"在微调模型中,输出层的学习率是其他层的多少倍?",594,595,593,594,469,149,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,d2l-zh-019,d2l-zh,zh,L2,"如果某一层需要一个在训练过程中始终不被更新的权重,在MXNet中应该怎么实现?",218,218,229,225,538,234,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-020,d2l-zh,zh,L2,"语言模型中,为了让数据集里从未出现过的词组合也能获得非零概率,常用什么处理方法?",330,330,330,692,689,338,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-021,d2l-zh,zh,L2,"用[1, -1]卷积核进行互相关检测边缘时,为什么把图像转置后就检测不到边缘了?",251,251,251,254,252,644,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-022,d2l-zh,zh,L2,"与AlexNet相比,NiN在网络末端用什么替代了全连接层?这样设计有什么好处和代价?",287,287,285,288,277,289,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-023,d2l-zh,zh,L2,“批量规范化”这个名字是怎么来的?,294,295,294,295,442,296,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,d2l-zh-024,d2l-zh,zh,L2,有没有一种比LSTM结构更简单、效果相当而计算更快的门控循环结构?,362,368,362,374,362,367,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,d2l-zh-025,d2l-zh,zh,L2,"训练序列到序列模型时,把真实的目标序列(而不是模型上一步的预测)送入解码器作为输入,这种做法叫什么?",398,398,402,393,392,451,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-026,d2l-zh,zh,L2,"梯度下降时学习率设得太大或太小,分别会出现什么现象?",469,479,469,483,484,493,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,d2l-zh-027,d2l-zh,zh,L2,"为什么实践中每个epoch都是无放回地遍历训练数据,而不是有放回地随机采样?",483,349,350,321,162,349,9,0,0,0,1,1,1,0.1111,0
+bge_m3_dense,d2l-zh-028,d2l-zh,zh,L2,"在环形拓扑中同步梯度时,如果把梯度切成n块并行传递,聚合时间会怎样随节点数变化?",575,575,576,358,360,359,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-029,d2l-zh,zh,L2,"目标检测模型输出了很多围绕同一目标、高度重叠的预测框,该如何精简?",609,631,599,626,628,620,13,0,0,0,0,1,1,0.0769,0
+bge_m3_dense,d2l-zh-030,d2l-zh,zh,L2,转置卷积中的填充与普通卷积中的填充有什么不同?,646,646,647,649,645,651,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-031,d2l-zh,zh,L2,为什么word2vec、GloVe这类预训练词向量无法区分“bank”在不同句子中的含义?,683,688,717,685,744,714,17,0,0,0,0,1,1,0.0588,0
+bge_m3_dense,d2l-zh-032,d2l-zh,zh,L2,字节对编码(BPE)学到的子词是否与数据集无关?能否用于其他数据集?,710,710,708,711,691,710,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-033,d2l-zh,zh,L2,"在GPU上训练时,为什么每个小批量都把损失打印到命令行会拖慢训练?",242,241,559,484,560,564,25,0,0,0,0,0,1,0.04,0
+bge_m3_dense,d2l-zh-034,d2l-zh,en,L3,"In the GloVe co-occurrence table, why is P(solid|ice)/P(solid|steam) large (≈8.9) while the ratio for 'water' is close to 1?",706,706,707,706,253,714,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,d2l-zh-035,d2l-zh,en,L3,"Why can GPT only look left-to-right, and how does its downstream fine-tuning differ from ELMo?",717,718,717,717,724,717,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,d2l-zh-036,d2l-zh,zh,L3,Which probabilistic graphical model does the book use to motivate 双向循环神经网络 (bidirectional RNNs)?,378,382,383,315,743,381,7,0,0,0,1,1,1,0.1429,0
+bge_m3_dense,d2l-zh-037,d2l-zh,en,L3,When should additive attention be used instead of scaled dot-product attention?,424,423,422,424,423,425,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,d2l-zh-038,d2l-zh,zh,L3,"What are the three stages of a fully convolutional network (全卷积网络) for semantic segmentation, and how is its transposed convolution initialized?",655,243,655,649,644,650,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,d2l-zh-039,d2l-zh,en,L3,Why is accuracy rarely the right metric once an ML system is used for automated decisions?,199,35,45,38,199,138,4,0,0,1,1,1,1,0.25,0
+bge_m3_dense,d2l-zh-040,d2l-zh,en,L3,"In the MultiHeadAttention implementation, what shape do queries/keys/values have after transpose_qkv?",432,433,432,432,432,432,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,d2l-zh-041,d2l-zh,zh,L4,"Adagrad的学习率衰减过于剧烈,RMSProp和Adam/Yogi分别是如何改进这一问题的?",506 511 519,509,512,508,513,519,5,0,0,1,1,1,1,0.2,0
+bge_m3_dense,d2l-zh-042,d2l-zh,zh,L4,Transformer的位置编码与BERT的位置嵌入有什么区别?,438 720,719,720,720,720,720,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,d2l-zh-043,d2l-zh,zh,L4,暂退法(Dropout)在理论上如何保证期望不变?在代码实现中训练和测试阶段分别怎么处理?,177 180,178,181,177,179,182,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,d2l-zh-044,d2l-zh,zh,L4,softmax的从零实现和简洁实现在数值计算上有什么不同?为什么简洁实现要这样改?,135 143,145,135,129,143,5,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,d2l-zh-045,d2l-zh,zh,L4,"skip_gram函数中,npx.batch_dot的输出为什么是(批量大小,1,max_len)?",416 701,486,701,697,297,335,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,d2l-zh-046,d2l-zh,zh,L5,如何使用PyTorch Lightning配置多节点分布式训练?,(none),588,588,588,588,588,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,d2l-zh-047,d2l-zh,zh,L5,扩散模型(Diffusion Model)的前向加噪过程是如何定义的?,(none),701,182,185,177,624,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,d2l-zh-048,d2l-zh,en,L5,What is the time complexity of Dijkstra's algorithm using a Fibonacci heap?,(none),508,350,355,12,512,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,d2l-zh-049,d2l-zh,zh,L5,"用LoRA微调大语言模型时,秩r一般设为多少比较合适?",(none),736,773,774,772,365,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,d2l-zh-050,d2l-zh,zh,L5,红烧肉最正宗的做法是什么?,(none),598,170,592,184,137,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,LLMbookzh-001,LLMbookzh,zh,L1,这种大模型具有但小模型不具有的能力通常被称为什么?,18,38,36,20,335,36,15,0,0,0,0,1,1,0.0667,0
+bge_m3_dense,LLMbookzh-002,LLMbookzh,zh,L1,"在给定算力预算的条件下,扩展法则的三个基本公式中,αN、αD、αC 分别约为多少?",33,33,34,33,32,34,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-003,LLMbookzh,zh,L1,OpenAI 提供的三种文本表征 API 支持的输入长度都是多少个词元?,54,54,53,117,53,47,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-004,LLMbookzh,zh,L1,WebText 是通过抓取 Reddit 上获得至少几个赞的外链得到的?文本总量是多少?,57,57,57,56,302,55,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-005,LLMbookzh,zh,L1,Dolly 数据集包含多少个人类生成的数据实例?由哪家公司发布?,63,63,61,62,65,63,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-006,LLMbookzh,zh,L1,"Dolma 采用基于规则的方法过滤隐私内容时,主要标注了哪三类敏感信息?",77,77,77,74,61,61,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-007,LLMbookzh,zh,L1,BPE 算法最早是在哪一年被提出的?最初用于什么?,85,85,88,87,86,89,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-008,LLMbookzh,zh,L1,"LLaMA 的预训练数据中,来自 arXiv 的科学数据占比是多少?",90,72,72,358,75,17,13,0,0,0,0,1,1,0.0769,0
+bge_m3_dense,LLMbookzh-009,LLMbookzh,zh,L1,目前常用的预训练任务主要分为哪三类?,126,70,126,128,144,30,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,LLMbookzh-010,LLMbookzh,zh,L1,"以 LLaMA (7B) 为例,按参数量计算公式得到的参数量是多少?",138,138,139,137,46,176,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-011,LLMbookzh,zh,L1,"在另外一些参考文献中,指令微调也被称为什么?",150,150,161,158,160,159,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-012,LLMbookzh,zh,L1,"在指令微调代码实践中,IGNORE_INDEX 的值被设置为多少?",168,169,169,168,150,167,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,LLMbookzh-013,LLMbookzh,zh,L1,"在实践中,束搜索中束的数量通常设定在什么范围?当 n=1 时会发生什么?",215,215,215,216,218,292,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-014,LLMbookzh,zh,L1,"根据零点因子 Z 是否为零,均匀量化可以进一步分为哪两类?",231,231,232,230,235,233,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-015,LLMbookzh,zh,L1,Sheared LLaMA 将 LLaMA-2 (7B) 剪枝到多大参数规模?继续预训练后恢复到原始模型多少预测精度?,246,246,245,46,240,110,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-016,LLMbookzh,zh,L1,多智能体系统的协同机制通常包括哪三种?,284,283,283,282,284,286,4,0,0,1,1,1,1,0.25,0
+bge_m3_dense,LLMbookzh-017,LLMbookzh,zh,L1,XSum 数据集包含了多少篇 BBC 新闻文章?时间范围是?,302,56,302,55,55,55,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,LLMbookzh-018,LLMbookzh,zh,L1,HellaSwag 数据集包含大约多少个情景描述?这些描述主要来源于哪里?,312,312,321,63,327,56,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-019,LLMbookzh,zh,L2,"模型预测下一个词越来越准,却在某些任务上越做越差——这种反常现象叫什么?",36,80,36,305,127,264,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,LLMbookzh-020,LLMbookzh,zh,L2,书中用什么日常生活中的例子来通俗解释扩展法则与涌现能力之间的关系?,39,39,38,36,36,39,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-021,LLMbookzh,zh,L2,"如果评测用的题目事先已经混进了训练语料,这种问题在书中被称为什么?",81,81,307,127,325,306,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-022,LLMbookzh,zh,L2,怎样量化衡量一个分词器把文本'压'得好不好?如何计算?,89,89,88,76,317,89,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-023,LLMbookzh,zh,L2,"只按词元所处位置分配一个固定向量的做法,为什么不利于处理长文本?",96,117,120,117,116,121,7,0,0,0,1,1,1,0.1429,0
+bge_m3_dense,LLMbookzh-024,LLMbookzh,zh,L2,"Transformer 编码器中把每一层的输入直接加到输出上,这样设计是为了解决什么问题?",99,99,104,99,113,113,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-025,LLMbookzh,zh,L2,"想粗略估算一次预训练要跑多少天,书里给了什么方法?用 LLaMA (65B) 算出来大约多少天?",140,140,144,176,51,145,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-026,LLMbookzh,zh,L2,"只用英文指令数据微调的模型,能力能迁移到其他语言吗?书中举了什么例子?",159,159,150,31,158,150,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-027,LLMbookzh,zh,L2,"用低秩适配方法微调 LLaMA (7B) 时,显存需求大约能从多少降到多少?",163,163,176,177,164,238,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-028,LLMbookzh,zh,L2,为什么研究者要寻找不依赖强化学习的对齐方法?基于人类反馈的强化学习在工程上有哪些麻烦?,199,181,199,183,187,186,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,LLMbookzh-029,LLMbookzh,zh,L2,"同一批次里的请求输出长短不一,导致要等最慢的那条生成完,vLLM 用什么技术来缓解这个问题?",225,225,228,229,227,228,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-030,LLMbookzh,zh,L2,利用一个大模型和一个小模型的输出概率差来挑选下一个词的解码方法叫什么?,218,218,213,214,226,227,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-031,LLMbookzh,zh,L2,"设计思维链示例时,为什么倾向于挑选推理步骤更多的例子?",266,266,267,266,265,269,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-032,LLMbookzh,zh,L2,"大模型做大数运算或解方程时容易出错,有哪些办法可以提升它的数值计算能力?",318,361,317,91,130,35,13,0,0,0,0,1,1,0.0769,0
+bge_m3_dense,LLMbookzh-033,LLMbookzh,zh,L2,"检索回来的参考文档太长、还夹杂无关内容时,可以在输入端做哪些处理?",338,338,75,78,337,253,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-034,LLMbookzh,en,L3,"According to Ilya Sutskever, what is large-scale pre-training essentially doing?",30,126,30,30,70,29,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,LLMbookzh-035,LLMbookzh,zh,L3,GPT-4 Turbo 的 context window 有多大?knowledge cutoff 扩展到了什么时候?,45,53,45,44,55,55,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,LLMbookzh-036,LLMbookzh,en,L3,Why does the Transformer need position embeddings? What does self-attention degrade into without them?,104,99,96,108,122,104,5,0,0,1,1,1,1,0.2,0
+bge_m3_dense,LLMbookzh-037,LLMbookzh,en,L3,"In PPO, why is the probability ratio r_t(θ) clipped to [1−ε, 1+ε]?",193,193,193,194,204,191,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-038,LLMbookzh,zh,L3,"In in-context learning, 示例设计 (demonstration design) 有哪三个关键因素?",258,261,258,252,252,264,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,LLMbookzh-039,LLMbookzh,en,L3,How is a model's expected win rate calculated in the Elo rating system used for pairwise LLM comparison?,295,295,184,17,294,194,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-040,LLMbookzh,en,L3,"What did SQuAD 2.0 add compared with the original SQuAD, and what is SQuAD's main evaluation metric?",308,308,48,47,110,194,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-041,LLMbookzh,zh,L4,"对 LLaMA (65B) 分别进行全参数指令微调和 LoRA 微调,所需的 A800 GPU 数量、批次大小和微调时间有何差异?",171 176,176,176,171,176,163,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-042,LLMbookzh,zh,L4,InstructGPT 采用的 RLHF 与 DPO 在优化策略模型的方式上有什么不同?,183 204,211,211,195,207,43,28,0,0,0,0,0,1,0.0357,0
+bge_m3_dense,LLMbookzh-043,LLMbookzh,zh,L4,完整自注意力机制与状态空间模型在建模序列时的计算复杂度有何不同?为什么?,108 123,97,122,108,97,108,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,LLMbookzh-044,LLMbookzh,zh,L4,"以 8 比特为例,对称量化与非对称量化的参数设置有何不同?将 LLaMA (7B) 从 FP16 量化到 INT8/INT4 后,显存和性能如何变化?",232 241,240,240,239,237,231,6,0,0,0,1,1,1,0.1667,0
+bge_m3_dense,LLMbookzh-045,LLMbookzh,zh,L4,"基于大语言模型的规划框架与智能体框架中,'制定方案'和'执行动作'分别由哪些组件负责?",273 281,281,282,272,273,278,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,LLMbookzh-046,LLMbookzh,zh,L5,红烧肉怎么做才好吃?,(none),274,274,274,83,219,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,LLMbookzh-047,LLMbookzh,zh,L5,GPT-4 的参数量是多少?,(none),53,44,45,49,17,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,LLMbookzh-048,LLMbookzh,zh,L5,FlashAttention-2 相比标准注意力实现能带来多少倍的训练加速?,(none),109,224,142,108,224,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,LLMbookzh-049,LLMbookzh,en,L5,"How many experts does Mixtral activate per token, and how many experts does each layer have in total?",(none),110,111,111,111,49,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,LLMbookzh-050,LLMbookzh,zh,L5,LoRA 最早是由哪个机构、在哪一年提出的?,(none),163,163,174,174,174,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,p300-001,p300,en,L1,What is a morpheme?,45,45,45,45,46,45,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-002,p300,en,L1,Which two tokenization algorithms are widely used in modern language models?,51,51,290,290,54,290,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-003,p300,en,L1,"In the regular expression example for finding 'the', what are false positives and false negatives?",61,122,61,61,121,110,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,p300-004,p300,en,L1,How does gradient descent find the minimum of a function?,111,111,111,111,112,111,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-005,p300,en,L1,Under what name was logistic regression developed and applied to NLP at IBM Research in the early 1990s?,133,133,133,133,214,21,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-006,p300,en,L1,How does top-k sampling work?,208,208,208,208,208,209,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-007,p300,en,L1,What does Direct Preference Optimization (DPO) avoid that RL-based preference training requires?,230,230,231,231,232,230,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-008,p300,en,L1,What is a postings list in an inverted index?,268,268,268,280,269,268,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-009,p300,en,L1,"Since when have TREC evaluations been run, and when was the QA track added?",282,282,308,505,505,431,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-010,p300,en,L1,"What are cycles per second called, and what is the period of a wave?",346,346,356,347,346,352,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-011,p300,en,L1,What is dynamic time warping?,389,389,69,499,389,69,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-012,p300,en,L1,How are TTS systems evaluated by humans?,401,401,401,403,391,403,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-013,p300,en,L1,Which algorithms do CRF taggers use for inference and for training?,429,429,431,422,427,425,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-014,p300,en,L1,What are graph-based methods for creating dependency structures based on?,478,478,471,460,461,461,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-015,p300,en,L1,"Which typology of affective states does the chapter use, and what categories does it include?",527,527,527,545,527,8,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-016,p300,en,L1,Why must a dialogue system use coreference when the user says 'I'll take the second one' after hearing about two flights?,547,547,602,600,603,602,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-017,p300,en,L1,What percentage of PDTB relations are either within a single sentence or span two adjacent sentences?,586,586,581,585,581,581,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-018,p300,en,L2,"What do you call a language in which a single ending packs several grammatical meanings together, and what English example is given?",46,46,453,187,46,287,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-019,p300,en,L2,What is the most helpful way to picture the operations needed to turn 'intention' into 'execution'?,68,69,70,70,462,466,7,0,0,0,1,1,1,0.1429,0
+bge_m3_dense,p300-020,p300,en,L2,"Why does a 4-gram model trained on Shakespeare have so few choices for the next word, often copying his text?",87,87,87,87,88,88,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-021,p300,en,L2,"If a name like 'Jurafsky' never appears in training but shows up at test time, why isn't that fatal for modern language models?",89,89,89,217,28,89,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-022,p300,en,L2,"When comparing two classifiers, what does a very small p-value tell us about the observed gap in performance?",125,125,125,125,126,127,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-023,p300,en,L2,How could you work out what an unfamiliar vegetable name means just from the sentences it appears in?,139,139,145,154,139,145,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-024,p300,en,L2,How does word2vec obtain training labels without anyone hand-annotating data?,145,145,145,490,465,145,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-025,p300,en,L2,How does the size of the surrounding window used to build word vectors change which words come out as most similar?,151,151,144,141,140,175,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-026,p300,en,L2,"Backprop is a special case of which more general way of computing derivatives, and what representation does it rely on?",178,178,178,179,176,93,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-027,p300,en,L2,"Why is it wasteful at generation time to recompute keys and values for earlier tokens, and what technique fixes this?",212,212,212,447,210,204,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-028,p300,en,L2,"In an LSTM, which component throws away context that is no longer useful, and how does it do it?",324,323,323,324,324,334,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,p300-029,p300,en,L2,Why are speech features collected on a perceptually warped frequency scale instead of equally across all frequencies?,359,359,350,351,346,355,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-030,p300,en,L2,How does CTC avoid transcribing silence as letters while still allowing genuine double letters?,381,381,381,381,385,393,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-031,p300,en,L2,Why is finding and labeling names of people and places harder than tagging each word with its part of speech?,414,414,408,429,412,411,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-032,p300,en,L2,Why can 'herself' but not 'her' refer to Janet in 'Janet bought ___ a bottle of fish sauce'?,554,554,554,554,547,578,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-033,p300,zh,L3,bigram 语言模型中，P(wn|wn−1) 如何用 count 来估计？为什么每个句子要加 <s> 和 </s>？,79,79,98,92,79,90,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-034,p300,zh,L3,在垃圾邮件检测的 confusion matrix（混淆矩阵）中，true positive 和 false negative 分别指什么？,121,121,121,123,123,121,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-035,p300,zh,L3,Transformer 里的 feedforward layer 为什么叫 position-wise？它的参数在不同位置、不同层之间是否共享？,194,194,194,165,167,193,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-036,p300,zh,L3,一个 transformer block 内部的计算顺序是什么？residual connection 加在哪里？,199,192,192,193,199,196,4,0,0,1,1,1,1,0.25,0
+bge_m3_dense,p300-037,p300,zh,L3,简单 RNN 中 hidden state h_t 是怎么计算的？参数矩阵 W、U、V 的维度分别是多少？,312,312,321,330,315,311,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-038,p300,zh,L3,Viterbi 算法的 initialization、recursion、termination 三个步骤分别在做什么？,419,419,72,419,421,419,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-039,p300,zh,L3,依存句法结构 (dependency structure) 用什么样的图来表示？V 和 A 分别代表什么？,459,459,459,457,457,460,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-040,p300,zh,L3,e2e-coref 模型在计算 span representation 时，用哪三个 token 来表示一个 span？,563,563,564,450,564,397,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-041,p300,en,L4,Compare how attention works in a transformer layer versus in an RNN encoder-decoder.,188 332,293,374,293,215,375,6,0,0,0,1,1,1,0.1667,0
+bge_m3_dense,p300-042,p300,en,L4,"What are the trade-offs between single-encoder and dual-encoder dense retrieval, and how can a retriever be better adapted for RAG?",273 277,273,280,275,5,277,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-043,p300,en,L4,"What does the chrF metric measure, and in the 'witness for the past' example, how do the two hypotheses score?",302 306,302,302,302,302,303,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-044,p300,en,L4,How does the neural span-based constituency parser (Kitaev et al.) differ from classic CKY?,443 449,449,449,454,433,7,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-045,p300,en,L4,Compare transition-based and graph-based dependency parsing.,462 471,471,478,465,461,469,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,p300-046,p300,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),219,219,98,80,90,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,p300-047,p300,en,L5,What is the running time of Dijkstra's algorithm with a Fibonacci heap?,(none),419,378,313,422,426,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,p300-048,p300,en,L5,What are the ACID properties of database transactions?,(none),641,268,639,381,266,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,p300-049,p300,zh,L5,如何在 PyTorch 中设置 learning rate scheduler？,(none),384,376,376,26,241,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,p300-050,p300,en,L5,How do you configure BGP routing on a Cisco router?,(none),51,471,444,517,53,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,clrs-001,clrs,en,L1,"Which chapter studies linear programming, the technique used for problems such as placing oil wells or assigning airline crews to flights?",28,28,870,870,870,790,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-002,clrs,en,L1,Why is Strassen's algorithm often not the method of choice for matrix multiplication from a practical point of view?,132,132,100,132,133,848,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-003,clrs,en,L1,"In the hiring problem, what is the total cost of the algorithm in terms of the interviewing cost ci, the hiring cost ch, and m people hired?",136,136,142,136,145,136,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-004,clrs,en,L1,"Which procedures allow the heap data structure to implement a priority queue, and what is their running time?",174,174,183,183,184,184,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-005,clrs,en,L1,Who is credited with inventing counting sort in 1954?,232,232,63,232,215,63,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-006,clrs,en,L1,"What is the expected running time of RANDOMIZED-SELECT, assuming the elements are distinct?",236,236,247,238,237,241,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-007,clrs,en,L1,"Under reasonable assumptions, what is the average time to search for an element in a hash table?",274,281,280,280,280,296,8,0,0,0,1,1,1,0.125,0
+bge_m3_dense,clrs-008,clrs,en,L1,"In the 0-1 knapsack example with a 50-pound knapsack, which items does the optimal solution take?",447,447,448,1158,447,1159,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-009,clrs,en,L1,What does B-TREE-SEARCH return when the key is not found and x is a leaf?,513,513,512,517,512,311,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-010,clrs,en,L1,"In a disjoint-set data structure with n MAKE-SET operations, what is the maximum number of UNION operations?",583,583,583,588,587,589,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-011,clrs,en,L1,How is the work of a multithreaded computation defined?,800,800,798,801,805,799,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-012,clrs,en,L1,What are computations called when round-off errors become amplified and lead to incorrect results?,834,834,25,27,923,55,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-013,clrs,en,L1,"According to the fundamental theorem of linear programming, what are the possible outcomes for any linear program?",912,891,913,913,866,907,7,0,0,0,1,1,1,0.1429,0
+bge_m3_dense,clrs-014,clrs,en,L1,"Trial division by all integers up to R factors any number up to R^2. For the same amount of work, up to what size can POLLARD-RHO factor a number?",997,997,997,1001,998,998,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-015,clrs,en,L1,"Besides text-editing programs, what other applications of string-matching algorithms are mentioned?",1006,1006,1016,1259,1011,1010,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-016,clrs,en,L1,Who invented the Knuth-Morris-Pratt algorithm?,1034,1034,1034,1023,63,1031,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-017,clrs,en,L1,Since what year has the P ≠ NP question been an open research problem?,1069,1069,1069,1126,1085,1090,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-018,clrs,en,L2,"When inserting a new element into the already-sorted prefix, how far does insertion sort typically have to look, and what does that mean for its typical running time?",49,33,45,565,49,38,4,0,0,1,1,1,1,0.25,0
+bge_m3_dense,clrs-019,clrs,en,L2,Why is finding the contiguous stretch of an array with the largest total trivial when no entries are negative?,91,95,90,91,263,688,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,clrs-020,clrs,en,L2,What compiler technique lets quicksort get rid of its second recursive call by using a loop instead?,209,209,206,191,170,1064,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-021,clrs,en,L2,"In the idealized model for open addressing, what is assumed about the order in which table slots are tried for a given key?",295,295,295,297,291,291,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-022,clrs,en,L2,"In the book's three-matrix example, how big a difference does the choice of grouping make to the number of scalar multiplications?",392,17,392,22,2,392,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,clrs-023,clrs,en,L2,"How much time and memory does the bottom-up procedure for choosing the best order of matrix multiplications need, and why?",398,396,396,398,396,410,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,clrs-024,clrs,en,L2,"In the scheduling-non-overlapping-events problem, after greedily picking the event that ends earliest, what is left to solve?",438,438,443,439,438,443,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-025,clrs,en,L2,"In the potential-function style of amortized analysis, what does it mean when an operation is charged less than it actually costs?",481,481,480,481,477,379,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-026,clrs,en,L2,What running time results from a recurrence that shrinks the universe size to its square root at each level while doing constant work per level?,558,558,57,568,115,197,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-027,clrs,en,L2,What everyday example does the book use to illustrate ordering tasks that have precedence constraints in a DAG?,633,633,634,678,678,633,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-028,clrs,en,L2,"What determines how fast Dijkstra's algorithm runs, and at most how many times can it lower a vertex's key overall?",682,682,682,679,680,683,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-029,clrs,en,L2,"Why hasn't one standard model of parallel computing been widely accepted, the way the RAM model was for serial computing?",793,793,44,832,45,793,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-030,clrs,en,L2,"Algebraically, how does the simplex method move from one corner of the feasible region to another?",870,869,869,871,888,869,18,0,0,0,0,1,1,0.0556,0
+bge_m3_dense,clrs-031,clrs,en,L2,"What two things does an electronic signature confirm, and who is able to check it?",982,982,982,982,979,985,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-032,clrs,en,L2,Why can the same Θ(k)-time algorithm count as polynomial or exponential depending on how the input number k is written down?,1077,948,1077,1077,1080,1069,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,clrs-033,clrs,zh,L3,RB-INSERT-FIXUP 的 while 循环所维护的 loop invariant 中，红黑树最多会违反哪几条 red-black properties？,339,339,337,340,337,343,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-034,clrs,zh,L3,如何证明 HUFFMAN 算法产生的是 optimal prefix code（最优前缀码）？,456,452,454,456,456,452,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,clrs-035,clrs,zh,L3,Fibonacci heap 中 extract-min（抽取最小节点）操作的实际代价 (actual work) 是多少？,539,538,533,532,535,531,8,0,0,0,1,1,1,0.125,0
+bge_m3_dense,clrs-036,clrs,zh,L3,单源最短路径中，每个顶点的 predecessor 属性 v.π 有什么作用？最短路径最多包含多少条边？,668,668,697,668,706,677,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-037,clrs,zh,L3,Floyd-Warshall 的递归定义中，为什么 d_ij^(0) = w_ij？,715,720,718,718,721,716,19,0,0,0,0,1,1,0.0526,0
+bge_m3_dense,clrs-038,clrs,zh,L3,迭代版 FFT (iterative FFT) 相比 Section 30.2 的递归版有什么优势？,936,936,941,493,936,941,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-039,clrs,zh,L3,"扩展欧几里得算法 EXTENDED-EUCLID 在 b ≠ 0 时，如何从递归结果 (d', x', y') 得到系数 x 和 y？",959,959,958,959,959,958,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-040,clrs,zh,L3,在 formal language 的框架下，复杂度类 P 是如何定义的？,1080,1080,1074,1085,1088,1076,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-041,clrs,en,L4,"Why does a naive recursive solution like RECURSIVE-MATRIX-CHAIN take exponential time, and how does dynamic programming avoid that cost?",380 406,405,407,406,396,410,3,0,1,1,1,1,1,0.3333,0
+bge_m3_dense,clrs-042,clrs,en,L4,"Compare the recursion tree for merge sort's recurrence T(n) = 2T(n/2) + cn with the one for T(n) = 3T(n/4) + cn^2: branching factor, subproblem size at depth i, and cost per node.",58 111,109,58,59,112,57,2,0,1,1,1,1,1,0.5,0
+bge_m3_dense,clrs-043,clrs,en,L4,"Which red-black properties does RB-DELETE-FIXUP restore, and what is the worst-case bound on structural modifications for a sequence of m RB-INSERT and RB-DELETE operations?",347 495,495,347,496,347,496,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-044,clrs,en,L4,Contrast how many augmentations Ford-Fulkerson may need in the book's bad example with the bound on saturating pushes in the generic push-relabel algorithm.,747 766,766,757,769,767,758,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-045,clrs,en,L4,"Compare the costs of polynomial operations using the FFT: multiplying two degree-bound-n polynomials, evaluating at one point, at all n complex roots of unity, and at n arbitrary points. Why must degree-bounds be doubled before multiplying?",925 944,925,925,926,944,933,1,1,1,1,1,1,1,1.0,0
+bge_m3_dense,clrs-046,clrs,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),382,205,191,1149,448,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,clrs-047,clrs,en,L5,How does Python's Timsort choose its minimum run length?,(none),191,47,241,202,236,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,clrs-048,clrs,en,L5,What is the time complexity of A* search when the heuristic is consistent?,(none),1015,281,274,1089,280,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,clrs-049,clrs,zh,L5,Transformer 模型中 self-attention 的时间复杂度是多少？,(none),242,1022,368,780,1290,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+bge_m3_dense,clrs-050,clrs,en,L5,How does leader election work in the Raft consensus protocol?,(none),237,776,1044,237,592,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,d2l-zh-001,d2l-zh,zh,L1,图3.1.2中表示线性回归的神经网络层数是多少?为什么计算层数时不考虑输入层?,111,111,103,125,121,105,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-002,d2l-zh,zh,L1,"在softmax回归实验中,精度(accuracy)是如何定义的?",129,138,129,145,137,5,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,d2l-zh-003,d2l-zh,zh,L1,什么是泛化误差(generalization error)?,160,160,169,161,454,176,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-004,d2l-zh,zh,L1,"当输入值精确等于0时,ReLU函数的导数默认取多少?",151,151,152,153,154,170,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-005,d2l-zh,zh,L1,LeNet是由谁、在哪一年、在哪个机构提出的?最初的目的是什么?,267,267,267,274,272,277,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-006,d2l-zh,zh,L1,统计学家把训练数据上的平均损失称为什么?它用来近似什么?,195,39,195,107,106,128,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,d2l-zh-007,d2l-zh,zh,L1,"在统计学中,对超出已知观测范围进行预测叫什么?在现有观测值之间进行估计叫什么?",316,316,378,323,129,381,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-008,d2l-zh,zh,L1,tokenize函数支持哪两种词元类型?遇到其他类型会怎样?,325,325,326,729,385,325,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-009,d2l-zh,zh,L1,什么是循环神经网络(RNNs)?,339,339,315,361,351,381,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-010,d2l-zh,zh,L1,"在图9.8.1的贪心搜索例子中,预测输出序列的条件概率是多少?",403,403,403,404,405,402,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-011,d2l-zh,zh,L1,硬盘驱动器(HDD)的转速大约是多少?大约能达到多少IOPs?,548,548,557,549,556,484,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-012,d2l-zh,zh,L1,“计算性能”一章集中讨论了影响计算性能的哪些主要因素?,529,529,546,22,564,545,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-013,d2l-zh,zh,L1,"在BERT遮蔽语言模型的数据生成中,被选中预测的词元有多大比例被替换成“<mask>”?其余情况如何处理?",727,727,727,721,736,727,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-014,d2l-zh,zh,L1,单发多框检测(SSD)论文中选用的基础网络是什么?,620,620,629,631,623,625,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-015,d2l-zh,zh,L1,"read_imdb读取的IMDb评论数据集中,训练集数目是多少?",739,739,739,739,741,741,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-016,d2l-zh,zh,L1,"在房价预测的K折验证实验中,5-折验证的平均训练log rmse和平均验证log rmse分别是多少?",208,208,208,209,163,206,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-017,d2l-zh,zh,L1,"CIFAR-10训练图像增广中,图像先被放大到多少像素,随机裁剪后又被缩放到多少像素?",668,586,668,589,583,676,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,d2l-zh-018,d2l-zh,zh,L1,"在微调模型中,输出层的学习率是其他层的多少倍?",594,593,595,594,590,590,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf,d2l-zh-019,d2l-zh,zh,L2,"如果某一层需要一个在训练过程中始终不被更新的权重,在MXNet中应该怎么实现?",218,182,121,173,218,218,4,0,0,1,1,1,1,0.25,0
+hybrid_rrf,d2l-zh-020,d2l-zh,zh,L2,"语言模型中,为了让数据集里从未出现过的词组合也能获得非零概率,常用什么处理方法?",330,330,706,338,330,329,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-021,d2l-zh,zh,L2,"用[1, -1]卷积核进行互相关检测边缘时,为什么把图像转置后就检测不到边缘了?",251,251,254,251,253,249,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-022,d2l-zh,zh,L2,"与AlexNet相比,NiN在网络末端用什么替代了全连接层?这样设计有什么好处和代价?",287,285,287,277,288,285,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,d2l-zh-023,d2l-zh,zh,L2,“批量规范化”这个名字是怎么来的?,294,295,442,301,300,294,5,0,0,1,1,1,1,0.2,0
+hybrid_rrf,d2l-zh-024,d2l-zh,zh,L2,有没有一种比LSTM结构更简单、效果相当而计算更快的门控循环结构?,362,362,368,374,375,364,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-025,d2l-zh,zh,L2,"训练序列到序列模型时,把真实的目标序列(而不是模型上一步的预测)送入解码器作为输入,这种做法叫什么?",398,398,402,392,390,392,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-026,d2l-zh,zh,L2,"梯度下降时学习率设得太大或太小,分别会出现什么现象?",469,483,479,503,483,520,7,0,0,0,1,1,1,0.1429,0
+hybrid_rrf,d2l-zh-027,d2l-zh,zh,L2,"为什么实践中每个epoch都是无放回地遍历训练数据,而不是有放回地随机采样?",483,483,349,492,699,489,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-028,d2l-zh,zh,L2,"在环形拓扑中同步梯度时,如果把梯度切成n块并行传递,聚合时间会怎样随节点数变化?",575,575,576,579,573,495,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-029,d2l-zh,zh,L2,"目标检测模型输出了很多围绕同一目标、高度重叠的预测框,该如何精简?",609,599,609,620,615,631,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,d2l-zh-030,d2l-zh,zh,L2,转置卷积中的填充与普通卷积中的填充有什么不同?,646,646,649,254,647,651,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-031,d2l-zh,zh,L2,为什么word2vec、GloVe这类预训练词向量无法区分“bank”在不同句子中的含义?,683,717,712,15,688,744,9,0,0,0,1,1,1,0.1111,0
+hybrid_rrf,d2l-zh-032,d2l-zh,zh,L2,字节对编码(BPE)学到的子词是否与数据集无关?能否用于其他数据集?,710,708,710,711,710,15,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,d2l-zh-033,d2l-zh,zh,L2,"在GPU上训练时,为什么每个小批量都把损失打印到命令行会拖慢训练?",242,560,241,559,565,484,11,0,0,0,0,1,1,0.0909,0
+hybrid_rrf,d2l-zh-034,d2l-zh,en,L3,"In the GloVe co-occurrence table, why is P(solid|ice)/P(solid|steam) large (≈8.9) while the ratio for 'water' is close to 1?",706,706,706,714,333,808,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-035,d2l-zh,en,L3,"Why can GPT only look left-to-right, and how does its downstream fine-tuning differ from ELMo?",717,718,717,724,717,717,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,d2l-zh-036,d2l-zh,zh,L3,Which probabilistic graphical model does the book use to motivate 双向循环神经网络 (bidirectional RNNs)?,378,382,383,382,743,380,11,0,0,0,0,1,1,0.0909,0
+hybrid_rrf,d2l-zh-037,d2l-zh,en,L3,When should additive attention be used instead of scaled dot-product attention?,424,423,424,421,414,422,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,d2l-zh-038,d2l-zh,zh,L3,"What are the three stages of a fully convolutional network (全卷积网络) for semantic segmentation, and how is its transposed convolution initialized?",655,649,243,246,644,805,7,0,0,0,1,1,1,0.1429,0
+hybrid_rrf,d2l-zh-039,d2l-zh,en,L3,Why is accuracy rarely the right metric once an ML system is used for automated decisions?,199,138,270,101,35,805,10,0,0,0,1,1,1,0.1,0
+hybrid_rrf,d2l-zh-040,d2l-zh,en,L3,"In the MultiHeadAttention implementation, what shape do queries/keys/values have after transpose_qkv?",432,432,432,432,432,432,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-041,d2l-zh,zh,L4,"Adagrad的学习率衰减过于剧烈,RMSProp和Adam/Yogi分别是如何改进这一问题的?",506 511 519,508,519,515,509,520,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,d2l-zh-042,d2l-zh,zh,L4,Transformer的位置编码与BERT的位置嵌入有什么区别?,438 720,719,718,439,444,720,5,0,0,1,1,1,1,0.2,0
+hybrid_rrf,d2l-zh-043,d2l-zh,zh,L4,暂退法(Dropout)在理论上如何保证期望不变?在代码实现中训练和测试阶段分别怎么处理?,177 180,178,181,177,177,179,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf,d2l-zh-044,d2l-zh,zh,L4,softmax的从零实现和简洁实现在数值计算上有什么不同?为什么简洁实现要这样改?,135 143,145,143,143,142,126,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,d2l-zh-045,d2l-zh,zh,L4,"skip_gram函数中,npx.batch_dot的输出为什么是(批量大小,1,max_len)?",416 701,701,697,697,660,730,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,d2l-zh-046,d2l-zh,zh,L5,如何使用PyTorch Lightning配置多节点分布式训练?,(none),557,571,576,588,577,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,d2l-zh-047,d2l-zh,zh,L5,扩散模型(Diffusion Model)的前向加噪过程是如何定义的?,(none),177,356,185,216,701,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,d2l-zh-048,d2l-zh,en,L5,What is the time complexity of Dijkstra's algorithm using a Fibonacci heap?,(none),350,812,508,354,810,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,d2l-zh-049,d2l-zh,zh,L5,"用LoRA微调大语言模型时,秩r一般设为多少比较合适?",(none),774,736,765,768,773,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,d2l-zh-050,d2l-zh,zh,L5,红烧肉最正宗的做法是什么?,(none),170,175,68,792,254,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,LLMbookzh-001,LLMbookzh,zh,L1,这种大模型具有但小模型不具有的能力通常被称为什么?,18,36,36,38,18,20,4,0,0,1,1,1,1,0.25,0
+hybrid_rrf,LLMbookzh-002,LLMbookzh,zh,L1,"在给定算力预算的条件下,扩展法则的三个基本公式中,αN、αD、αC 分别约为多少?",33,33,34,33,32,34,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-003,LLMbookzh,zh,L1,OpenAI 提供的三种文本表征 API 支持的输入长度都是多少个词元?,54,54,53,48,53,49,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-004,LLMbookzh,zh,L1,WebText 是通过抓取 Reddit 上获得至少几个赞的外链得到的?文本总量是多少?,57,57,56,60,57,60,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-005,LLMbookzh,zh,L1,Dolly 数据集包含多少个人类生成的数据实例?由哪家公司发布?,63,63,64,65,65,61,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-006,LLMbookzh,zh,L1,"Dolma 采用基于规则的方法过滤隐私内容时,主要标注了哪三类敏感信息?",77,77,77,74,74,61,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-007,LLMbookzh,zh,L1,BPE 算法最早是在哪一年被提出的?最初用于什么?,85,85,88,86,89,87,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-008,LLMbookzh,zh,L1,"LLaMA 的预训练数据中,来自 arXiv 的科学数据占比是多少?",90,57,75,72,358,72,6,0,0,0,1,1,1,0.1667,0
+hybrid_rrf,LLMbookzh-009,LLMbookzh,zh,L1,目前常用的预训练任务主要分为哪三类?,126,126,262,71,61,28,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-010,LLMbookzh,zh,L1,"以 LLaMA (7B) 为例,按参数量计算公式得到的参数量是多少?",138,138,139,46,176,139,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-011,LLMbookzh,zh,L1,"在另外一些参考文献中,指令微调也被称为什么?",150,150,208,159,162,61,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-012,LLMbookzh,zh,L1,"在指令微调代码实践中,IGNORE_INDEX 的值被设置为多少?",168,169,169,168,167,171,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf,LLMbookzh-013,LLMbookzh,zh,L1,"在实践中,束搜索中束的数量通常设定在什么范围?当 n=1 时会发生什么?",215,215,215,216,218,219,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-014,LLMbookzh,zh,L1,"根据零点因子 Z 是否为零,均匀量化可以进一步分为哪两类?",231,231,230,232,236,234,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-015,LLMbookzh,zh,L1,Sheared LLaMA 将 LLaMA-2 (7B) 剪枝到多大参数规模?继续预训练后恢复到原始模型多少预测精度?,246,246,245,240,240,46,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-016,LLMbookzh,zh,L1,多智能体系统的协同机制通常包括哪三种?,284,283,283,284,282,286,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf,LLMbookzh-017,LLMbookzh,zh,L1,XSum 数据集包含了多少篇 BBC 新闻文章?时间范围是?,302,56,302,59,60,58,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,LLMbookzh-018,LLMbookzh,zh,L1,HellaSwag 数据集包含大约多少个情景描述?这些描述主要来源于哪里?,312,312,312,61,321,58,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-019,LLMbookzh,zh,L2,"模型预测下一个词越来越准,却在某些任务上越做越差——这种反常现象叫什么?",36,36,128,127,20,301,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-020,LLMbookzh,zh,L2,书中用什么日常生活中的例子来通俗解释扩展法则与涌现能力之间的关系?,39,39,39,38,36,7,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-021,LLMbookzh,zh,L2,"如果评测用的题目事先已经混进了训练语料,这种问题在书中被称为什么?",81,81,81,298,128,329,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-022,LLMbookzh,zh,L2,怎样量化衡量一个分词器把文本'压'得好不好?如何计算?,89,89,292,290,302,121,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-023,LLMbookzh,zh,L2,"只按词元所处位置分配一个固定向量的做法,为什么不利于处理长文本?",96,117,96,121,117,116,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,LLMbookzh-024,LLMbookzh,zh,L2,"Transformer 编码器中把每一层的输入直接加到输出上,这样设计是为了解决什么问题?",99,99,96,99,98,165,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-025,LLMbookzh,zh,L2,"想粗略估算一次预训练要跑多少天,书里给了什么方法?用 LLaMA (65B) 算出来大约多少天?",140,140,51,144,51,51,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-026,LLMbookzh,zh,L2,"只用英文指令数据微调的模型,能力能迁移到其他语言吗?书中举了什么例子?",159,159,31,158,150,52,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-027,LLMbookzh,zh,L2,"用低秩适配方法微调 LLaMA (7B) 时,显存需求大约能从多少降到多少?",163,163,176,164,163,238,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-028,LLMbookzh,zh,L2,为什么研究者要寻找不依赖强化学习的对齐方法?基于人类反馈的强化学习在工程上有哪些麻烦?,199,181,43,182,183,199,5,0,0,1,1,1,1,0.2,0
+hybrid_rrf,LLMbookzh-029,LLMbookzh,zh,L2,"同一批次里的请求输出长短不一,导致要等最慢的那条生成完,vLLM 用什么技术来缓解这个问题?",225,225,228,229,228,197,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-030,LLMbookzh,zh,L2,利用一个大模型和一个小模型的输出概率差来挑选下一个词的解码方法叫什么?,218,218,213,226,227,214,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-031,LLMbookzh,zh,L2,"设计思维链示例时,为什么倾向于挑选推理步骤更多的例子?",266,266,266,265,267,267,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-032,LLMbookzh,zh,L2,"大模型做大数运算或解方程时容易出错,有哪些办法可以提升它的数值计算能力?",318,317,318,317,80,358,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,LLMbookzh-033,LLMbookzh,zh,L2,"检索回来的参考文档太长、还夹杂无关内容时,可以在输入端做哪些处理?",338,338,339,338,78,337,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-034,LLMbookzh,en,L3,"According to Ilya Sutskever, what is large-scale pre-training essentially doing?",30,380,126,365,364,366,8,0,0,0,1,1,1,0.125,0
+hybrid_rrf,LLMbookzh-035,LLMbookzh,zh,L3,GPT-4 Turbo 的 context window 有多大?knowledge cutoff 扩展到了什么时候?,45,53,45,2,39,44,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,LLMbookzh-036,LLMbookzh,en,L3,Why does the Transformer need position embeddings? What does self-attention degrade into without them?,104,113,113,96,112,112,18,0,0,0,0,1,1,0.0556,0
+hybrid_rrf,LLMbookzh-037,LLMbookzh,en,L3,"In PPO, why is the probability ratio r_t(θ) clipped to [1−ε, 1+ε]?",193,193,193,202,190,194,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-038,LLMbookzh,zh,L3,"In in-context learning, 示例设计 (demonstration design) 有哪三个关键因素?",258,258,380,380,252,252,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-039,LLMbookzh,en,L3,How is a model's expected win rate calculated in the Elo rating system used for pairwise LLM comparison?,295,294,319,274,389,371,6,0,0,0,1,1,1,0.1667,0
+hybrid_rrf,LLMbookzh-040,LLMbookzh,en,L3,"What did SQuAD 2.0 add compared with the original SQuAD, and what is SQuAD's main evaluation metric?",308,308,307,364,258,48,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-041,LLMbookzh,zh,L4,"对 LLaMA (65B) 分别进行全参数指令微调和 LoRA 微调,所需的 A800 GPU 数量、批次大小和微调时间有何差异?",171 176,171,176,176,176,164,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-042,LLMbookzh,zh,L4,InstructGPT 采用的 RLHF 与 DPO 在优化策略模型的方式上有什么不同?,183 204,207,195,211,211,199,20,0,0,0,0,1,1,0.05,0
+hybrid_rrf,LLMbookzh-043,LLMbookzh,zh,L4,完整自注意力机制与状态空间模型在建模序列时的计算复杂度有何不同?为什么?,108 123,108,122,97,108,97,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,LLMbookzh-044,LLMbookzh,zh,L4,"以 8 比特为例,对称量化与非对称量化的参数设置有何不同?将 LLaMA (7B) 从 FP16 量化到 INT8/INT4 后,显存和性能如何变化?",232 241,231,241,237,240,239,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,LLMbookzh-045,LLMbookzh,zh,L4,"基于大语言模型的规划框架与智能体框架中,'制定方案'和'执行动作'分别由哪些组件负责?",273 281,282,281,272,278,279,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,LLMbookzh-046,LLMbookzh,zh,L5,红烧肉怎么做才好吃?,(none),112,274,113,274,39,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,LLMbookzh-047,LLMbookzh,zh,L5,GPT-4 的参数量是多少?,(none),46,53,139,17,79,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,LLMbookzh-048,LLMbookzh,zh,L5,FlashAttention-2 相比标准注意力实现能带来多少倍的训练加速?,(none),109,224,108,18,142,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,LLMbookzh-049,LLMbookzh,en,L5,"How many experts does Mixtral activate per token, and how many experts does each layer have in total?",(none),111,111,111,111,147,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,LLMbookzh-050,LLMbookzh,zh,L5,LoRA 最早是由哪个机构、在哪一年提出的?,(none),163,163,164,174,164,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,p300-001,p300,en,L1,What is a morpheme?,45,45,45,45,45,46,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-002,p300,en,L1,Which two tokenization algorithms are widely used in modern language models?,51,51,290,290,290,243,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-003,p300,en,L1,"In the regular expression example for finding 'the', what are false positives and false negatives?",61,122,61,61,121,121,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,p300-004,p300,en,L1,How does gradient descent find the minimum of a function?,111,111,111,111,111,111,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-005,p300,en,L1,Under what name was logistic regression developed and applied to NLP at IBM Research in the early 1990s?,133,133,133,214,133,214,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-006,p300,en,L1,How does top-k sampling work?,208,208,208,208,208,206,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-007,p300,en,L1,What does Direct Preference Optimization (DPO) avoid that RL-based preference training requires?,230,231,230,231,232,218,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,p300-008,p300,en,L1,What is a postings list in an inverted index?,268,268,268,269,268,280,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-009,p300,en,L1,"Since when have TREC evaluations been run, and when was the QA track added?",282,282,505,21,348,308,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-010,p300,en,L1,"What are cycles per second called, and what is the period of a wave?",346,346,356,345,346,352,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-011,p300,en,L1,What is dynamic time warping?,389,389,389,641,69,69,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-012,p300,en,L1,How are TTS systems evaluated by humans?,401,401,401,402,403,404,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-013,p300,en,L1,Which algorithms do CRF taggers use for inference and for training?,429,429,431,425,427,517,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-014,p300,en,L1,What are graph-based methods for creating dependency structures based on?,478,478,471,461,471,461,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-015,p300,en,L1,"Which typology of affective states does the chapter use, and what categories does it include?",527,545,527,527,527,527,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,p300-016,p300,en,L1,Why must a dialogue system use coreference when the user says 'I'll take the second one' after hearing about two flights?,547,547,602,600,602,547,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-017,p300,en,L1,What percentage of PDTB relations are either within a single sentence or span two adjacent sentences?,586,586,585,581,585,585,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-018,p300,en,L2,"What do you call a language in which a single ending packs several grammatical meanings together, and what English example is given?",46,46,434,344,243,342,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-019,p300,en,L2,What is the most helpful way to picture the operations needed to turn 'intention' into 'execution'?,68,69,70,68,69,68,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf,p300-020,p300,en,L2,"Why does a 4-gram model trained on Shakespeare have so few choices for the next word, often copying his text?",87,87,87,87,88,265,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-021,p300,en,L2,"If a name like 'Jurafsky' never appears in training but shows up at test time, why isn't that fatal for modern language models?",89,89,89,36,50,50,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-022,p300,en,L2,"When comparing two classifiers, what does a very small p-value tell us about the observed gap in performance?",125,125,125,128,125,128,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-023,p300,en,L2,How could you work out what an unfamiliar vegetable name means just from the sentences it appears in?,139,17,86,17,547,16,8,0,0,0,1,1,1,0.125,0
+hybrid_rrf,p300-024,p300,en,L2,How does word2vec obtain training labels without anyone hand-annotating data?,145,145,145,171,489,209,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-025,p300,en,L2,How does the size of the surrounding window used to build word vectors change which words come out as most similar?,151,151,144,141,144,143,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-026,p300,en,L2,"Backprop is a special case of which more general way of computing derivatives, and what representation does it rely on?",178,178,178,180,188,423,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-027,p300,en,L2,"Why is it wasteful at generation time to recompute keys and values for earlier tokens, and what technique fixes this?",212,212,212,204,204,291,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-028,p300,en,L2,"In an LSTM, which component throws away context that is no longer useful, and how does it do it?",324,323,323,324,324,325,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf,p300-029,p300,en,L2,Why are speech features collected on a perceptually warped frequency scale instead of equally across all frequencies?,359,359,349,351,346,355,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-030,p300,en,L2,How does CTC avoid transcribing silence as letters while still allowing genuine double letters?,381,381,381,385,381,380,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-031,p300,en,L2,Why is finding and labeling names of people and places harder than tagging each word with its part of speech?,414,429,408,411,412,318,8,0,0,0,1,1,1,0.125,0
+hybrid_rrf,p300-032,p300,en,L2,Why can 'herself' but not 'her' refer to Janet in 'Janet bought ___ a bottle of fish sauce'?,554,554,550,554,553,547,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-033,p300,zh,L3,bigram 语言模型中，P(wn|wn−1) 如何用 count 来估计？为什么每个句子要加 <s> 和 </s>？,79,79,79,79,90,92,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-034,p300,zh,L3,在垃圾邮件检测的 confusion matrix（混淆矩阵）中，true positive 和 false negative 分别指什么？,121,121,121,123,123,122,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-035,p300,zh,L3,Transformer 里的 feedforward layer 为什么叫 position-wise？它的参数在不同位置、不同层之间是否共享？,194,194,194,193,203,192,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-036,p300,zh,L3,一个 transformer block 内部的计算顺序是什么？residual connection 加在哪里？,199,192,196,193,192,196,9,0,0,0,1,1,1,0.1111,0
+hybrid_rrf,p300-037,p300,zh,L3,简单 RNN 中 hidden state h_t 是怎么计算的？参数矩阵 W、U、V 的维度分别是多少？,312,321,314,315,321,385,6,0,0,0,1,1,1,0.1667,0
+hybrid_rrf,p300-038,p300,zh,L3,Viterbi 算法的 initialization、recursion、termination 三个步骤分别在做什么？,419,419,419,419,419,72,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-039,p300,zh,L3,依存句法结构 (dependency structure) 用什么样的图来表示？V 和 A 分别代表什么？,459,459,457,457,478,460,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-040,p300,zh,L3,e2e-coref 模型在计算 span representation 时，用哪三个 token 来表示一个 span？,563,563,564,564,564,414,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-041,p300,en,L4,Compare how attention works in a transformer layer versus in an RNN encoder-decoder.,188 332,293,374,293,375,374,10,0,0,0,1,1,1,0.1,0
+hybrid_rrf,p300-042,p300,en,L4,"What are the trade-offs between single-encoder and dual-encoder dense retrieval, and how can a retriever be better adapted for RAG?",273 277,277,275,273,5,280,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-043,p300,en,L4,"What does the chrF metric measure, and in the 'witness for the past' example, how do the two hypotheses score?",302 306,302,302,302,297,302,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-044,p300,en,L4,How does the neural span-based constituency parser (Kitaev et al.) differ from classic CKY?,443 449,449,449,454,433,7,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-045,p300,en,L4,Compare transition-based and graph-based dependency parsing.,462 471,471,478,461,462,469,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,p300-046,p300,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),219,219,645,410,98,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,p300-047,p300,en,L5,What is the running time of Dijkstra's algorithm with a Fibonacci heap?,(none),474,128,313,51,419,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,p300-048,p300,en,L5,What are the ACID properties of database transactions?,(none),488,617,641,634,268,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,p300-049,p300,zh,L5,如何在 PyTorch 中设置 learning rate scheduler？,(none),114,183,384,111,376,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,p300-050,p300,en,L5,How do you configure BGP routing on a Cisco router?,(none),432,40,51,157,471,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,clrs-001,clrs,en,L1,"Which chapter studies linear programming, the technique used for problems such as placing oil wells or assigning airline crews to flights?",28,28,870,870,870,790,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-002,clrs,en,L1,Why is Strassen's algorithm often not the method of choice for matrix multiplication from a practical point of view?,132,132,132,100,848,133,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-003,clrs,en,L1,"In the hiring problem, what is the total cost of the algorithm in terms of the interviewing cost ci, the hiring cost ch, and m people hired?",136,136,142,136,144,135,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-004,clrs,en,L1,"Which procedures allow the heap data structure to implement a priority queue, and what is their running time?",174,174,183,174,183,184,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-005,clrs,en,L1,Who is credited with inventing counting sort in 1954?,232,232,170,217,63,217,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-006,clrs,en,L1,"What is the expected running time of RANDOMIZED-SELECT, assuming the elements are distinct?",236,236,202,238,240,234,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-007,clrs,en,L1,"Under reasonable assumptions, what is the average time to search for an element in a hash table?",274,280,280,274,296,281,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf,clrs-008,clrs,en,L1,"In the 0-1 knapsack example with a 50-pound knapsack, which items does the optimal solution take?",447,448,447,1159,447,448,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,clrs-009,clrs,en,L1,What does B-TREE-SEARCH return when the key is not found and x is a leaf?,513,513,311,517,311,505,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-010,clrs,en,L1,"In a disjoint-set data structure with n MAKE-SET operations, what is the maximum number of UNION operations?",583,583,583,593,587,597,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-011,clrs,en,L1,How is the work of a multithreaded computation defined?,800,800,801,798,795,805,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-012,clrs,en,L1,What are computations called when round-off errors become amplified and lead to incorrect results?,834,834,923,27,25,944,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-013,clrs,en,L1,"According to the fundamental theorem of linear programming, what are the possible outcomes for any linear program?",912,913,913,912,907,867,3,0,1,1,1,1,1,0.3333,0
+hybrid_rrf,clrs-014,clrs,en,L1,"Trial division by all integers up to R factors any number up to R^2. For the same amount of work, up to what size can POLLARD-RHO factor a number?",997,997,1001,998,997,987,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-015,clrs,en,L1,"Besides text-editing programs, what other applications of string-matching algorithms are mentioned?",1006,1006,1016,1011,1007,1010,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-016,clrs,en,L1,Who invented the Knuth-Morris-Pratt algorithm?,1034,1034,1034,1023,1026,1023,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-017,clrs,en,L1,Since what year has the P ≠ NP question been an open research problem?,1069,1069,1069,1090,1085,1070,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-018,clrs,en,L2,"When inserting a new element into the already-sorted prefix, how far does insertion sort typically have to look, and what does that mean for its typical running time?",49,33,45,37,48,47,23,0,0,0,0,0,1,0.0435,0
+hybrid_rrf,clrs-019,clrs,en,L2,Why is finding the contiguous stretch of an array with the largest total trivial when no entries are negative?,91,90,91,95,263,674,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,clrs-020,clrs,en,L2,What compiler technique lets quicksort get rid of its second recursive call by using a loop instead?,209,209,209,200,205,196,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-021,clrs,en,L2,"In the idealized model for open addressing, what is assumed about the order in which table slots are tried for a given key?",295,291,295,291,290,295,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,clrs-022,clrs,en,L2,"In the book's three-matrix example, how big a difference does the choice of grouping make to the number of scalar multiplications?",392,392,392,392,393,398,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-023,clrs,en,L2,"How much time and memory does the bottom-up procedure for choosing the best order of matrix multiplications need, and why?",398,398,396,410,396,393,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-024,clrs,en,L2,"In the scheduling-non-overlapping-events problem, after greedily picking the event that ends earliest, what is left to solve?",438,439,438,436,438,438,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,clrs-025,clrs,en,L2,"In the potential-function style of amortized analysis, what does it mean when an operation is charged less than it actually costs?",481,477,481,483,481,472,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,clrs-026,clrs,en,L2,What running time results from a recurrence that shrinks the universe size to its square root at each level while doing constant work per level?,558,558,57,575,197,196,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-027,clrs,en,L2,What everyday example does the book use to illustrate ordering tasks that have precedence constraints in a DAG?,633,633,634,636,465,678,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-028,clrs,en,L2,"What determines how fast Dijkstra's algorithm runs, and at most how many times can it lower a vertex's key overall?",682,682,682,680,683,680,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-029,clrs,en,L2,"Why hasn't one standard model of parallel computing been widely accepted, the way the RAM model was for serial computing?",793,793,44,832,44,45,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-030,clrs,en,L2,"Algebraically, how does the simplex method move from one corner of the feasible region to another?",870,871,869,869,869,871,7,0,0,0,1,1,1,0.1429,0
+hybrid_rrf,clrs-031,clrs,en,L2,"What two things does an electronic signature confirm, and who is able to check it?",982,982,979,982,982,982,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-032,clrs,en,L2,Why can the same Θ(k)-time algorithm count as polynomial or exponential depending on how the input number k is written down?,1077,1077,1077,948,1149,1069,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-033,clrs,zh,L3,RB-INSERT-FIXUP 的 while 循环所维护的 loop invariant 中，红黑树最多会违反哪几条 red-black properties？,339,339,337,343,340,337,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-034,clrs,zh,L3,如何证明 HUFFMAN 算法产生的是 optimal prefix code（最优前缀码）？,456,452,456,454,456,1301,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,clrs-035,clrs,zh,L3,Fibonacci heap 中 extract-min（抽取最小节点）操作的实际代价 (actual work) 是多少？,539,538,532,531,531,543,6,0,0,0,1,1,1,0.1667,0
+hybrid_rrf,clrs-036,clrs,zh,L3,单源最短路径中，每个顶点的 predecessor 属性 v.π 有什么作用？最短路径最多包含多少条边？,668,697,706,706,668,668,4,0,0,1,1,1,1,0.25,0
+hybrid_rrf,clrs-037,clrs,zh,L3,Floyd-Warshall 的递归定义中，为什么 d_ij^(0) = w_ij？,715,720,718,716,720,721,16,0,0,0,0,1,1,0.0625,0
+hybrid_rrf,clrs-038,clrs,zh,L3,迭代版 FFT (iterative FFT) 相比 Section 30.2 的递归版有什么优势？,936,936,936,941,941,940,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-039,clrs,zh,L3,"扩展欧几里得算法 EXTENDED-EUCLID 在 b ≠ 0 时，如何从递归结果 (d', x', y') 得到系数 x 和 y？",959,958,959,959,959,958,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,clrs-040,clrs,zh,L3,在 formal language 的框架下，复杂度类 P 是如何定义的？,1080,1074,1080,1078,1079,1079,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,clrs-041,clrs,en,L4,"Why does a naive recursive solution like RECURSIVE-MATRIX-CHAIN take exponential time, and how does dynamic programming avoid that cost?",380 406,405,410,407,395,393,6,0,0,0,1,1,1,0.1667,0
+hybrid_rrf,clrs-042,clrs,en,L4,"Compare the recursion tree for merge sort's recurrence T(n) = 2T(n/2) + cn with the one for T(n) = 3T(n/4) + cn^2: branching factor, subproblem size at depth i, and cost per node.",58 111,59,58,109,112,109,2,0,1,1,1,1,1,0.5,0
+hybrid_rrf,clrs-043,clrs,en,L4,"Which red-black properties does RB-DELETE-FIXUP restore, and what is the worst-case bound on structural modifications for a sequence of m RB-INSERT and RB-DELETE operations?",347 495,495,496,496,496,347,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-044,clrs,en,L4,Contrast how many augmentations Ford-Fulkerson may need in the book's bad example with the bound on saturating pushes in the generic push-relabel algorithm.,747 766,766,767,766,764,767,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-045,clrs,en,L4,"Compare the costs of polynomial operations using the FFT: multiplying two degree-bound-n polynomials, evaluating at one point, at all n complex roots of unity, and at n arbitrary points. Why must degree-bounds be doubled before multiplying?",925 944,925,944,933,930,921,1,1,1,1,1,1,1,1.0,0
+hybrid_rrf,clrs-046,clrs,en,L5,What is the best recipe for Indonesian nasi goreng?,(none),161,205,411,70,382,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,clrs-047,clrs,en,L5,How does Python's Timsort choose its minimum run length?,(none),563,663,191,1015,47,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,clrs-048,clrs,en,L5,What is the time complexity of A* search when the heuristic is consistent?,(none),165,787,165,593,587,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,clrs-049,clrs,zh,L5,Transformer 模型中 self-attention 的时间复杂度是多少？,(none),1290,426,1306,242,497,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0
+hybrid_rrf,clrs-050,clrs,en,L5,How does leader election work in the Raft consensus protocol?,(none),439,237,831,776,108,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,0

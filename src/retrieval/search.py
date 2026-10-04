@@ -47,46 +47,30 @@ def _mmr_rerank(
     n = len(cand_ids)
     top_k = min(top_k, n)
 
-    # Start from best query score
-    selected: List[int] = []
-    selected_set = set()
+    rel = np.asarray(cand_scores, dtype=float)
+    # All candidate<->candidate similarities in one sparse product (n is small, ~50),
+    # instead of one sparse dot product per (candidate, selected) pair.
+    sims = (cand_matrix @ cand_matrix.T).toarray()
 
-    first = int(np.argmax(cand_scores))
-    selected.append(first)
-    selected_set.add(first)
+    # Start from best query score
+    first = int(np.argmax(rel))
+    selected: List[int] = [first]
+    is_selected = np.zeros(n, dtype=bool)
+    is_selected[first] = True
+    # diversity penalty: max similarity of each candidate to any selected one
+    max_sim = np.maximum(sims[:, first], 0.0)
 
     # Greedy MMR
     while len(selected) < top_k:
-        best_idx = None
-        best_val = -1e18
-
-        # Compute max similarity to already-selected for each candidate (efficient enough for small fetch_k)
-        for i in range(n):
-            if i in selected_set:
-                continue
-
-            # relevance: query similarity
-            rel = float(cand_scores[i])
-
-            # diversity penalty: max similarity to any selected
-            # (matrix is sparse; dot products are efficient)
-            max_sim = 0.0
-            vi = cand_matrix[i]
-            for j in selected:
-                sim = float((vi @ cand_matrix[j].T).toarray()[0][0])
-                if sim > max_sim:
-                    max_sim = sim
-
-            mmr_val = lambda_mult * rel - (1.0 - lambda_mult) * max_sim
-            if mmr_val > best_val:
-                best_val = mmr_val
-                best_idx = i
-
-        if best_idx is None:
+        mmr_val = lambda_mult * rel - (1.0 - lambda_mult) * max_sim
+        mmr_val[is_selected] = -np.inf
+        best_idx = int(np.argmax(mmr_val))  # first max wins ties, same as before
+        if is_selected[best_idx]:
             break
 
         selected.append(best_idx)
-        selected_set.add(best_idx)
+        is_selected[best_idx] = True
+        max_sim = np.maximum(max_sim, sims[:, best_idx])
 
     return [cand_ids[i] for i in selected]
 
