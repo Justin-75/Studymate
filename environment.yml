@@ -4,12 +4,20 @@ channels:
 dependencies:
   - python=3.11
   - pip
-  - scikit-learn        
+  - numpy
+  - scipy             # sparse TF-IDF matrices
+  - scikit-learn
+  - joblib            # saves/loads the TF-IDF vectorizer
+  - tesseract         # OCR engine (with chi_sim + eng data) behind pytesseract; pip can't install it
   - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128   # CUDA 12.8 torch for the RTX 50-series
+      - torch==2.11.0+cu128   # pinned: unpinned, pip takes a newer CPU-only build from PyPI
       - pymupdf
-      - flask
-      - flask-cors
-      - openai            # client for DeepSeek / Ollama / Groq (all OpenAI-compatible)
+      - fastapi
+      - starlette
+      - uvicorn
+      - python-multipart  # file uploads in FastAPI
+      - pydantic
       - pillow
       - opencv-python
       - pytesseract
@@ -18,3 +26,9 @@ dependencies:
       - FlagEmbedding
       - faiss-cpu
       - modelscope
+      - langchain-core
+      - langchain-ollama
+      - langchain-deepseek
+      - langgraph
+      - langgraph-checkpoint-sqlite
+      - deepeval==4.2.8   # only for scripts/eval_generation.py; unpinned, pip falls back to 2.9.3

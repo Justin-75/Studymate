@@ -1,0 +1,7 @@
+# Allowlist: only what the image needs. Keeps .env (API key), Data/ and the eval files out.
+*
+!environment.yml
+!src
+!server
+!web
+**/__pycache__

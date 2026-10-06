@@ -5,8 +5,6 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Literal
 
 ISO8601 = str
-GenerateMode = Literal["summary", "flashcards", "quiz"]  # Phase 1 modes
-
 
 # ----------------------------
 # Core storage models
@@ -69,22 +67,3 @@ class SearchHit:
 # Generation models
 # ----------------------------
 
-@dataclass(frozen=True)
-class GenerateRequest:
-    doc_id: str
-    mode: GenerateMode
-    query: str
-    top_k: int = 8
-
-
-@dataclass(frozen=True)
-class GenerateResult:
-    """
-    `content` is mode-specific JSON-serializable payload.
-    `citations` is a list of dicts so it's trivially JSON-safe.
-    """
-    doc_id: str
-    mode: GenerateMode
-    query: str
-    content: Dict[str, Any]
-    citations: List[Dict[str, Any]] = field(default_factory=list)
