@@ -1,0 +1,23 @@
+# docker compose up --build    then open http://localhost:5000
+services:
+  studymate:
+    build: .
+    image: studymate
+    ports:
+      - "5000:5000"
+    env_file: .env      # DEEPSEEK_API_KEY etc.; .dockerignore keeps the file itself out of the image
+    environment:
+      BGE_M3_PATH: /models/bge-m3
+      OLLAMA_HOST: http://host.docker.internal:11434   # Ollama on Windows, used only without a DeepSeek key
+    volumes:
+      - ./Data:/app/Data          # same database, indexes and summaries as running locally
+      - ./uploads:/app/uploads
+      - E:/models/bge-m3:/models/bge-m3:ro
+      - ${USERPROFILE}/.cache/huggingface:/hf   # the reranker already downloaded on Windows
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
