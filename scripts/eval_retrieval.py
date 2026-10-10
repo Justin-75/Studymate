@@ -11,6 +11,23 @@ Interactive retrieval benchmark for StudyMate. No arguments needed:
    write CSVs to eval_out/<timestamp>/ for Excel.
 
 To only score (no menu):  python scripts/eval_retrieval.py run
+Only some retrievers:     python scripts/eval_retrieval.py run hybrid_rrf+reranker hybrid_rrf+reranker@128
+(names as in RETRIEVERS below)
+
+Child-size sweep (parent-child retrieval: children are searched, the LLM reads their 512-word parent):
+    python scripts/eval_retrieval.py sweep                          hybrid_rrf+reranker, sizes 64 80 90 100 110 128 140
+    python scripts/eval_retrieval.py sweep hybrid_rrf 64 100 128    another retriever / other sizes
+    python scripts/eval_retrieval.py sweep hybrid_rrf 150 150o40    "150o40" = 150 words, 40 overlapping
+Every "<name>@<size>" row is the same retriever run over child chunks of <size> words (cut from each
+512-word chunk) instead of the 512-word chunks; "<name>@<size>o<overlap>" uses children that also share
+~<overlap> words with their neighbour. bm25_raw, bge_m3_dense, hybrid_rrf and hybrid_rrf+reranker can take
+a size, and `run` accepts such names too (hybrid_rrf+reranker@100, hybrid_rrf@150o40).
+A missing child set is cut from the stored chunks on first use (no PDF, no LLM; stays in app.db:
+python -m src.ingest --drop-children <size> [overlap] removes it). Before a row is timed, its indexes and models
+are loaded, so ms/query is query time only; embed s is the one-time BGE-M3 cost of that size.
+The per-size table (quality next to cost) is printed and saved as size_compare.csv.
+hybrid_rrf+reranker@150 is what the app runs (CHILD_WORDS + CHILD_OVERLAP) before swapping in the parents; parents
+share their children's pages, so the page-level scores are the app's.
 
 Gold pages come in groups ("gold_groups"). Each group is one part of the answer;
 any page inside a group satisfies that part. Two scores per cut-off k:
@@ -48,6 +65,11 @@ from src.db.repository import Repository  # noqa: E402
 from src.retrieval.search import build_index_for_doc, search_chunks  # noqa: E402
 from src.retrieval.tfidf_index import TfidfIndex  # noqa: E402
 from src.retrieval import hybrid  # noqa: E402  (the same pipeline the app uses)
+from src.pdf.chunker import CHILD_OVERLAP, CHILD_WORDS  # noqa: E402
+from src.db.models import child_unit, parse_child_unit  # noqa: E402
+from src.ingest import build_children  # noqa: E402
+from src.retrieval import bm25_index, dense_index  # noqa: E402
+from src.retrieval.reranker import get_reranker  # noqa: E402
 
 
 DB_PATH = ROOT / "Data/Database/app.db"
@@ -116,8 +138,43 @@ def hybrid_rrf(doc_id: str, q: str, k: int) -> List[Hit]:
 
 
 def hybrid_rrf_rerank(doc_id: str, q: str, k: int) -> List[Hit]:
-    # hybrid_rrf pool of 30 -> bge-reranker-v2-m3. This is what the app runs.
+    # hybrid_rrf pool of 30 -> bge-reranker-v2-m3. This is what the app runs (STUDYMATE_RETRIEVAL_UNIT=chunks).
     return hybrid.hybrid_rrf_rerank(repo, doc_id, q, k)
+
+
+# The same four retrievers over child chunks of any size, scored on the children themselves.
+# A child's page is its parent's page, so the page-level scores compare directly with the 512-word rows.
+# Row name "<retriever>@<size>", e.g. "hybrid_rrf+reranker@100"; the app uses CHILD_WORDS.
+SIZED: Dict[str, Callable] = {        # retrievers that take unit= "chunks" or a child size
+    "bm25_raw": hybrid.bm25_hits,
+    "bge_m3_dense": hybrid.dense_hits,
+    "hybrid_rrf": hybrid.hybrid_rrf,
+    "hybrid_rrf+reranker": hybrid.hybrid_rrf_rerank,
+}
+SWEEP_SIZES = (64, 80, 90, 100, 110, 128, 140)   # child sizes `sweep` compares by default
+
+
+CHILD_SET = re.compile(r"[1-9]\d*(o\d+)?")   # a child set: "100" (100 words) or "150o40" (150 words, 40 overlap)
+
+
+def parse_row(name: str):
+    """'hybrid_rrf+reranker@100' -> ('hybrid_rrf+reranker', 100); '...@150o40' -> (..., '150o40');
+    any other name -> (name, None)."""
+    base, _, size = name.partition("@")
+    if CHILD_SET.fullmatch(size) and base in SIZED:
+        return base, child_unit(*parse_child_unit(size))
+    return name, None
+
+
+def child_retriever(base: str, size: int) -> Callable[[str, str, int], List[Hit]]:
+    fn = SIZED[base]
+
+    def run(doc_id: str, q: str, k: int) -> List[Hit]:
+        return fn(repo, doc_id, q, k, unit=size)
+
+    run.__name__ = f"{base}@{size}"
+    return run
+
 
 def dedupe_pages(hits: List[Hit]) -> List[Hit]:
     """Keep each page once, at the position of its first (best-ranked) chunk, with the
@@ -149,7 +206,7 @@ def page_level(fn: Callable[[str, str, int], List[Hit]]) -> Callable[[str, str, 
 
 RETRIEVERS: Dict[str, Callable[[str, str, int], List[Hit]]] = {
     name: page_level(fn) for name, fn in {
-        "hybrid_rrf+reranker": hybrid_rrf_rerank,   # what the app uses now
+        "hybrid_rrf+reranker": hybrid_rrf_rerank,   # the 512-word chunks (STUDYMATE_RETRIEVAL_UNIT=chunks)
         "tfidf_pipeline": tfidf_pipeline,   # the app's old retrieval (kept as a baseline)
         "tfidf_raw": tfidf_raw,             # compare these two:
         "bm25_raw": bm25_raw,               # same conditions, only the scoring differs
@@ -157,6 +214,41 @@ RETRIEVERS: Dict[str, Callable[[str, str, int], List[Hit]]] = {
         "hybrid_rrf": hybrid_rrf,           # BM25 + Dense + RRF
     }.items()
 }
+# the same four over the children the app uses (the rows above search the 512-word chunks)
+APP_CHILDREN = child_unit(CHILD_WORDS, CHILD_OVERLAP)
+RETRIEVERS.update({f"{b}@{APP_CHILDREN}": page_level(child_retriever(b, APP_CHILDREN)) for b in SIZED})
+ALL_RETRIEVERS = dict(RETRIEVERS)
+
+
+def retriever_for(name: str) -> Optional[Callable[[str, str, int], List[Hit]]]:
+    """A listed retriever, or "<sized retriever>@<any size>"; None if the name is unknown."""
+    if name in ALL_RETRIEVERS:
+        return ALL_RETRIEVERS[name]
+    base, size = parse_row(name)
+    return page_level(child_retriever(base, size)) if size else None
+
+
+def prepare(name: str, doc_ids: List[str]) -> Dict:
+    """
+    Before a row is timed: cut its child size if missing, load (or build) its BM25 and dense indexes and
+    the models, so ms/query measures queries only. Returns the index size and the one-time embed cost.
+    """
+    base, size = parse_row(name)
+    if base not in SIZED:
+        return {}
+    unit = size or "chunks"
+    items = embed_s = 0.0
+    for d in doc_ids:
+        if size and not repo.has_children(d, *parse_child_unit(size)):
+            build_children(d, str(DB_PATH), *parse_child_unit(size))
+        items += bm25_index.get_index(repo, d, unit).N
+        meta = dense_index.get_index(repo, d, unit).dir / "meta.json"
+        embed_s += json.loads(meta.read_text(encoding="utf-8")).get("build_seconds", 0) if meta.exists() else 0
+    if "reranker" in base:
+        rerank_warm = get_reranker()
+        rerank_warm.compute_score([["warm up", "warm up"]])
+    return {"unit": size or 512, "items": int(items), "embed_s": round(embed_s, 1)}
+
 LIVE = "tfidf_pipeline"  # the one shown while you type questions
 
 
@@ -466,7 +558,10 @@ def run_benchmark(names: Dict[str, str]) -> None:
     # (hit_rank, full_rank, returned_nothing) per question; ranks are None for L5
     buckets: Dict[Tuple[str, str], List[Tuple[Optional[int], Optional[int], bool]]] = defaultdict(list)
 
+    doc_ids = sorted({q["doc_id"] for q in questions})
+    costs: Dict[str, Dict] = {}
     for name, fn in RETRIEVERS.items():
+        costs[name] = prepare(name, doc_ids)
         t0 = time.time()
         for q in questions:
             groups = gold_groups(q)
@@ -510,6 +605,8 @@ def run_benchmark(names: Dict[str, str]) -> None:
                     buckets[(name, sl)].append((rank, full, not hits))
             else:  # unanswerable: no Recall/MRR, only whether the retriever correctly returned nothing
                 buckets[(name, f"level={q.get('level') or 'L5'}")].append((None, None, not hits))
+        if costs[name]:
+            costs[name]["ms_per_q"] = round((time.time() - t0) / len(questions) * 1000, 1)
         print(f"  {name} scored {len(questions)} questions in {time.time() - t0:.1f}s")
 
     summary_rows = []
@@ -539,10 +636,10 @@ def run_benchmark(names: Dict[str, str]) -> None:
     def cell(v) -> str:
         return f"{v:>8.3f}" if isinstance(v, float) else f"{'-':>8}"
 
-    print(f"\n  {'retriever':<20}{'slice':<20}{'n':>4}" + "".join(f"{'R@' + str(k):>8}" for k in KS)
+    print(f"\n  {'retriever':<25}{'slice':<20}{'n':>4}" + "".join(f"{'R@' + str(k):>8}" for k in KS)
           + f"{'MRR':>8}{'Full@5':>8}{'Full@10':>8}{'NoAns':>8}")
     for r in summary_rows:
-        print(f"  {r['retriever']:<20}{r['slice'][:19]:<20}{r['n']:>4}"
+        print(f"  {r['retriever']:<25}{r['slice'][:19]:<20}{r['n']:>4}"
               + "".join(cell(r[f'Recall@{k}']) for k in KS) + cell(r[f'MRR@{kmax}'])
               + cell(r["Full@5"]) + cell(r["Full@10"]) + cell(r["NoAnswer"]))
     print("\n  R@k = at least one gold page in the top k. Full@k = every part (gold group) found in the"
@@ -551,13 +648,77 @@ def run_benchmark(names: Dict[str, str]) -> None:
     print("\n  NoAns = share of questions where the retriever returned nothing (nothing above its score"
           "\n  threshold). On L5 (unanswerable) that is the correct answer, so higher is better; on every"
           "\n  other row it is a missed answer, so lower is better.")
+    compare_sizes(summary_rows, costs, kmax, out_dir / "size_compare.csv", write)
     print(f"\n  Excel files written to {out_dir}\n")
+
+
+def compare_sizes(summary_rows: List[Dict], costs: Dict[str, Dict], kmax: int, path: Path, write) -> None:
+    """
+    Per retriever: the 512-word chunks and every child size that was run, quality next to cost
+    (index items, one-time embed seconds, ms per query), to find the efficient child size.
+    """
+    by = {(r["retriever"], r["slice"]): r for r in summary_rows}
+    names = list(dict.fromkeys(r["retriever"] for r in summary_rows))
+    mrr, rows = f"MRR@{kmax}", []
+    for base in SIZED:
+        sized = sorted(((parse_row(n)[1], n) for n in names if parse_row(n)[0] == base and parse_row(n)[1]),
+                       key=lambda sn: parse_child_unit(sn[0]))       # by size, then overlap
+        if not sized:
+            continue
+        group = ([(512, base)] if base in names else []) + sized
+        for size, name in group:
+            a, c = by.get((name, "ALL")), costs.get(name, {})
+            if not a or not isinstance(a[mrr], float):
+                continue
+            words, overlap = parse_child_unit(size)
+            label = f"{words}-word children" + (f" +{overlap}" if overlap else "")
+            row = {"retriever": base, "unit": "512 (chunks)" if name == base else label,
+                   "items": c.get("items", ""), "embed_s": c.get("embed_s", ""), "ms_per_q": c.get("ms_per_q", ""),
+                   "R@1": a["Recall@1"], "R@3": a["Recall@3"], "R@5": a["Recall@5"], "R@10": a["Recall@10"], "MRR": a[mrr]}
+            for sl in sorted(sl for (n, sl) in by if n == name and (sl.startswith("level=") or sl.startswith("lang="))):
+                if isinstance(by[(name, sl)][mrr], float):
+                    row[f"MRR {sl.split('=')[1]}"] = by[(name, sl)][mrr]
+            rows.append(row)
+    if not rows:
+        return
+    keys = list(dict.fromkeys(k for r in rows for k in r))
+    write(path, [{k: r.get(k, "") for k in keys} for r in rows])
+    levels = [k for k in keys if k.startswith("MRR L")]
+    print("\n  Child size: quality next to cost (items = indexed units, embed s = one-time BGE-M3 time,"
+          "\n  ms/q = query time with everything loaded). * = best MRR of the retriever.")
+    print(f"  {'retriever':<20}{'unit':<20}{'items':>7}{'embed s':>9}{'ms/q':>8}{'R@1':>7}{'R@3':>7}{'R@5':>7}"
+          f"{'R@10':>7}{'MRR':>8}" + "".join(f"{k[4:]:>7}" for k in levels))
+    for base in dict.fromkeys(r["retriever"] for r in rows):
+        group = [r for r in rows if r["retriever"] == base]
+        best = max(r["MRR"] for r in group)
+        for r in group:
+            num = lambda v, w, f: f"{v:>{w}{f}}" if isinstance(v, (int, float)) else f"{'-':>{w}}"   # noqa: E731
+            print(f"  {base:<20}{r['unit']:<20}{num(r['items'], 7, 'd')}{num(r['embed_s'], 9, '.1f')}"
+                  f"{num(r['ms_per_q'], 8, '.0f')}" + "".join(num(r[k], 7, '.3f') for k in ("R@1", "R@3", "R@5", "R@10"))
+                  + f"{r['MRR']:>7.3f}{'*' if r['MRR'] == best else ' '}"
+                  + "".join(num(r.get(k, ""), 7, '.3f') for k in levels))
 
 
 def main() -> None:
     print("StudyMate retrieval benchmark")
     names = load_json(NAMES_FILE, {})
-    if sys.argv[1:] == ["run"]:
+    if sys.argv[1:2] in (["run"], ["sweep"]):
+        if sys.argv[1] == "sweep":            # one retriever: the 512-word chunks + each child size
+            args = sys.argv[2:]
+            base = args[0] if args and not CHILD_SET.fullmatch(args[0]) else "hybrid_rrf+reranker"
+            sizes = [a for a in args if CHILD_SET.fullmatch(a)] or list(SWEEP_SIZES)
+            if base not in SIZED:
+                raise SystemExit(f"sweep needs one of: {', '.join(SIZED)}")
+            pick = [base] + [f"{base}@{n}" for n in sizes]
+        else:
+            pick = sys.argv[2:]               # optional: score only these retrievers
+        unknown = [n for n in pick if retriever_for(n) is None]
+        if unknown:
+            raise SystemExit(f"Unknown retriever(s) {unknown}. Choose from: {', '.join(ALL_RETRIEVERS)}"
+                             f", or <{' | '.join(SIZED)}>@<size> or @<size>o<overlap>")
+        if pick:
+            RETRIEVERS.clear()
+            RETRIEVERS.update({n: retriever_for(n) for n in pick})
         run_benchmark(names)
         return
     while True:

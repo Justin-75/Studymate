@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "studymate",
+      "runtimeExecutable": "C:\\Users\\Lenovo\\.conda\\envs\\studymate\\python.exe",
+      "runtimeArgs": ["server/http_server.py"],
+      "port": 5001,
+      "autoPort": false,
+      "env": { "STUDYMATE_PORT": "5001", "PYTHONIOENCODING": "utf-8" }
+    }
+  ]
+}

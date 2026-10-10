@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Iterator, Optional
 
 from src.db.repository import Repository
+from src.pdf.chunker import NoTextLayerError, detect_lang
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DB_PATH = os.getenv("STUDYMATE_DB", str(PROJECT_ROOT / "Data" / "Database" / "app.db"))
@@ -21,6 +22,19 @@ SUMMARY_DIR = PROJECT_ROOT / "Data" / "Cache" / "summaries"
 @lru_cache(maxsize=1)
 def repo() -> Repository:
     return Repository(DB_PATH)
+
+
+@lru_cache(maxsize=256)
+def doc_language(doc_id: str) -> str:
+    """
+    "zh" or "en": the document's language, detected from its pages exactly as the chunker did at ingest.
+    Every prompt that writes for the student is told this language, so a Chinese question about an English
+    book still gets an English answer.
+    """
+    try:
+        return detect_lang([p.text_clean or "" for p in repo().get_pages(doc_id)])
+    except NoTextLayerError:
+        return "en"
 
 
 def _summary_path(doc_id: str) -> Path:

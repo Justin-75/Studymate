@@ -18,11 +18,13 @@ from typing import Dict, List, Tuple
 
 import jieba
 
+from src.db.models import parse_child_unit
+
 jieba.setLogLevel(60)   # hide jieba's "Building prefix dict..." messages
 
-K1 = 1.5    # how fast repeated words stop adding score (book: 1.2 ~ 2)
-B = 0.75    # how strongly long chunks are pulled down (book: 0.75)
-
+K1 = 1.5    # how fast repeated words stop adding score 
+B = 0.75    # how strongly long chunks are pulled down 
+#According to Okapi BM25 Books
 
 def tokenize(text: str) -> List[str]:
     tokens = jieba.lcut(text or "")                    # 1. split into words
@@ -67,7 +69,7 @@ class BM25Index:
                 tf_td = self.chunk_tf[i][t]
                 l_d = self.chunk_length[i]
                 tf_part = ((self.k1 + 1) * tf_td) / (
-                    self.k1 * ((1 - self.b) + (self.b * l_d / self.avg_length)) + tf_td
+                    self.k1 * ((1 - self.b) + (self.b * l_d / self.avg_length)) + tf_td #BM25 Formula according to Okapi books 
                 )
                 score += idf * tf_part
             scores.append(score)
@@ -82,13 +84,24 @@ class BM25Index:
 
 # One index per doc_id per process: tokenizing a whole book with jieba takes a few
 # seconds, so it is built on first use and reused for every later question.
-_CACHE: Dict[str, BM25Index] = {}
+_CACHE: Dict[Tuple[object, str], BM25Index] = {}
 
 
-def get_index(repo, doc_id: str) -> BM25Index:
-    if doc_id not in _CACHE:
-        chunks = repo.get_chunks(doc_id)
-        if not chunks:
-            raise ValueError(f"No chunks found in DB for doc_id={doc_id}. Ingest first.")
-        _CACHE[doc_id] = BM25Index([c.chunk_id for c in chunks], [c.text for c in chunks])
-    return _CACHE[doc_id]
+def get_index(repo, doc_id: str, unit="chunks") -> BM25Index:
+    """unit="chunks": the 512-word chunks; a child set (128, "150o40"): their child chunks (parent-child retrieval)."""
+    key = (unit if unit == "chunks" else parse_child_unit(unit), doc_id)
+    if key not in _CACHE:
+        if unit != "chunks":
+            items = [(c.child_id, c.text) for c in repo.get_children(doc_id, *parse_child_unit(unit))]
+        else:
+            items = [(c.chunk_id, c.text) for c in repo.get_chunks(doc_id)]
+        if not items:
+            raise ValueError(f"No {unit} found in DB for doc_id={doc_id}. Ingest first.")
+        _CACHE[key] = BM25Index([i for i, _ in items], [t for _, t in items])
+    return _CACHE[key]
+
+
+def forget(doc_id: str) -> None:
+    """Drop the in-memory indexes (chunks and every child size) of a document whose chunks changed."""
+    for key in [k for k in _CACHE if k[1] == doc_id]:
+        del _CACHE[key]

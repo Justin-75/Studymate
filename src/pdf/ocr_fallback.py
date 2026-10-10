@@ -1,36 +1,13 @@
 # src/pdf/ocr_fallback.py
 from __future__ import annotations
 
+import os
+import shutil
+import sys
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Optional, Tuple
 import re
 
-
-def normalize_ocr_lang(lang: str | None) -> str:
-    """Normalize OCR language selection.
-
-    Mixed-language OCR (e.g., "eng+chi_sim") often harms Chinese recognition quality.
-    This project therefore avoids mixed-language runs by default.
-
-    Behavior:
-      - If lang is empty/None -> "chi_sim"
-      - If multiple languages are provided with '+' or ',' ->
-          * choose "chi_sim" if present
-          * otherwise choose the first language
-      - Returns a single Tesseract language code.
-    """
-    raw = (lang or "").strip()
-    if not raw:
-        return "chi_sim"
-
-    parts = [p.strip() for p in re.split(r"[+,]", raw) if p.strip()]
-    if not parts:
-        return "chi_sim"
-
-    # Prefer Simplified Chinese if present.
-    if any(p == "chi_sim" for p in parts):
-        return "chi_sim"
-    return parts[0]
 
 
 def needs_ocr(
@@ -67,9 +44,10 @@ def extract_pages_text_ocr(
     lang: str = "chi_sim",
     psm: int = 3,
     use_preprocess: bool = False,
+    pages: Optional[List[int]] = None,
 ) -> List[Tuple[int, str]]:
     """
-    OCR a PDF page-by-page.
+    OCR a PDF page-by-page. pages: 1-based page numbers to OCR (None = every page).
 
     Implementation:
       - Use PyMuPDF (fitz) to render each page into an image at specified DPI
@@ -85,6 +63,7 @@ def extract_pages_text_ocr(
         from pytesseract import TesseractNotFoundError
     except ImportError as e:
         raise ImportError("pytesseract is required for OCR. Install: pip install pytesseract") from e
+    _use_env_tesseract(pytesseract)
 
     try:
         from PIL import Image
@@ -92,7 +71,7 @@ def extract_pages_text_ocr(
         raise ImportError("Pillow is required for OCR image handling. Install: pip install Pillow") from e
 
     # Avoid mixed-language OCR by default.
-    lang = normalize_ocr_lang(lang)
+    lang = "chi_sim"
 
     path = Path(file_path)
     if not path.exists() or not path.is_file():
@@ -120,7 +99,7 @@ def extract_pages_text_ocr(
         if getattr(doc, "is_encrypted", False):
             raise ValueError("PDF is encrypted and cannot be OCR-processed without a password.")
 
-        for idx in range(doc.page_count):
+        for idx in (range(doc.page_count) if pages is None else [p - 1 for p in pages]):
             page = doc.load_page(idx)
 
             mat = fitz.Matrix(zoom, zoom)
@@ -149,6 +128,19 @@ def extract_pages_text_ocr(
             pass
 
     return pages_out
+
+
+def _use_env_tesseract(pytesseract) -> None:
+    """
+    Use the env's own Tesseract and language data. On Windows conda puts tesseract.exe in Library/bin
+    (on PATH only after `conda activate`) and the data in share/tessdata, which tesseract can't find alone.
+    """
+    prefix = Path(sys.prefix)
+    exe = shutil.which("tesseract", path=os.pathsep.join(str(prefix / d) for d in ("Library/bin", "bin")))
+    if exe:
+        pytesseract.pytesseract.tesseract_cmd = exe
+    if (prefix / "share" / "tessdata").is_dir():
+        os.environ.setdefault("TESSDATA_PREFIX", str(prefix / "share" / "tessdata"))
 
 
 def _preprocess_for_ocr(pil_img, cv2, np):

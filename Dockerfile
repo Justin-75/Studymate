@@ -18,6 +18,14 @@ COPY --chown=$MAMBA_USER:$MAMBA_USER src ./src
 COPY --chown=$MAMBA_USER:$MAMBA_USER server ./server
 COPY --chown=$MAMBA_USER:$MAMBA_USER web ./web
 
+# Fail the build if the chunker can't run Moses (English sentences) on the env's Perl (environment.yml)
+RUN micromamba run -n base python -c "from src.pdf.chunker import Chunker; \
+    c = Chunker(); s = c.sentences('Dr. Smith left. It was 3 p.m. Bye!', 'en'); c.close(); \
+    assert s == ['Dr. Smith left.', 'It was 3 p.m.', 'Bye!'], s"
+# ... or if any part of the app can't import (a package missing or changed in environment.yml)
+RUN micromamba run -n base python -c "import server.http_server, src.graphs.study_graph, src.graphs.ingest_graph, \
+    src.retrieval.hybrid, src.ingest"
+
 # 0.0.0.0: inside a container 127.0.0.1 can't be reached from Windows
 ENV STUDYMATE_HOST=0.0.0.0 STUDYMATE_PORT=5000 HF_HOME=/hf
 EXPOSE 5000

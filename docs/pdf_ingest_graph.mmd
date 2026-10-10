@@ -1,0 +1,29 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([__start__]):::first
+	extract(extract)
+	detect_lang(detect_lang)
+	ocr_failed(ocr_failed)
+	ocr(ocr)
+	clean(clean)
+	chunk("chunk<br/>512-word parents, one page each<br/>each cut into 150-word children")
+	save(save)
+	__end__([__end__]):::last
+	__start__ --> extract;
+	extract --> detect_lang;
+	detect_lang -.->|text layer| clean;
+	detect_lang -.->|scanned, Chinese| ocr;
+	detect_lang -.->|scanned, English| ocr_failed;
+	ocr --> clean;
+	clean --> chunk;
+	chunk -.->|text| save;
+	chunk -.->|no text| __end__;
+	save --> __end__;
+	ocr_failed --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

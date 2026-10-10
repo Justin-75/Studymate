@@ -57,7 +57,7 @@ from src.graphs.store import (  # noqa: E402
 from src.graphs.study_graph import open_study_graph_async  # noqa: E402
 from src.ingest import ingest_pdf  # noqa: E402
 from src.llm_client import llm_info  # noqa: E402
-from src.retrieval.hybrid import warm_up  # noqa: E402
+from src.retrieval.hybrid import forget, warm_up  # noqa: E402
 
 WEB_DIR = ROOT / "web"                      # the chat UI: web/index.html
 UPLOAD_DIR = ROOT / "uploads"               # kept PDFs: uploads/<doc_id>.pdf
@@ -195,6 +195,7 @@ async def prepare_document(doc_id: str, pdf_path: str) -> None:
     job.update(index="building", error=None)
     try:
         async with GPU_LOCK:
+            forget(doc_id)                          # a re-uploaded PDF has new chunks
             await asyncio.to_thread(warm_up, repo(), doc_id)
     except Exception as e:
         traceback.print_exc()
@@ -349,13 +350,13 @@ async def upload(file: Optional[UploadFile] = File(None)):
     tmp = tmp_dir / Path(file.filename.replace("\\", "/")).name
     try:
         await asyncio.to_thread(_save_upload, file.file, tmp)
+        # the OCR language comes from the chunker's language detection; chunks are up to 512 words
         result = await asyncio.to_thread(
             ingest_pdf, file_path=str(tmp), db_path=DB_PATH,
-            ocr_enabled=True, ocr_lang="eng+chi_sim", ocr_dpi=300, ocr_psm=3, ocr_preprocess=False,
-            chunk_size=800, chunk_overlap=120, max_pages=None,
+            ocr_enabled=True, ocr_dpi=300, ocr_psm=3, ocr_preprocess=False, max_pages=None,
         )
         if result.num_chunks == 0:
-            raise HTTPException(422, NO_TEXT)
+            raise HTTPException(422, result.error or NO_TEXT)   # error: e.g. an English scan, which OCR can't read
         kept = UPLOAD_DIR / f"{result.doc_id}.pdf"
         await asyncio.to_thread(shutil.move, str(tmp), kept)
     except HTTPException:
