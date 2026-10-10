@@ -1,0 +1,23 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([__start__]):::first
+	make_cards(make_cards)
+	plan_sections(plan_sections)
+	summarize(summarize)
+	check(check)
+	finalize(finalize)
+	__end__([__end__]):::last
+	__start__ --> make_cards;
+	make_cards -->|a topic + description card per chunk| plan_sections;
+	plan_sections --> summarize;
+	summarize --> check;
+	check -.->|issues left, at most 2 revisions| summarize;
+	check -.->|clean, or out of revisions| finalize;
+	finalize -->|section summaries + overview saved| __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

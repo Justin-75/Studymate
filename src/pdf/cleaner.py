@@ -39,17 +39,23 @@ _CONTINUED_RE = re.compile(
 )
 # Line-wrap markers inside code listings: d2l uses "␣" + newline + ",→", LLMBook uses "↩→".
 # (A lone "␣" is NOT removed: SLP3 uses it on purpose to show a space in regex examples.)
+# Table-of-contents dot leaders: "13.6.1 下载数据集. . . . . . . . 599". Each dot is a BGE-M3 token, so one
+# contents page was a 3,600-token chunk. Only 5+ dots separated by spaces: an ellipsis ("...", ". . . .",
+# Chinese "……" = "......" after NFKC) and normal punctuation stay. Tested on all six benchmark books:
+# it matches contents pages only.
+_DOT_LEADER_RE = re.compile(r"[ \t]*\.(?:[ \t]+\.){4,}[ \t]*")
 _WRAP_SPACE_RE = re.compile(r"␣\s*,→")
 _WRAP_D2L_RE = re.compile(r"\s*,→")
 _WRAP_LLMBOOK_RE = re.compile(r"\s*↩→\s*")
 
 
 def strip_known_noise(text: str) -> str:
-    """Remove log lines, page-break markers and code line-wrap markers. Safe on any document."""
+    """Remove log lines, page-break markers, code line-wrap markers and contents dot leaders. Safe on any document."""
     if not text:
         return ""
     text = _MXNET_LOG_RE.sub("", text)
     text = _CONTINUED_RE.sub("", text)
+    text = _DOT_LEADER_RE.sub(" ", text)
     text = _WRAP_SPACE_RE.sub(" ", text)
     text = _WRAP_D2L_RE.sub("", text)
     text = _WRAP_LLMBOOK_RE.sub(" ", text)
@@ -76,10 +82,9 @@ def clean_page_text(text: str) -> str:
     Clean a single page of extracted text.
 
     Safe-by-default cleaning:
-    - Unicode normalize (NFKC)
+    - Unicode normalize (NFKC; also turns non-breaking spaces into spaces)
     - Remove URLs
-    - Remove control characters
-    - Remove soft hyphen (\u00ad)
+    - Remove control characters (also drops soft hyphens, \u00ad)
     - Fix hyphenation across line breaks (exam-\\nple -> example)
     - Conservative bullet/list prefix removal (ONLY on short lines)
     - Normalize whitespace (trim line spaces, collapse excessive blank lines, collapse multi-spaces)
@@ -97,9 +102,6 @@ def clean_page_text(text: str) -> str:
     # Remove known extraction noise (MXNet logs, "continued from previous page", wrap markers)
     text = strip_known_noise(text)
 
-    # Remove soft hyphen
-    text = text.replace("\u00ad", "")
-
     # Remove control characters (keep \n and \t)
     text = _strip_control_chars(text)
 
@@ -108,8 +110,6 @@ def clean_page_text(text: str) -> str:
 
     cleaned_lines: List[str] = []
     for line in text.split("\n"):
-        # Normalize common whitespace characters
-        line = line.replace("\u00a0", " ")  # non-breaking space -> normal space
         line = line.strip()
 
         if not line:

@@ -8,27 +8,31 @@ dependencies:
   - scipy             # sparse TF-IDF matrices
   - scikit-learn
   - joblib            # saves/loads the TF-IDF vectorizer
-  - tesseract         # OCR engine (with chi_sim + eng data) behind pytesseract; pip can't install it
-  - pip:
+  - tesseract         # OCR for engine (with chi_sim + eng data)
+  - perl              # runs the Moses sentence splitter + punctuation normalizer (English chunks)
+  - pip:   # versions pinned to the ones every benchmark in README.md was measured with (pip check clean)
       - --extra-index-url https://download.pytorch.org/whl/cu128   # CUDA 12.8 torch for the RTX 50-series
-      - torch==2.11.0+cu128   # pinned: unpinned, pip takes a newer CPU-only build from PyPI
-      - pymupdf
-      - fastapi
+      - torch==2.11.0+cu128   #pytorch + GPU (RTX 5070 Laptop)
+      - pymupdf==1.28.2 #Ingesting
+      - fastapi==0.142.2
       - starlette
-      - uvicorn
-      - python-multipart  # file uploads in FastAPI
+      - uvicorn==0.54.0
+      - python-multipart==0.0.32  # file uploads in FastAPI
       - pydantic
       - pillow
       - opencv-python
-      - pytesseract
+      - pytesseract #OCR 
       - python-dotenv
-      - jieba
-      - FlagEmbedding
-      - faiss-cpu
-      - modelscope
-      - langchain-core
-      - langchain-ollama
-      - langchain-deepseek
-      - langgraph
-      - langgraph-checkpoint-sqlite
-      - deepeval==4.2.8   # only for scripts/eval_generation.py; unpinned, pip falls back to 2.9.3
+      - jieba==0.42.1 #Chinese tokenizer (BM25 tokens, Chinese word counts for chunk sizes)
+      - mosestokenizer==1.2.1   # Moses sentence splitter for English chunks (runs on the perl above)
+      - toolwrapper==2.1.0      # mosestokenizer's pipe to Perl; src/pdf/chunker.py hooks its start/readline
+      - FlagEmbedding==1.4.2   # BGE-M3 dense encoder + bge-reranker-v2-m3
+      - transformers==5.17.0   # FlagEmbedding's backend; newer majors change its API
+      - faiss-cpu==1.15.1 # Indexing
+      - modelscope #Place for download BGE-M3, If you are on China
+      - langchain-core==1.6.6 #Langgraph for generation framework
+      - langchain-ollama==1.1.0
+      - langchain-deepseek==1.1.1
+      - langgraph==1.2.13
+      - langgraph-checkpoint-sqlite==3.1.1   # chat checkpoints + the per-document memory store
+      - deepeval==4.2.8   # Evaluation for generation

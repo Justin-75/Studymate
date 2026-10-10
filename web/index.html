@@ -317,7 +317,7 @@ const T = {
     placeholder: "随便问，或者直接说想要摘要、抽认卡还是测验…", placeholderNoDoc: "先上传或选择一份 PDF",
     placeholderIndexing: "正在建立索引，请稍候…", placeholderSummarizing: "正在生成全文摘要，完成后即可提问…", pages: "页",
     w_title: "StudyMate 正在阅读并总结这份文档", w_index: "StudyMate 正在为这份文档建立检索索引",
-    w_planning: "正在划分章节…", w_summarizing: (d, n) => `正在总结第 ${d}/${n} 节`, w_revising: (d, n) => `正在修改 ${d}/${n} 节`,
+    w_cards: (d, n) => `正在标注内容块 ${d}/${n} 批`, w_planning: "正在划分章节…", w_summarizing: (d, n) => `正在总结第 ${d}/${n} 节`, w_revising: (d, n) => `正在修改 ${d}/${n} 节`,
     w_checking: "正在核对摘要…", w_overview: "正在写全文概述…", w_start: "正在准备…",
     w_locked: "完成前暂时不能提问。", w_indexLocked: "完成后就可以开始提问。",
     st_indexing: "建立索引中", st_indexError: "索引失败", st_sumReady: "摘要就绪", st_sumBuilding: "摘要生成中", st_sumNone: "无摘要", st_sumError: "摘要失败",
@@ -352,7 +352,8 @@ const T = {
     nextReview: w => `接下来：复习「${w}」，然后再测一轮。`, maxRounds: w => `已经做了最多轮次。建议稍后再复习：${w}`, allGood: "全部掌握，做得好！",
     reviewOf: "复习", thinking: "StudyMate 正在思考…", errorPrefix: "出错了：", notFound: "文档中没有找到相关内容。",
     step: { router:"理解你的问题", retrieve:"检索相关页面", answer:"撰写回答", summary_doc:"整理全文摘要", summarize_topic:"总结该主题",
-            make_flashcards:"制作抽认卡", make_quiz:"出题", collect_answers:"等待作答", grade:"批改答案", review:"复习薄弱知识点", no_context:"未找到相关内容" },
+            make_flashcards:"制作抽认卡", make_quiz:"出题", collect_answers:"等待作答", grade:"批改答案", review:"复习薄弱知识点", no_context:"未找到相关内容",
+            topic_summary:"整理主题摘要", remember:"记住本次学习" },
     pdfMissing: "没有找到这份文档的 PDF 文件",
   },
   en: {
@@ -361,7 +362,7 @@ const T = {
     placeholder: "Ask anything, or just say what you want: a summary, flashcards, a quiz…", placeholderNoDoc: "Upload or pick a PDF first",
     placeholderIndexing: "Indexing the document, one moment…", placeholderSummarizing: "Building the document summary. You can ask once it's done…", pages: "pages",
     w_title: "StudyMate is reading and summarizing this document", w_index: "StudyMate is building the search index for this document",
-    w_planning: "Splitting it into sections…", w_summarizing: (d, n) => `Summarizing section ${d} of ${n}`, w_revising: (d, n) => `Revising ${d} of ${n} sections`,
+    w_cards: (d, n) => `Labelling chunks, batch ${d} of ${n}`, w_planning: "Splitting it into sections…", w_summarizing: (d, n) => `Summarizing section ${d} of ${n}`, w_revising: (d, n) => `Revising ${d} of ${n} sections`,
     w_checking: "Checking the summaries…", w_overview: "Writing the overview…", w_start: "Getting started…",
     w_locked: "You can ask questions once it's done.", w_indexLocked: "You can start once it's done.",
     st_indexing: "Indexing", st_indexError: "Index failed", st_sumReady: "Summary ready", st_sumBuilding: "Summarizing", st_sumNone: "No summary", st_sumError: "Summary failed",
@@ -397,7 +398,8 @@ const T = {
     reviewOf: "Review", thinking: "StudyMate is thinking…", errorPrefix: "Something went wrong: ", notFound: "Nothing about that was found in the document.",
     step: { router:"Understanding your request", retrieve:"Searching the document", answer:"Writing the answer", summary_doc:"Preparing the document summary",
             summarize_topic:"Summarizing the topic", make_flashcards:"Making flashcards", make_quiz:"Writing the quiz", collect_answers:"Waiting for your answers",
-            grade:"Grading", review:"Reviewing weak concepts", no_context:"Nothing found" },
+            grade:"Grading", review:"Reviewing weak concepts", no_context:"Nothing found",
+            topic_summary:"Writing the topic summary", remember:"Remembering this session" },
     pdfMissing: "The PDF file for this document isn't available",
   },
 };
@@ -518,7 +520,7 @@ function renderWorking() {
     if (S.messages.length) scrollDown();
   }
   const p = d.summary_progress || {}, pct = kind === "summary" && p.total ? Math.round(100 * p.done / p.total) : null;
-  const stage = { planning: t("w_planning"), summarizing: t("w_summarizing", p.done, p.total), revising: t("w_revising", p.done, p.total),
+  const stage = { cards: t("w_cards", p.done, p.total), planning: t("w_planning"), summarizing: t("w_summarizing", p.done, p.total), revising: t("w_revising", p.done, p.total),
                   checking: t("w_checking"), overview: t("w_overview") }[p.stage] || t("w_start");
   row.querySelector(".w-title").textContent = t(kind === "index" ? "w_index" : "w_title");
   row.querySelector(".w-line").textContent = kind === "index" ? t("w_indexLocked") : `${stage} · ${t("w_locked")}`;

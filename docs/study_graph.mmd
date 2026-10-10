@@ -1,0 +1,46 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([__start__]):::first
+	router(router)
+	summary_doc(summary_doc)
+	retrieve("retrieve<br/>BM25 + BGE-M3 on 150-word children, reranker<br/>top 5 parents of 512 words, +2 per extra round")
+	no_context(no_context)
+	summarize_topic(summarize_topic)
+	topic_summary(topic_summary)
+	answer(answer)
+	make_flashcards(make_flashcards)
+	make_quiz(make_quiz)
+	collect_answers(collect_answers)
+	grade(grade)
+	review(review)
+	remember(remember)
+	__end__([__end__]):::last
+	__start__ --> router;
+	router -.->|whole-document summary| summary_doc;
+	router -.->|anything else| retrieve;
+	retrieve -.->|no passages| no_context;
+	retrieve -.->|passages| summarize_topic;
+	summarize_topic -.->|not covered, new query, under 3 rounds| retrieve;
+	summarize_topic -.->|ask| answer;
+	summarize_topic -.->|summary| topic_summary;
+	summarize_topic -.->|flashcard| make_flashcards;
+	summarize_topic -.->|quiz| make_quiz;
+	make_quiz -.->|questions| collect_answers;
+	make_quiz -.->|no usable questions| __end__;
+	collect_answers -->|pause for the answers| grade;
+	grade -.->|weak concepts, under 3 rounds| review;
+	grade -.->|done| remember;
+	review --> make_quiz;
+	topic_summary --> remember;
+	answer --> remember;
+	make_flashcards --> remember;
+	remember --> __end__;
+	summary_doc --> __end__;
+	no_context --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

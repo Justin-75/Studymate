@@ -6,13 +6,16 @@ import numpy as np
 from FlagEmbedding import FlagReranker
 
 Hit = Tuple[str, int, float, str]   # (chunk_id, page_no, score, text)
+MAX_LENGTH = 8192    # tokens per (question, chunk) pair = the model's own limit, so no chunk is cut
+BATCH_SIZE = 16      # pairs per step; FlagEmbedding shrinks it by itself if long pairs run out of GPU memory
 _reranker = None
 
 
 def get_reranker() -> FlagReranker:
     global _reranker
     if _reranker is None:
-        _reranker = FlagReranker("BAAI/bge-reranker-v2-m3", use_fp16=True)  # fp16 OK on your RTX 5070
+        _reranker = FlagReranker("BAAI/bge-reranker-v2-m3", use_fp16=True,   # fp16 OK on your RTX 5070
+                                 max_length=MAX_LENGTH, batch_size=BATCH_SIZE)
     return _reranker
 
 

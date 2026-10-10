@@ -9,10 +9,13 @@ Answer-quality benchmark for StudyMate: does the answer stick to the pages it wa
     python scripts/eval_generation.py agree                # how often the judge agrees with you
 
 For every question in eval/questions.jsonl:
-  1. retrieve   the app's retrieval (hybrid RRF + reranker), top k chunks
-  2. answer     the app's own `answer` node (src/graphs/nodes.py): same prompt, same temperature
+  1. retrieve   the app's own question path, build_answer_graph() in src/graphs/study_graph.py:
+                hybrid retrieval (top k chunks, each with its card if the document has cards), then
+                the agent loop: summarize_topic writes notes and searches again while they don't cover
+                the question (at most MAX_HOPS rounds)
+  2. answer     the app's own `answer` node: notes + chunks, same prompt, same temperature
   3. judge      DeepEval FaithfulnessMetric with the app's LLM at temperature 0: split the answer
-                into claims, mark each claim yes / borderline / no against the chunks.
+                into claims, mark each claim yes / borderline / no against the chunks the model saw.
                 Faithfulness = yes claims / all claims.
 
 Judge settings, and why:
@@ -50,6 +53,7 @@ import json
 import os
 import random
 import sys
+import threading
 import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -68,7 +72,9 @@ from deepeval.test_case import LLMTestCase  # noqa: E402
 
 from src.graphs import nodes as N  # noqa: E402  (the app's own retrieval + answer node)
 from src.graphs import prompts as P  # noqa: E402
+from src.graphs.study_graph import build_answer_graph  # noqa: E402
 from src.llm_client import get_llm, llm_info  # noqa: E402
+from src.retrieval import hybrid  # noqa: E402
 
 EVAL_DIR = ROOT / "eval"
 QUESTIONS_FILE = EVAL_DIR / "questions.jsonl"
@@ -185,8 +191,8 @@ def read_csv(path: Path) -> List[Dict]:
     raise SystemExit(f"Can't read {path}: save it as 'CSV UTF-8' in Excel.")
 
 
-def out_dir(k: int) -> Path:
-    d = OUT_ROOT / f"generation_k{k}"
+def out_dir(k: int, unit: str = "children") -> Path:
+    d = OUT_ROOT / f"generation_k{k}_{unit}"
     d.mkdir(parents=True, exist_ok=True)
     return d
 
@@ -195,18 +201,35 @@ def out_dir(k: int) -> Path:
 # 1 + 2. Retrieve and answer, exactly as the app does
 # ---------------------------------------------------------------------------
 def block(hit: Dict) -> str:
-    return f"[p.{hit['page_no']}] {hit['text']}"
+    return P.format_block(hit)       # exactly the block the model saw (page label, card line, text)
 
 
-def answer_one(q: Dict, hits: List[Dict], k: int) -> Dict:
+_GPU = threading.Lock()          # BGE-M3 and the reranker: one search at a time across the worker threads
+_app_search = N._search
+
+
+def _locked_search(*args, **kwargs):
+    with _GPU:
+        return _app_search(*args, **kwargs)
+
+
+N._search = _locked_search      # the graph's retrieve node looks N._search up at call time
+_answer_graph = build_answer_graph()
+
+
+def answer_one(q: Dict, k: int) -> Dict:
+    out = _answer_graph.invoke({"doc_id": q["doc_id"], "topic": q["q"], "intent": "ask", "scope": "topic",
+                                "follow_up": False, "messages": [], "hops": 0, "queries": []})
+    hits = out.get("context") or []
     prompt_context = P.format_context(hits)
     shown = [h for h in hits if block(h) in prompt_context]     # format_context stops at max_chars
+    notes = out.get("notes") or {}
     rec = {"id": q["id"], "k": k, "model": llm_info()["model"],
+           "hops": out.get("hops", 0), "queries": out.get("queries", []), "covered": notes.get("covered"),
            "shown_pages": [h["page_no"] for h in shown], "context": [block(h) for h in shown]}
-    if not hits:                                                 # the app would reply no_context
+    data = out["messages"][-1].additional_kwargs.get("data", {}) if out.get("messages") else {}
+    if not hits or "answer" not in data:                         # the app replied no_context
         return {**rec, "answer": "", "found": False, "cited_pages": []}
-    msg = N.answer({"context": hits, "topic": q["q"]})["messages"][0]
-    data = msg.additional_kwargs["data"]                         # Answer: answer, pages, found
     return {**rec, "answer": data["answer"], "found": bool(data["found"]),
             "cited_pages": [int(p) for p in data["pages"]]}
 
@@ -217,11 +240,10 @@ def generate_answers(questions: List[Dict], k: int, path: Path, workers: int) ->
     if not todo:
         return done
     t0 = time.time()
-    print(f"  retrieving top {k} chunks for {len(todo)} questions ...")
-    retrieved = [(q, N._search(q["doc_id"], q["q"], k)) for q in todo]   # GPU models: one at a time
-    print(f"  answering with {llm_info()['model']} ({workers} at a time) ...")
+    print(f"  answering {len(todo)} questions with {llm_info()['model']} ({workers} at a time; "
+          f"retrieval, notes loop and answer as in the app) ...")
     with ThreadPoolExecutor(workers) as pool, open(path, "a", encoding="utf-8") as f:
-        futures = {pool.submit(answer_one, q, hits, k): q for q, hits in retrieved}
+        futures = {pool.submit(answer_one, q, k): q for q in todo}
         for i, fut in enumerate(as_completed(futures), 1):
             try:
                 rec = fut.result()
@@ -313,6 +335,8 @@ def per_question_rows(questions: List[Dict], answers: Dict[str, Dict], judged: D
             "retrieval_hit": int(bool(gold & shown)) if gold else "n/a",
             "retrieval_full": int(all(g & shown for g in groups)) if gold else "n/a",
             "found": int(a["found"]),
+            "hops": a.get("hops", ""),                       # retrieval rounds of the agent loop
+            "queries": " | ".join(a.get("queries", [])),
             "cited_pages": " ".join(map(str, sorted(cited))),
             # cited pages were all shown to the model / at least one cited page is a gold page
             "cite_valid": int(bool(cited) and cited <= shown) if a["found"] else "n/a",
@@ -350,6 +374,7 @@ def summary_rows(rows: List[Dict]) -> List[Dict]:
         judged = [r for r in items if r["faithfulness"] != ""]
         out.append({
             "slice": sl, "n": len(items),
+            "Hops": mean([r["hops"] for r in items if r["hops"] != ""]),
             "RetrievalHit": mean([r["retrieval_hit"] for r in gold_rows]),
             "Answered": mean([r["found"] for r in gold_rows]),
             "Abstain": mean([1 - r["found"] for r in l5_rows]),
@@ -363,8 +388,8 @@ def summary_rows(rows: List[Dict]) -> List[Dict]:
 
 
 def print_summary(summary: List[Dict]) -> None:
-    cols = ["RetrievalHit", "Answered", "Abstain", "Judged", "Faithfulness", "FullyFaithful", "CiteValid", "CiteGold"]
-    heads = ["RetHit", "Answered", "Abstain", "Judged", "Faithful", "Fully", "CiteOK", "CiteGold"]
+    cols = ["Hops", "RetrievalHit", "Answered", "Abstain", "Judged", "Faithfulness", "FullyFaithful", "CiteValid", "CiteGold"]
+    heads = ["Hops", "RetHit", "Answered", "Abstain", "Judged", "Faithful", "Fully", "CiteOK", "CiteGold"]
 
     def cell(v) -> str:
         if v is None:
@@ -375,6 +400,7 @@ def print_summary(summary: List[Dict]) -> None:
     for r in summary:
         print(f"  {r['slice'][:17]:<18}{r['n']:>4}" + "".join(cell(r[c]) for c in cols))
     print("""
+  Hops      mean retrieval rounds per question (1 = the first search was enough)
   RetHit    a gold page is among the chunks the model saw (L1-L4)
   Answered  the model gave an answer (found=true) on L1-L4; a refusal there is a missed answer
   Abstain   the model refused (found=false) on L5, where the document has no answer: higher is better
@@ -393,7 +419,9 @@ def cmd_run(args) -> None:
     if args.limit:
         picked = {q["id"] for q in random.Random(SEED).sample(questions, min(args.limit, len(questions)))}
         questions = [q for q in questions if q["id"] in picked]
-    d = out_dir(args.k)
+    N.TOP_K = args.k                # chunks of the first search; the agent loop may add MORE_K per round
+    hybrid.RETRIEVAL_UNIT = args.unit   # children = parent-child retrieval (the LLM still gets the parent chunks)
+    d = out_dir(args.k, args.unit)
     answers_path, judged_path = d / "answers.jsonl", d / f"judged_{args.truths}.jsonl"
     if args.fresh:
         for p in d.glob("*.jsonl"):
@@ -418,7 +446,7 @@ def cmd_run(args) -> None:
 
 
 def cmd_labels(args) -> None:
-    d = out_dir(args.k)
+    d = out_dir(args.k, args.unit)
     sheet = d / "label_sheet.csv"
     if sheet.exists() and not args.force:
         raise SystemExit(f"{sheet} already exists (it may hold your labels). Use --force to replace it.")
@@ -447,7 +475,7 @@ def cmd_labels(args) -> None:
 
 
 def cmd_agree(args) -> None:
-    d = out_dir(args.k)
+    d = out_dir(args.k, args.unit)
     sheet = d / "label_sheet.csv"
     if not sheet.exists():
         raise SystemExit(f"No {sheet}. Run `labels` first.")
@@ -490,6 +518,9 @@ def main() -> None:
     for name in ("run", "labels", "agree"):
         p = sub.add_parser(name)
         p.add_argument("--k", type=int, default=N.TOP_K, help=f"chunks given to the model (app: {N.TOP_K})")
+        p.add_argument("--unit", choices=["children", "chunks"], default="children",
+                       help="what retrieval searches: children (the app: children -> their parent chunks) "
+                            "or the 512-word chunks. Results in generation_k<k>_<unit>/")
         if name != "agree":
             p.add_argument("--truths", choices=["raw", "extracted"], default="raw",
                            help="judge against the chunks verbatim (raw) or DeepEval's extracted truths")

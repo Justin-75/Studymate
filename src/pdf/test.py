@@ -5,7 +5,7 @@ from typing import List, Tuple
 from src.pdf.extractor import extract_pages_text_pymupdf
 from src.pdf.ocr_fallback import needs_ocr, extract_pages_text_ocr
 from src.pdf.cleaner import clean_page_text
-from src.pdf.chunker import chunk_pages
+from src.pdf.chunker import Chunker
 
 
 # =========================
@@ -58,7 +58,8 @@ def _process_pdf(file_path: str, label: str) -> None:
 
     # 6) Chunking (first 5 pages only)
     doc_id = f"test-{label.lower().replace(' ', '-')}"
-    chunks = chunk_pages(doc_id, pages_clean, chunk_size=800, overlap=120)
+    with Chunker() as chunker:      # language detected from the pages; up to 512 words per chunk
+        chunks = chunker.chunk_pages(doc_id, pages_clean)
 
     print(f"\n[{label}] Total chunks (first {MAX_PAGES_TO_SHOW} pages): {len(chunks)}")
     if chunks:

@@ -1,0 +1,22 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([__start__]):::first
+	retrieve(retrieve)
+	no_context(no_context)
+	summarize_topic(summarize_topic)
+	answer(answer)
+	__end__([__end__]):::last
+	__start__ --> retrieve;
+	retrieve -.->|no passages| no_context;
+	retrieve -.->|passages| summarize_topic;
+	summarize_topic -.->|not covered, new query, under 3 rounds| retrieve;
+	summarize_topic -.->|covered, or out of rounds| answer;
+	answer --> __end__;
+	no_context --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

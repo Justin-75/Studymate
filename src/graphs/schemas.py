@@ -17,11 +17,15 @@ from pydantic import BaseModel, Field
 # ---------------------------------------------------------------------------
 class Intent(BaseModel):
     intent: Literal["ask", "summary", "flashcard", "quiz"] = Field(
-        description="ask = a question about the document; summary = summarize; "
-                    "flashcard = make flashcards; quiz = test me / make a quiz"
+        description="ask = a question or a request for an explanation; summary = summarize / outline; "
+                    "flashcard = make flashcards; quiz = test me / make a quiz / exercises"
     )
     scope: Literal["document", "topic"] = Field(
         description="document = the whole PDF (e.g. 'summarize this PDF'); topic = one specific topic"
+    )
+    follow_up: bool = Field(
+        description="True if the new message continues the topic of the last assistant reply "
+                    "(more detail, the next step, an example, or 'it' / '这个' pointing at it); False otherwise"
     )
     topic: str = Field(
         description="The user's request rewritten as a standalone search query, using the chat history "
@@ -49,6 +53,16 @@ class TopicSummary(BaseModel):
     key_points: List[KeyPoint] = Field(description="3-7 key points, each with its source page")
 
 
+class TopicNotes(BaseModel):
+    """summarize_topic's notes on the retrieved pages, plus the agent loop's decision: search again or not."""
+    main_idea: str = Field(description="One sentence: what the pages say about the topic")
+    key_points: List[KeyPoint] = Field(description="3-7 facts from the pages about the topic, each with its "
+                                                   "source page; empty if no page talks about the topic")
+    covered: bool = Field(description="True if the key points contain everything the task needs")
+    missing: str = Field(description="If covered is false: the facts the pages lack, one sentence. Else empty")
+    next_query: str = Field(description="If covered is false: a search query for the missing facts. Else empty")
+
+
 class SectionSummary(BaseModel):
     title: str = Field(description="Section title (keep the original title if one is given)")
     main_idea: str = Field(description="One-sentence summary of the section")
@@ -59,6 +73,22 @@ class SectionSummary(BaseModel):
 class DocOverview(BaseModel):
     subject: str = Field(description="Subject of the document, e.g. 'Data Structures textbook, Ch.1-5'")
     overview: str = Field(description="A short paragraph describing what the whole document covers")
+
+
+class ChunkCard(BaseModel):
+    id: str = Field(description="The chunk's id exactly as given: c1, c2, ...")
+    topic: str = Field(description="The chunk's main subject in 2-8 words, using the document's own terms")
+    description: str = Field(description="1-2 sentences (max 40 words): what the chunk explains, defines, "
+                                         "proves or lists, with its key terms")
+
+
+class ChunkCardBatch(BaseModel):
+    cards: List[ChunkCard] = Field(description="One card per chunk, in the order the chunks were given")
+
+
+class ConversationSummary(BaseModel):
+    summary: str = Field(description="Bullet lines, under 150 words: topics asked, main facts answered "
+                                     "(with pages), quiz concepts right and wrong")
 
 
 class FaithfulnessCheck(BaseModel):
